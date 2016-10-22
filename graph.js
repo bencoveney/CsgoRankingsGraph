@@ -169,11 +169,17 @@ for (var i = 0; i < data.teams.length; i++)
 		pathDefinition += xPositionAfter + " ";
 		pathDefinition += yPositionAfter;
 
+		var safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_")
+
 		var line = document.createElementNS(svgNs, "path");
 		line.setAttribute("d", pathDefinition);
 		line.setAttribute("stroke", team.color);
 		line.setAttribute("fill", "transparent");
-		line.setAttribute("stroke-width", 20);
+		line.setAttribute("stroke-width", 40);
+		line.setAttribute("stroke-opacity", 0.7);
+		line.setAttribute("class", "team-" + safeTeamName);
+		line.setAttribute("onmouseover", "handleMouseOver(\"" + safeTeamName + "\");");
+		line.setAttribute("onmouseout", "handleMouseOut(\"" + safeTeamName + "\");");
 		graph.appendChild(line);
 	}
 }
@@ -213,3 +219,18 @@ gradientArea.setAttribute("width", width);
 gradientArea.setAttribute("height", gradientHeight);
 gradientArea.setAttribute("fill", "url(#bottom)");
 graph.appendChild(gradientArea);
+
+function changeTeamOpacity(teamName, opacity) {
+	var teamSeries = document.querySelectorAll(".team-" + teamName);
+	teamSeries.forEach(function(path) {
+		path.setAttribute("stroke-opacity", opacity);
+	});
+}
+
+function handleMouseOver(teamName) {
+	changeTeamOpacity(teamName, 1);
+}
+
+function handleMouseOut(teamName) {
+	changeTeamOpacity(teamName, 0.7);
+}
