@@ -1,6 +1,12 @@
 // Get the canvas.
-var canvas = document.getElementById("graph");
-var context = canvas.getContext("2d");
+var graph = document.getElementById("graph");
+var svgNs = "http://www.w3.org/2000/svg";
+
+var width = 3000;
+var height = 900;
+
+graph.setAttribute('width', width);
+graph.setAttribute('height', height);
 
 data.rankings = data.rankings.sort(function(a, b) {
 	return a.date - b.date;
@@ -73,8 +79,8 @@ for (var i = 0; i < data.teams.length; i++)
 }
 
 var padding = 50;
-var remainingHeight = canvas.height - (padding * 2);
-var remainingWidth = canvas.width - (padding * 2);
+var remainingHeight = height - (padding * 2);
+var remainingWidth = width - (padding * 2);
 
 var numberOfRankings = data.rankings.length;
 var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
@@ -87,19 +93,15 @@ for (var i = 0; i < data.rankings.length; i++)
 {
 	var xPosition = (i * spacingPerRanking) + padding;
 
-	context.save();
-
-	context.strokeStyle = "grey";
-	context.lineWidth = 1;
-	context.setLineDash([5, 15]);
-
-	context.beginPath();
-	context.moveTo(xPosition, 0);
-	context.lineTo(xPosition, canvas.height);
-	context.closePath();
-	context.stroke();
-
-	context.restore();
+	var line = document.createElementNS(svgNs, "line");
+	line.setAttribute("x1", xPosition);
+	line.setAttribute("y1", 0);
+	line.setAttribute("x2", xPosition);
+	line.setAttribute("y2", height);
+	line.setAttribute("stroke", "grey");
+	line.setAttribute("stroke-width", 1);
+	line.setAttribute("stroke-dasharray", "5, 5");
+	graph.appendChild(line);
 }
 
 // Draw gridlines
@@ -107,19 +109,15 @@ for (var i = 0; i < data.rankings[0].ranks.length; i++)
 {
 	var yPosition = (i * spacingPerRank) + padding;
 
-	context.save();
-
-	context.strokeStyle = "grey";
-	context.lineWidth = 1;
-	context.setLineDash([5, 15]);
-
-	context.beginPath();
-	context.moveTo(0, yPosition);
-	context.lineTo(canvas.width, yPosition);
-	context.closePath();
-	context.stroke();
-
-	context.restore();
+	var line = document.createElementNS(svgNs, "line");
+	line.setAttribute("x1", 0);
+	line.setAttribute("y1", yPosition);
+	line.setAttribute("x2", width);
+	line.setAttribute("y2", yPosition);
+	line.setAttribute("stroke", "grey");
+	line.setAttribute("stroke-width", 1);
+	line.setAttribute("stroke-dasharray", "5, 5");
+	graph.appendChild(line);
 }
 
 // Draw team series.
@@ -159,34 +157,59 @@ for (var i = 0; i < data.teams.length; i++)
 		var xPositionBefore = ((j - 1) * spacingPerRanking) + padding;
 		var xPositionAfter = (j * spacingPerRanking) + padding;
 
-		context.save();
-
-		context.strokeStyle = team.color;
-		context.lineWidth = 20;
-
 		var curveSoftness = spacingPerRanking * 0.75;
-		context.beginPath();
-		context.moveTo(xPositionBefore, yPositionBefore);
-		context.bezierCurveTo(
-			xPositionBefore + curveSoftness, yPositionBefore,
-			xPositionAfter - curveSoftness, yPositionAfter,
-			xPositionAfter, yPositionAfter
-		);
-		context.stroke();
 
-		context.restore();
+		var pathDefinition = "M" + xPositionBefore + " "
+		pathDefinition += yPositionBefore + " ";
+		pathDefinition += "C ";
+		pathDefinition += (xPositionBefore + curveSoftness) + " ";
+		pathDefinition += yPositionBefore + ", ";
+		pathDefinition += (xPositionAfter - curveSoftness) + " ";
+		pathDefinition += yPositionAfter + ", ";
+		pathDefinition += xPositionAfter + " ";
+		pathDefinition += yPositionAfter;
+
+		var line = document.createElementNS(svgNs, "path");
+		line.setAttribute("d", pathDefinition);
+		line.setAttribute("stroke", team.color);
+		line.setAttribute("fill", "transparent");
+		line.setAttribute("stroke-width", 20);
+		graph.appendChild(line);
 	}
 }
 
 // Fade the bottom to black.
 var gradientHeight = padding;
-var gradientTop = canvas.height - gradientHeight;
-var gradientBottom = canvas.height;
+var gradientTop = height - gradientHeight;
+var gradientBottom = height;
 
-context.save();
-var gradient = context.createLinearGradient(0, gradientTop, 0, gradientBottom);
-gradient.addColorStop(0.000, 'rgba(0, 0, 0, 0.000)');
-gradient.addColorStop(1.000, 'rgba(0, 0, 0, 1.000)');
-context.fillStyle = gradient;
-context.fillRect(0, gradientTop, canvas.width, gradientHeight);
-context.restore();
+var definitions = document.createElementNS(svgNs, "defs");
+graph.appendChild(definitions);
+
+var gradient = document.createElementNS(svgNs, "linearGradient");
+gradient.setAttribute("id", "bottom");
+gradient.setAttribute("x1", 0);
+gradient.setAttribute("y1", 0);
+gradient.setAttribute("x2", 0);
+gradient.setAttribute("y2", 1);
+definitions.appendChild(gradient);
+
+var topStop = document.createElementNS(svgNs, "stop");
+topStop.setAttribute("offset", "0%");
+topStop.setAttribute("stop-color", "black");
+topStop.setAttribute("stop-opacity", 0);
+gradient.appendChild(topStop);
+
+var bottomStop = document.createElementNS(svgNs, "stop");
+bottomStop.setAttribute("offset", "100%");
+bottomStop.setAttribute("stop-color", "black");
+bottomStop.setAttribute("stop-opacity", 1);
+gradient.appendChild(bottomStop);
+
+var gradientArea = document.createElementNS(svgNs, "rect");
+gradientArea.setAttribute("x", 0);
+gradientArea.setAttribute("y", gradientTop);
+gradientArea.setAttribute("width", width);
+gradientArea.setAttribute("height", gradientHeight);
+gradientArea.setAttribute("fill", "url(#bottom)");
+graph.appendChild(gradientArea);
