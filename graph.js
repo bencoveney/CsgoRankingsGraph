@@ -18,6 +18,22 @@ function drawLine(x1, y1, x2, y2, color, width, dashes)
 	graph.appendChild(line);
 }
 
+function drawText(string, x, y, color, fontFamily, fontSize, anchor)
+{
+	var text = document.createElementNS(svgNs, "text");
+
+	text.innerHTML = string;
+
+	text.setAttribute("x", x);
+	text.setAttribute("y", y);
+	text.setAttribute("font-family", fontFamily);
+	text.setAttribute("font-size", fontSize);
+	text.setAttribute("text-anchor", anchor);
+	text.setAttribute("fill", color);
+
+	graph.appendChild(text);
+}
+
 // Set the dimensions
 var width = 3000;
 var height = 900;
@@ -83,9 +99,12 @@ data.teams.forEach(function(team)
 });
 
 // Apply some padding to the graph area so that the points are not pressed up against the side.
-var padding = 50;
-var remainingHeight = height - (padding * 2);
-var remainingWidth = width - (padding * 2);
+var paddingTop = 100;
+var paddingLeft = 50;
+var paddingRight = 50;
+var paddingBottm = 50;
+var remainingHeight = height - paddingTop - paddingBottm;
+var remainingWidth = width - paddingLeft - paddingRight;
 
 // Distribute the vertical space between the number of rankings.
 var numberOfRankings = data.rankings.length;
@@ -95,18 +114,19 @@ var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
 var numberOfRanks = data.rankings[0].ranks.length;
 var spacingPerRank = remainingHeight / (numberOfRanks - 1);
 
-// Draw vertical gridlines.
+// Draw horizontal gridlines.
 data.rankings.forEach(function(ranking, rankingIndex)
 { 
-	var xPosition = (rankingIndex * spacingPerRanking) + padding;
+	var xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
 
-	drawLine(xPosition, 0, xPosition, height, "grey", 1, "5, 5");
+	drawLine(xPosition, 0, xPosition, height, "darkgrey", 1, "5, 5");
+	drawText(ranking.date.toDateString(), xPosition, 20, "white", "Arial", 12, "middle");
 });
 
-// Draw horizontal gridlines.
+// Draw vertical gridlines.
 data.rankings[0].ranks.forEach(function(ranking, rankingIndex)
 { 
-	var yPosition = (rankingIndex * spacingPerRank) + padding;
+	var yPosition = (rankingIndex * spacingPerRank) + paddingTop;
 
 	drawLine(0, yPosition, width, yPosition, "grey", 1, "5, 5");
 });
@@ -114,19 +134,21 @@ data.rankings[0].ranks.forEach(function(ranking, rankingIndex)
 // Draw team series.
 data.teams.forEach(function(team)
 {
+	// Calculate the line's x position at the given ranking.
 	function getXPosition(rankIndex)
 	{
-		return (rankIndex * spacingPerRanking) + padding;
+		return (rankIndex * spacingPerRanking) + paddingLeft;
 	}
 
-	function getYPosition(rankIndex)
+	// Calculate the line's y position at the given ranking.
+	function getYPosition(rankingIndex)
 	{
 		// We might be pointing to a ranking which doesn't exist.
 		// Duplicate the ranking to keep a flat line at the graph's edges.
-		rankIndex = Math.min(Math.max(rankIndex, 0), numberOfRankings - 1);
+		rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
 
 		// Find the rank at the given rankings.
-		var rank = team.ranks[rankIndex];
+		var rank = team.ranks[rankingIndex];
 
 		// If there was no rank then put the team off the bottom.
 		rank = rank === null ? numberOfRanks + 1 : rank;
@@ -134,26 +156,26 @@ data.teams.forEach(function(team)
 		// Decrement the rankings so that it is 0-based rather than 1-based.
 		rank = rank - 1;
 
-		return (rank * spacingPerRank) + padding;
+		return (rank * spacingPerRank) + paddingTop;
 	}
 
 	// Iterate through the gaps on either side of the rankings.
 	for (var j = 0; j < (numberOfRankings + 1); j++)
 	{
 		// Find the index before and after the gap.
-		var rankIndexBefore = j - 1;
-		var rankIndexAfter = j;
+		var rankingIndexBefore = j - 1;
+		var rankingIndexAfter = j;
 
 		// Calculate how to place the curve anchor points.
 		var curveSoftness = spacingPerRanking * 0.75;
 
 		// Calculate the y position before and after the transition.
-		var yPositionBefore = getYPosition(rankIndexBefore);
-		var yPositionAfter = getYPosition(rankIndexAfter);
+		var yPositionBefore = getYPosition(rankingIndexBefore);
+		var yPositionAfter = getYPosition(rankingIndexAfter);
 
 		// Calculate the y position before and after the transition.
-		var xPositionBefore = getXPosition(rankIndexBefore);
-		var xPositionAfter = getXPosition(rankIndexAfter);
+		var xPositionBefore = getXPosition(rankingIndexBefore);
+		var xPositionAfter = getXPosition(rankingIndexAfter);
 
 		// If there is no existing path then create the starting point.
 		if (!team.pathDefinition) {
@@ -162,6 +184,7 @@ data.teams.forEach(function(team)
 		}
 
 		// Add the curve.
+		// TODO: Create long lines for big flat gaps.
 		team.pathDefinition += " C ";
 		team.pathDefinition += (xPositionBefore + curveSoftness) + " ";
 		team.pathDefinition += yPositionBefore + ", ";
@@ -179,7 +202,7 @@ data.teams.forEach(function(team)
 	line.setAttribute("d", team.pathDefinition);
 	line.setAttribute("stroke", team.color);
 	line.setAttribute("fill", "transparent");
-	line.setAttribute("stroke-width", 40);
+	line.setAttribute("stroke-width", 10);
 	line.setAttribute("stroke-opacity", 0.7);
 	line.setAttribute("class", "team-" + team.safeTeamName);
 	line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
@@ -188,7 +211,7 @@ data.teams.forEach(function(team)
 });
 
 // Prepare a gradient for the bottom of the graph to fade to black.
-var gradientHeight = padding;
+var gradientHeight = paddingBottom;
 var gradientTop = height - gradientHeight;
 var gradientBottom = height;
 

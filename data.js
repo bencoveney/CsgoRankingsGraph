@@ -1,7 +1,7 @@
 var data = {
 	rankings: [
 		{
-			date: Date.parse("October 17, 2016"),
+			date: new Date("October 17, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -56,7 +56,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("October 10, 2016"),
+			date: new Date("October 10, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -111,7 +111,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("October 3, 2016"),
+			date: new Date("October 3, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -166,7 +166,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("September 26, 2016"),
+			date: new Date("September 26, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -221,7 +221,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("September 19, 2016"),
+			date: new Date("September 19, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -276,7 +276,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("September 12, 2016"),
+			date: new Date("September 12, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -331,7 +331,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("September 5, 2016"),
+			date: new Date("September 5, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -386,7 +386,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("August 29, 2016"),
+			date: new Date("August 29, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -441,7 +441,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("August 22, 2016"),
+			date: new Date("August 22, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -496,7 +496,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("August 15, 2016"),
+			date: new Date("August 15, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -551,7 +551,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("August 8, 2016"),
+			date: new Date("August 8, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -606,7 +606,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("August 1, 2016"),
+			date: new Date("August 1, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -661,7 +661,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("July 26, 2016"),
+			date: new Date("July 26, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -716,7 +716,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("July 19, 2016"),
+			date: new Date("July 19, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -771,7 +771,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("July 11, 2016"),
+			date: new Date("July 11, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -826,7 +826,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("July 4, 2016"),
+			date: new Date("July 4, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -881,7 +881,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("June 27, 2016"),
+			date: new Date("June 27, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -936,7 +936,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("June 21, 2016"),
+			date: new Date("June 21, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -991,7 +991,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("June 13, 2016"),
+			date: new Date("June 13, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -1046,7 +1046,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("June 6, 2016"),
+			date: new Date("June 6, 2016"),
 			ranks: [
 				{
 					position: 1,
@@ -1101,7 +1101,7 @@ var data = {
 			]
 		},
 		{
-			date: Date.parse("June 1, 2016"),
+			date: new Date("June 1, 2016"),
 			ranks: [
 				{
 					position: 1,
