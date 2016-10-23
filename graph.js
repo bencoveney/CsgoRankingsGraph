@@ -144,6 +144,9 @@ data.teams.forEach(function(team)
 		var rankIndexBefore = j - 1;
 		var rankIndexAfter = j;
 
+		// Calculate how to place the curve anchor points.
+		var curveSoftness = spacingPerRanking * 0.75;
+
 		// Calculate the y position before and after the transition.
 		var yPositionBefore = getYPosition(rankIndexBefore);
 		var yPositionAfter = getYPosition(rankIndexAfter);
@@ -152,36 +155,36 @@ data.teams.forEach(function(team)
 		var xPositionBefore = getXPosition(rankIndexBefore);
 		var xPositionAfter = getXPosition(rankIndexAfter);
 
-		// Calculate how to place the curve anchor points.
-		var curveSoftness = spacingPerRanking * 0.75;
+		// If there is no existing path then create the starting point.
+		if (!team.pathDefinition) {
+			team.pathDefinition = "M" + xPositionBefore + " "
+			team.pathDefinition += yPositionBefore + " ";
+		}
 
-		// Create the path definition.
-		// TODO: Use one single path per team.
-		var pathDefinition = "M" + xPositionBefore + " "
-		pathDefinition += yPositionBefore + " ";
-		pathDefinition += "C ";
-		pathDefinition += (xPositionBefore + curveSoftness) + " ";
-		pathDefinition += yPositionBefore + ", ";
-		pathDefinition += (xPositionAfter - curveSoftness) + " ";
-		pathDefinition += yPositionAfter + ", ";
-		pathDefinition += xPositionAfter + " ";
-		pathDefinition += yPositionAfter;
-
-		// Create a safe team name to use in CSS/HTML identifiers.
-		var safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_")
-
-		// Create the curve element.
-		var line = document.createElementNS(svgNs, "path");
-		line.setAttribute("d", pathDefinition);
-		line.setAttribute("stroke", team.color);
-		line.setAttribute("fill", "transparent");
-		line.setAttribute("stroke-width", 40);
-		line.setAttribute("stroke-opacity", 0.7);
-		line.setAttribute("class", "team-" + safeTeamName);
-		line.setAttribute("onmouseover", "handleMouseOver(\"" + safeTeamName + "\");");
-		line.setAttribute("onmouseout", "handleMouseOut(\"" + safeTeamName + "\");");
-		graph.appendChild(line);
+		// Add the curve.
+		team.pathDefinition += " C ";
+		team.pathDefinition += (xPositionBefore + curveSoftness) + " ";
+		team.pathDefinition += yPositionBefore + ", ";
+		team.pathDefinition += (xPositionAfter - curveSoftness) + " ";
+		team.pathDefinition += yPositionAfter + ", ";
+		team.pathDefinition += xPositionAfter + " ";
+		team.pathDefinition += yPositionAfter;
 	}
+
+	// Create a safe team name to use in CSS/HTML identifiers.
+	team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
+
+	// Create the curve element.
+	var line = document.createElementNS(svgNs, "path");
+	line.setAttribute("d", team.pathDefinition);
+	line.setAttribute("stroke", team.color);
+	line.setAttribute("fill", "transparent");
+	line.setAttribute("stroke-width", 40);
+	line.setAttribute("stroke-opacity", 0.7);
+	line.setAttribute("class", "team-" + team.safeTeamName);
+	line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
+	line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+	graph.appendChild(line);
 });
 
 // Prepare a gradient for the bottom of the graph to fade to black.
