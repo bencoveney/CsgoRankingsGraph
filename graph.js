@@ -1,31 +1,44 @@
-// Get the canvas.
+// Get the graph renderer.
 var graph = document.getElementById("graph");
 var svgNs = "http://www.w3.org/2000/svg";
 
+// Creates a line on the graph.
+function drawLine(x1, y1, x2, y2, color, width, dashes)
+{
+	var line = document.createElementNS(svgNs, "line");
+
+	line.setAttribute("x1", x1);
+	line.setAttribute("y1", y1);
+	line.setAttribute("x2", x2);
+	line.setAttribute("y2", y2);
+	line.setAttribute("stroke", color);
+	line.setAttribute("stroke-width", width);
+	line.setAttribute("stroke-dasharray", dashes);
+
+	graph.appendChild(line);
+}
+
+// Set the dimensions
 var width = 3000;
 var height = 900;
-
 graph.setAttribute('width', width);
 graph.setAttribute('height', height);
 
-data.rankings = data.rankings.sort(function(a, b) {
+// Ensure the rankings are sorted.
+data.rankings = data.rankings.sort(function(a, b)
+{
 	return a.date - b.date;
 });
 
 // Populate a collection containing all the players.
 data.players = {};
-for (var i = 0; i < data.rankings.length; i++)
+data.rankings.forEach(function(ranking)
 {
-	var ranking = data.rankings[i];
-
-	for (var j = 0; j < ranking.ranks.length; j++)
+	ranking.ranks.forEach(function(rank, rankIndex)
 	{
-		var rank = ranking.ranks[j];
-
-		for (var k = 0; k < rank.players.length; k++)
+		rank.players.forEach(function(playerName)
 		{
-			var playerName = rank.players[k];
-
+			// Attempt to find the existing player.
 			var player;
 			if (data.players[playerName])
 			{
@@ -33,132 +46,117 @@ for (var i = 0; i < data.rankings.length; i++)
 			}
 			else
 			{
-				player = {};
+				// Populate a fresh player with empty rankings.
+				player = {
+					teams: []
+				};
 
-				player.teams = [];
-
-				for (var l = 0; l < data.rankings.length; l++)
+				data.rankings.forEach(function()
 				{
 					player.teams.push(null);
-				}
+				});
 
 				data.players[playerName] = player
 			}
 
-			player.teams[j] = rank.team;
-		}
-	}
-}
+			// Put the team into the player's history.
+			player.teams[rankIndex] = rank.team;
+		});
+	});
+});
 
 // Denormalize the rank of each team for every ranking.
-for (var i = 0; i < data.teams.length; i++)
+data.teams.forEach(function(team)
 {
-	// Find the team.
-	var team = data.teams[i];
-
 	// Get their rankings.
 	team.ranks = [];
-	for (var j = 0; j < data.rankings.length; j++)
+	data.rankings.forEach(function(ranking)
 	{
-		// Look for the team in the ranking.
-		var ranking = data.rankings[j];
-
-		var foundRank = ranking.ranks.find(function(rank) {
+		// Add the team's rank, otherwise null.
+		var foundRank = ranking.ranks.find(function(rank)
+		{
 			return rank.team == team.name;
 		});
 
-		if (foundRank)
-		{
-			team.ranks.push(foundRank.position);
-		}
-		else
-		{
-			team.ranks.push(null);
-		}
-	}
-}
+		team.ranks.push(foundRank ? foundRank.position : null);
+	});
+});
 
+// Apply some padding to the graph area so that the points are not pressed up against the side.
 var padding = 50;
 var remainingHeight = height - (padding * 2);
 var remainingWidth = width - (padding * 2);
 
+// Distribute the vertical space between the number of rankings.
 var numberOfRankings = data.rankings.length;
 var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
 
+// Distribute the horizontal space between the number of ranks.
 var numberOfRanks = data.rankings[0].ranks.length;
 var spacingPerRank = remainingHeight / (numberOfRanks - 1);
 
-// Draw gridlines
-for (var i = 0; i < data.rankings.length; i++)
-{
-	var xPosition = (i * spacingPerRanking) + padding;
+// Draw vertical gridlines.
+data.rankings.forEach(function(ranking, rankingIndex)
+{ 
+	var xPosition = (rankingIndex * spacingPerRanking) + padding;
 
-	var line = document.createElementNS(svgNs, "line");
-	line.setAttribute("x1", xPosition);
-	line.setAttribute("y1", 0);
-	line.setAttribute("x2", xPosition);
-	line.setAttribute("y2", height);
-	line.setAttribute("stroke", "grey");
-	line.setAttribute("stroke-width", 1);
-	line.setAttribute("stroke-dasharray", "5, 5");
-	graph.appendChild(line);
-}
+	drawLine(xPosition, 0, xPosition, height, "grey", 1, "5, 5");
+});
 
-// Draw gridlines
-for (var i = 0; i < data.rankings[0].ranks.length; i++)
-{
-	var yPosition = (i * spacingPerRank) + padding;
+// Draw horizontal gridlines.
+data.rankings[0].ranks.forEach(function(ranking, rankingIndex)
+{ 
+	var yPosition = (rankingIndex * spacingPerRank) + padding;
 
-	var line = document.createElementNS(svgNs, "line");
-	line.setAttribute("x1", 0);
-	line.setAttribute("y1", yPosition);
-	line.setAttribute("x2", width);
-	line.setAttribute("y2", yPosition);
-	line.setAttribute("stroke", "grey");
-	line.setAttribute("stroke-width", 1);
-	line.setAttribute("stroke-dasharray", "5, 5");
-	graph.appendChild(line);
-}
+	drawLine(0, yPosition, width, yPosition, "grey", 1, "5, 5");
+});
 
 // Draw team series.
-for (var i = 0; i < data.teams.length; i++)
+data.teams.forEach(function(team)
 {
-	var team = data.teams[i];
+	function getXPosition(rankIndex)
+	{
+		return (rankIndex * spacingPerRanking) + padding;
+	}
 
+	function getYPosition(rankIndex)
+	{
+		// We might be pointing to a ranking which doesn't exist.
+		// Duplicate the ranking to keep a flat line at the graph's edges.
+		rankIndex = Math.min(Math.max(rankIndex, 0), numberOfRankings - 1);
+
+		// Find the rank at the given rankings.
+		var rank = team.ranks[rankIndex];
+
+		// If there was no rank then put the team off the bottom.
+		rank = rank === null ? numberOfRanks + 1 : rank;
+
+		// Decrement the rankings so that it is 0-based rather than 1-based.
+		rank = rank - 1;
+
+		return (rank * spacingPerRank) + padding;
+	}
+
+	// Iterate through the gaps on either side of the rankings.
 	for (var j = 0; j < (numberOfRankings + 1); j++)
 	{
+		// Find the index before and after the gap.
 		var rankIndexBefore = j - 1;
 		var rankIndexAfter = j;
 
-		if (rankIndexBefore < 0)
-		{
-			rankIndexBefore = rankIndexAfter;
-		}
-		else if (rankIndexAfter >= numberOfRankings)
-		{
-			rankIndexAfter = rankIndexBefore;
-		}
+		// Calculate the y position before and after the transition.
+		var yPositionBefore = getYPosition(rankIndexBefore);
+		var yPositionAfter = getYPosition(rankIndexAfter);
 
-		var rankBefore = team.ranks[rankIndexBefore];
-		var rankAfter = team.ranks[rankIndexAfter];
+		// Calculate the y position before and after the transition.
+		var xPositionBefore = getXPosition(rankIndexBefore);
+		var xPositionAfter = getXPosition(rankIndexAfter);
 
-		if (rankBefore === null)
-		{
-			rankBefore = numberOfRanks + 1;
-		}
-		if (rankAfter === null)
-		{
-			rankAfter = numberOfRanks + 1;
-		}
-
-		yPositionBefore = ((rankBefore - 1) * spacingPerRank) + padding;
-		yPositionAfter = ((rankAfter - 1) * spacingPerRank) + padding;
-
-		var xPositionBefore = ((j - 1) * spacingPerRanking) + padding;
-		var xPositionAfter = (j * spacingPerRanking) + padding;
-
+		// Calculate how to place the curve anchor points.
 		var curveSoftness = spacingPerRanking * 0.75;
 
+		// Create the path definition.
+		// TODO: Use one single path per team.
 		var pathDefinition = "M" + xPositionBefore + " "
 		pathDefinition += yPositionBefore + " ";
 		pathDefinition += "C ";
@@ -169,8 +167,10 @@ for (var i = 0; i < data.teams.length; i++)
 		pathDefinition += xPositionAfter + " ";
 		pathDefinition += yPositionAfter;
 
+		// Create a safe team name to use in CSS/HTML identifiers.
 		var safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_")
 
+		// Create the curve element.
 		var line = document.createElementNS(svgNs, "path");
 		line.setAttribute("d", pathDefinition);
 		line.setAttribute("stroke", team.color);
@@ -182,16 +182,18 @@ for (var i = 0; i < data.teams.length; i++)
 		line.setAttribute("onmouseout", "handleMouseOut(\"" + safeTeamName + "\");");
 		graph.appendChild(line);
 	}
-}
+});
 
-// Fade the bottom to black.
+// Prepare a gradient for the bottom of the graph to fade to black.
 var gradientHeight = padding;
 var gradientTop = height - gradientHeight;
 var gradientBottom = height;
 
+// Add a definitions section to the graph for gradient declarations.
 var definitions = document.createElementNS(svgNs, "defs");
 graph.appendChild(definitions);
 
+// Add a new gradient to the definitions.
 var gradient = document.createElementNS(svgNs, "linearGradient");
 gradient.setAttribute("id", "bottom");
 gradient.setAttribute("x1", 0);
@@ -200,18 +202,21 @@ gradient.setAttribute("x2", 0);
 gradient.setAttribute("y2", 1);
 definitions.appendChild(gradient);
 
+// Create the transparent gradient stop.
 var topStop = document.createElementNS(svgNs, "stop");
 topStop.setAttribute("offset", "0%");
 topStop.setAttribute("stop-color", "black");
 topStop.setAttribute("stop-opacity", 0);
 gradient.appendChild(topStop);
 
+// Create the solid gradient stop.
 var bottomStop = document.createElementNS(svgNs, "stop");
 bottomStop.setAttribute("offset", "100%");
 bottomStop.setAttribute("stop-color", "black");
 bottomStop.setAttribute("stop-opacity", 1);
 gradient.appendChild(bottomStop);
 
+// Create the rectangle with the gradient applied.
 var gradientArea = document.createElementNS(svgNs, "rect");
 gradientArea.setAttribute("x", 0);
 gradientArea.setAttribute("y", gradientTop);
@@ -220,17 +225,23 @@ gradientArea.setAttribute("height", gradientHeight);
 gradientArea.setAttribute("fill", "url(#bottom)");
 graph.appendChild(gradientArea);
 
-function changeTeamOpacity(teamName, opacity) {
+// Changes the opacity for all paths matching the team name.
+function changeTeamOpacity(teamName, opacity)
+{
 	var teamSeries = document.querySelectorAll(".team-" + teamName);
 	teamSeries.forEach(function(path) {
 		path.setAttribute("stroke-opacity", opacity);
 	});
 }
 
-function handleMouseOver(teamName) {
+// Highlights the specified team's path.
+function handleMouseOver(teamName)
+{
 	changeTeamOpacity(teamName, 1);
 }
 
-function handleMouseOut(teamName) {
+// Lowlights the specified team's path.
+function handleMouseOut(teamName)
+{
 	changeTeamOpacity(teamName, 0.7);
 }
