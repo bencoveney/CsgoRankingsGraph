@@ -18,7 +18,7 @@ function drawLine(x1, y1, x2, y2, color, width, dashes)
 	graph.appendChild(line);
 }
 
-function drawText(string, x, y, color, fontFamily, fontSize, anchor)
+function drawText(string, x, y, rotation, color, fontFamily, fontSize, anchor)
 {
 	var text = document.createElementNS(svgNs, "text");
 
@@ -30,13 +30,14 @@ function drawText(string, x, y, color, fontFamily, fontSize, anchor)
 	text.setAttribute("font-size", fontSize);
 	text.setAttribute("text-anchor", anchor);
 	text.setAttribute("fill", color);
+	text.setAttribute("transform", "rotate(" + rotation + ", " + x + ", " + y + ")");
 
 	graph.appendChild(text);
 }
 
 // Set the dimensions
-var width = 3000;
-var height = 900;
+var width = 2000;
+var height = 500;
 graph.setAttribute('width', width);
 graph.setAttribute('height', height);
 
@@ -102,8 +103,8 @@ data.teams.forEach(function(team)
 var paddingTop = 100;
 var paddingLeft = 50;
 var paddingRight = 50;
-var paddingBottm = 50;
-var remainingHeight = height - paddingTop - paddingBottm;
+var paddingBottom = 50;
+var remainingHeight = height - paddingTop - paddingBottom;
 var remainingWidth = width - paddingLeft - paddingRight;
 
 // Distribute the vertical space between the number of rankings.
@@ -114,13 +115,20 @@ var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
 var numberOfRanks = data.rankings[0].ranks.length;
 var spacingPerRank = remainingHeight / (numberOfRanks - 1);
 
+var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+
 // Draw horizontal gridlines.
 data.rankings.forEach(function(ranking, rankingIndex)
 { 
 	var xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
 
 	drawLine(xPosition, 0, xPosition, height, "darkgrey", 1, "5, 5");
-	drawText(ranking.date.toDateString(), xPosition, 20, "white", "Arial", 12, "middle");
+
+	var dayAndMonth = ranking.date.getDate() + " " + months[ranking.date.getMonth()];
+	var year = ranking.date.getFullYear().toString();
+
+	drawText(dayAndMonth, xPosition, 20, 0, "white", "Arial", 12, "middle");
+	drawText(year, xPosition, 40, 0, "white", "Arial", 12, "middle");
 });
 
 // Draw vertical gridlines.
@@ -130,6 +138,11 @@ data.rankings[0].ranks.forEach(function(ranking, rankingIndex)
 
 	drawLine(0, yPosition, width, yPosition, "grey", 1, "5, 5");
 });
+
+// Declare some opactiy constants.
+var normalOpacity = 0.7;
+var highlightOpacity = 1;
+var lowlightOpacity = 0.2;
 
 // Draw team series.
 data.teams.forEach(function(team)
@@ -198,7 +211,7 @@ data.teams.forEach(function(team)
 		line.setAttribute("stroke", team.color);
 		line.setAttribute("fill", "transparent");
 		line.setAttribute("stroke-width", 10);
-		line.setAttribute("stroke-opacity", 0.7);
+		line.setAttribute("stroke-opacity", normalOpacity);
 		line.setAttribute("class", "team-" + team.safeTeamName);
 		line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
 		line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
@@ -259,11 +272,23 @@ function changeTeamOpacity(teamName, opacity)
 // Highlights the specified team's path.
 function handleMouseOver(teamName)
 {
-	changeTeamOpacity(teamName, 1);
+	console.log("Highlighting " + teamName);
+
+	data.teams.forEach(function(team)
+	{
+		var opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
+		
+		changeTeamOpacity(team.safeTeamName, opacity);
+	});
 }
 
 // Lowlights the specified team's path.
 function handleMouseOut(teamName)
 {
-	changeTeamOpacity(teamName, 0.7);
+	console.log("Lowlighting " + teamName);
+
+	data.teams.forEach(function(team)
+	{
+		changeTeamOpacity(team.safeTeamName, normalOpacity);
+	});
 }
