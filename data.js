@@ -1,6 +1,61 @@
 var data = {
 	rankings: [
 		{
+			date: new Date("October 24, 2016"),
+			ranks: [
+				{
+					position: 1,
+					team: "Virtus.pro",
+					players: [ "TaZ", "NEO", "pashaBiceps", "Snax", "byali" ]
+				},
+				{
+					position: 2,
+					team: "dignitas",
+					players: [ "RUBINO", "cajunb", "MSL", "Magiskb0Y", "k0nfig" ]
+				},
+				{
+					position: 3,
+					team: "SK",
+					players: [ "fnx", "FalleN", "fer", "coldzera", "TACO" ]
+				},
+				{
+					position: 4,
+					team: "Natus Vincere",
+					players: [ "Edward", "GuardiaN", "seized", "flamie", "s1mple" ]
+				},
+				{
+					position: 5,
+					team: "G2",
+					players: [ "shox", "RpK", "SmithZz", "ScreaM", "bodyy" ]
+				},
+				{
+					position: 6,
+					team: "NiP",
+					players: [ "f0rest", "GeT_RiGhT", "Xizt", "friberg", "pyth" ]
+				},
+				{
+					position: 7,
+					team: "Cloud9",
+					players: [ "n0thing", "Skadoodle", "shroud", "autimatic", "Stewie2K" ]
+				},
+				{
+					position: 8,
+					team: "Liquid",
+					players: [ "Hiko", "Pimp", "nitr0", "jdm64", "EliGE" ]
+				},
+				{
+					position: 9,
+					team: "fnatic",
+					players: [ "olofmeister", "dennis", "wenton", "twist", "KRIMZ" ]
+				},
+				{
+					position: 10,
+					team: "EnVyUs",
+					players: [ "SIXER", "kennyS", "NBK-", "apEX", "Happy" ]
+				}
+			]
+		},
+		{
 			date: new Date("October 17, 2016"),
 			ranks: [
 				{
@@ -209,7 +264,7 @@ var data = {
 					players: [ "karrigan", "Xyp9x", "dupreeh", "device", "Kjaerbye" ]
 				},
 				{
-					position: 8,
+					position: 9,
 					team: "GODSENT",
 					players: [ "pronax", "flusha", "znajder", "JW", "KRIMZ" ]
 				},
@@ -1158,19 +1213,19 @@ var data = {
 	],
 	teams: [
 		{ name: "Virtus.pro", color: "#F36801" },
-		{ name: "SK", color: "#001B65" },
+		{ name: "SK", color: "#001B65", textColor: "#2D498E" },
 		{ name: "Natus Vincere", color: "#FEE821" },
 		{ name: "NiP", color: "#A98C66" },
 		{ name: "dignitas", color: "#F8C700" },
 		{ name: "Cloud9", color: "#1D9DD8" },
-		{ name: "G2", color: "#6A6A6A" },
-		{ name: "Liquid", color: "#253E77" },
-		{ name: "EnVyUs", color: "#0B1D4D" },
+		{ name: "G2", color: "#A8A8A8" },
+		{ name: "Liquid", color: "#253E77", textColor: "#5B76AF" },
+		{ name: "EnVyUs", color: "#0B1D4D", textColor: "#576DA5" },
 		{ name: "GODSENT", color: "#F5C92E" },
 		{ name: "Astralis", color: "#EF3742" },
 		{ name: "Immortals", color: "#01B2AA" },
 		{ name: "Heroic", color: "#3EB243" },
-		{ name: "mousesports", color: "#B11237" },
+		{ name: "mousesports", color: "#B11237", textColor: "#C12E50" },
 		{ name: "fnatic", color: "#F19E33" },
 		{ name: "Luminosity", color: "#0AA6C4" }
 	]

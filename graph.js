@@ -18,7 +18,7 @@ function drawLine(x1, y1, x2, y2, color, width, dashes)
 	graph.appendChild(line);
 }
 
-function drawText(string, x, y, rotation, color, fontFamily, fontSize, anchor)
+function drawText(string, x, y, color, fontSize, className, opacity)
 {
 	var text = document.createElementNS(svgNs, "text");
 
@@ -26,18 +26,19 @@ function drawText(string, x, y, rotation, color, fontFamily, fontSize, anchor)
 
 	text.setAttribute("x", x);
 	text.setAttribute("y", y);
-	text.setAttribute("font-family", fontFamily);
+	text.setAttribute("font-family", "Arial");
 	text.setAttribute("font-size", fontSize);
-	text.setAttribute("text-anchor", anchor);
+	text.setAttribute("text-anchor", "middle");
 	text.setAttribute("fill", color);
-	text.setAttribute("transform", "rotate(" + rotation + ", " + x + ", " + y + ")");
+	text.setAttribute("class", className);
+	text.setAttribute("fill-opacity", opacity);
 
 	graph.appendChild(text);
 }
 
 // Set the dimensions
-var width = 2000;
-var height = 500;
+var width = 2500;
+var height = 700;
 graph.setAttribute('width', width);
 graph.setAttribute('height', height);
 
@@ -122,13 +123,13 @@ data.rankings.forEach(function(ranking, rankingIndex)
 { 
 	var xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
 
-	drawLine(xPosition, 0, xPosition, height, "darkgrey", 1, "5, 5");
+	drawLine(xPosition, 0, xPosition, height, "#333333", 1, "5, 5");
 
 	var dayAndMonth = ranking.date.getDate() + " " + months[ranking.date.getMonth()];
 	var year = ranking.date.getFullYear().toString();
 
-	drawText(dayAndMonth, xPosition, 20, 0, "white", "Arial", 12, "middle");
-	drawText(year, xPosition, 40, 0, "white", "Arial", 12, "middle");
+	drawText(dayAndMonth, xPosition, 20, "white", 12, "", 1);
+	drawText(year, xPosition, 40, "white", 12, "", 1);
 });
 
 // Draw vertical gridlines.
@@ -136,25 +137,19 @@ data.rankings[0].ranks.forEach(function(ranking, rankingIndex)
 { 
 	var yPosition = (rankingIndex * spacingPerRank) + paddingTop;
 
-	drawLine(0, yPosition, width, yPosition, "grey", 1, "5, 5");
+	drawLine(0, yPosition, width, yPosition, "#333333", 1, "5, 5");
 });
 
 // Declare some opactiy constants.
-var normalOpacity = 0.7;
+var normalOpacity = 0.5;
 var highlightOpacity = 1;
 var lowlightOpacity = 0.2;
 
 // Draw team series.
 data.teams.forEach(function(team)
 {
-	// Calculate the line's x position at the given ranking.
-	function getXPosition(rankIndex)
-	{
-		return (rankIndex * spacingPerRanking) + paddingLeft;
-	}
-
-	// Calculate the line's y position at the given ranking.
-	function getYPosition(rankingIndex)
+	// Gets the rank for a team in the given set of rankings.
+	function getRank(rankingIndex)
 	{
 		// We might be pointing to a ranking which doesn't exist.
 		// Duplicate the ranking to keep a flat line at the graph's edges.
@@ -164,13 +159,26 @@ data.teams.forEach(function(team)
 		var rank = team.ranks[rankingIndex];
 
 		// If there was no rank then put the team off the bottom.
-		rank = rank === null ? numberOfRanks + 1 : rank;
+		return rank === null ? numberOfRanks + 1 : rank;
+	}
 
+	// Calculate the line's x position at the given ranking.
+	function getXPosition(rankIndex)
+	{
+		return (rankIndex * spacingPerRanking) + paddingLeft;
+	}
+
+	// Calculate the line's y position at the given ranking.
+	function getYPosition(rank)
+	{
 		// Decrement the rankings so that it is 0-based rather than 1-based.
 		rank = rank - 1;
 
 		return (rank * spacingPerRank) + paddingTop;
 	}
+
+	// Create a safe team name to use in CSS/HTML identifiers.
+	team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
 
 	// Iterate through the gaps on either side of the rankings.
 	for (var j = 0; j < (numberOfRankings + 1); j++)
@@ -182,13 +190,25 @@ data.teams.forEach(function(team)
 		// Calculate how to place the curve anchor points.
 		var curveSoftness = spacingPerRanking * 0.75;
 
+		var rankBefore = getRank(rankingIndexBefore);
+		var rankAfter = getRank(rankingIndexAfter);
+
 		// Calculate the y position before and after the transition.
-		var yPositionBefore = getYPosition(rankingIndexBefore);
-		var yPositionAfter = getYPosition(rankingIndexAfter);
+		var yPositionBefore = getYPosition(rankBefore);
+		var yPositionAfter = getYPosition(rankAfter);
 
 		// Calculate the y position before and after the transition.
 		var xPositionBefore = getXPosition(rankingIndexBefore);
 		var xPositionAfter = getXPosition(rankingIndexAfter);
+
+		if(j < numberOfRankings && rankAfter <= numberOfRanks)
+		{
+			var labelClass = "team-" + team.safeTeamName;
+			var labelText = team.name + " (" + rankAfter + ")";
+			var labelColor = team.textColor || team.color;
+
+			drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
+		}
 
 		// Add the curve.
 		// TODO: Create long lines for big flat gaps.
@@ -201,9 +221,6 @@ data.teams.forEach(function(team)
 		pathDefinition += yPositionAfter + ", ";
 		pathDefinition += xPositionAfter + " ";
 		pathDefinition += yPositionAfter;
-
-		// Create a safe team name to use in CSS/HTML identifiers.
-		team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
 
 		// Create the curve element.
 		var line = document.createElementNS(svgNs, "path");
@@ -266,6 +283,7 @@ function changeTeamOpacity(teamName, opacity)
 	var teamSeries = document.querySelectorAll(".team-" + teamName);
 	teamSeries.forEach(function(path) {
 		path.setAttribute("stroke-opacity", opacity);
+		path.setAttribute("fill-opacity", opacity);
 	});
 }
 
@@ -291,4 +309,9 @@ function handleMouseOut(teamName)
 	{
 		changeTeamOpacity(team.safeTeamName, normalOpacity);
 	});
+}
+
+function showTeamLabels()
+{
+
 }
