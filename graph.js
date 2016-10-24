@@ -177,37 +177,33 @@ data.teams.forEach(function(team)
 		var xPositionBefore = getXPosition(rankingIndexBefore);
 		var xPositionAfter = getXPosition(rankingIndexAfter);
 
-		// If there is no existing path then create the starting point.
-		if (!team.pathDefinition) {
-			team.pathDefinition = "M" + xPositionBefore + " "
-			team.pathDefinition += yPositionBefore + " ";
-		}
-
 		// Add the curve.
 		// TODO: Create long lines for big flat gaps.
-		team.pathDefinition += " C ";
-		team.pathDefinition += (xPositionBefore + curveSoftness) + " ";
-		team.pathDefinition += yPositionBefore + ", ";
-		team.pathDefinition += (xPositionAfter - curveSoftness) + " ";
-		team.pathDefinition += yPositionAfter + ", ";
-		team.pathDefinition += xPositionAfter + " ";
-		team.pathDefinition += yPositionAfter;
+		var pathDefinition = "M" + xPositionBefore + " "
+		pathDefinition += yPositionBefore + " ";
+		pathDefinition += " C ";
+		pathDefinition += (xPositionBefore + curveSoftness) + " ";
+		pathDefinition += yPositionBefore + ", ";
+		pathDefinition += (xPositionAfter - curveSoftness) + " ";
+		pathDefinition += yPositionAfter + ", ";
+		pathDefinition += xPositionAfter + " ";
+		pathDefinition += yPositionAfter;
+
+		// Create a safe team name to use in CSS/HTML identifiers.
+		team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
+
+		// Create the curve element.
+		var line = document.createElementNS(svgNs, "path");
+		line.setAttribute("d", pathDefinition);
+		line.setAttribute("stroke", team.color);
+		line.setAttribute("fill", "transparent");
+		line.setAttribute("stroke-width", 10);
+		line.setAttribute("stroke-opacity", 0.7);
+		line.setAttribute("class", "team-" + team.safeTeamName);
+		line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
+		line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+		graph.appendChild(line);
 	}
-
-	// Create a safe team name to use in CSS/HTML identifiers.
-	team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
-
-	// Create the curve element.
-	var line = document.createElementNS(svgNs, "path");
-	line.setAttribute("d", team.pathDefinition);
-	line.setAttribute("stroke", team.color);
-	line.setAttribute("fill", "transparent");
-	line.setAttribute("stroke-width", 10);
-	line.setAttribute("stroke-opacity", 0.7);
-	line.setAttribute("class", "team-" + team.safeTeamName);
-	line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
-	line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
-	graph.appendChild(line);
 });
 
 // Prepare a gradient for the bottom of the graph to fade to black.
