@@ -145,38 +145,191 @@ var normalOpacity = 0.5;
 var highlightOpacity = 1;
 var lowlightOpacity = 0.2;
 
+// Calculate how to place the curve anchor points.
+var curveSoftness = spacingPerRanking * 0.75;
+var curveWidth = 10
+var curveFade = spacingPerRanking * 0.25;
+
+// Gets the rank for a team in the given set of rankings.
+function getRank(team, rankingIndex)
+{
+	// We might be pointing to a ranking which doesn't exist.
+	// Duplicate the ranking to keep a flat line at the graph's edges.
+	rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
+
+	// Find the rank at the given rankings.
+	return team.ranks[rankingIndex];
+}
+
+// Calculate the line's x position at the given ranking.
+function getXPosition(rankIndex)
+{
+	return (rankIndex * spacingPerRanking) + paddingLeft;
+}
+
+// Calculate the line's y position at the given ranking.
+function getYPosition(rank)
+{
+	// Decrement the rankings so that it is 0-based rather than 1-based.
+	rank = rank - 1;
+
+	return (rank * spacingPerRank) + paddingTop;
+}
+
+function createLabel(team, rankingIndex, rank)
+{
+	if(rankingIndex < numberOfRankings && rank <= numberOfRanks)
+	{
+		var yPosition = getYPosition(rank);
+		var xPosition = getXPosition(rankingIndex);
+
+		var labelClass = "team-" + team.safeTeamName;
+		var labelText = team.name + " (" + rank + ")";
+		var labelColor = team.textColor || team.color;
+
+		drawText(labelText, xPosition, yPosition - 20, labelColor, "12", labelClass, normalOpacity);
+	}
+}
+
+function createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team)
+{
+	// Calculate the y position before and after the transition.
+	var yPositionBefore = getYPosition(rankBefore);
+	var yPositionAfter = getYPosition(rankAfter);
+
+	// Calculate the y position before and after the transition.
+	var xPositionBefore = getXPosition(rankingIndexBefore);
+	var xPositionAfter = getXPosition(rankingIndexAfter);
+
+	createLabel(team, rankingIndexAfter, rankAfter);
+
+	if(rankingIndexAfter < numberOfRankings && rankAfter <= numberOfRanks)
+	{
+		var labelClass = "team-" + team.safeTeamName;
+		var labelText = team.name + " (" + rankAfter + ")";
+		var labelColor = team.textColor || team.color;
+
+		drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
+	}
+
+	// Add the curve.
+	// TODO: Create long lines for big flat gaps.
+	var pathDefinition = "M" + xPositionBefore + " "
+	pathDefinition += yPositionBefore + " ";
+	pathDefinition += " C ";
+	pathDefinition += (xPositionBefore + curveSoftness) + " ";
+	pathDefinition += yPositionBefore + ", ";
+	pathDefinition += (xPositionAfter - curveSoftness) + " ";
+	pathDefinition += yPositionAfter + ", ";
+	pathDefinition += xPositionAfter + " ";
+	pathDefinition += yPositionAfter;
+
+	// Create the curve element.
+	var line = document.createElementNS(svgNs, "path");
+	line.setAttribute("d", pathDefinition);
+	line.setAttribute("stroke", team.color);
+	line.setAttribute("fill", "transparent");
+	line.setAttribute("stroke-width", curveWidth);
+	line.setAttribute("stroke-opacity", normalOpacity);
+	line.setAttribute("class", "team-" + team.safeTeamName);
+	line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
+	line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+	graph.appendChild(line);
+}
+
+// Add a definitions section to the graph for gradient declarations.
+var definitions = document.createElementNS(svgNs, "defs");
+graph.appendChild(definitions);
+
+function createLinearGradient(id, x1, y1, x2, y2, startColor, startOpacity, stopColor, stopOpacity)
+{
+	// Add a new gradient to the definitions.
+	var gradient = document.createElementNS(svgNs, "linearGradient");
+	gradient.setAttribute("id", id);
+	gradient.setAttribute("x1", x1);
+	gradient.setAttribute("y1", y1);
+	gradient.setAttribute("x2", x2);
+	gradient.setAttribute("y2", y2);
+	definitions.appendChild(gradient);
+
+	// Create the transparent gradient stop.
+	var topStop = document.createElementNS(svgNs, "stop");
+	topStop.setAttribute("offset", "0%");
+	topStop.setAttribute("stop-color", startColor);
+	topStop.setAttribute("stop-opacity", startOpacity);
+	gradient.appendChild(topStop);
+
+	// Create the solid gradient stop.
+	var bottomStop = document.createElementNS(svgNs, "stop");
+	bottomStop.setAttribute("offset", "100%");
+	bottomStop.setAttribute("stop-color", stopColor);
+	bottomStop.setAttribute("stop-opacity", stopOpacity);
+	gradient.appendChild(bottomStop);
+}
+
+function createFadeOut(rankingIndexBefore, rankBefore, team)
+{
+	var yPosition = getYPosition(rankBefore) - (curveWidth / 2);
+	var height = curveWidth;
+
+	// Calculate the y position before and after the transition.
+	var xPosition = getXPosition(rankingIndexBefore);
+	var width = curveFade;
+
+	var gradientName = team.safeTeamName + "_before_" + rankingIndexBefore;
+	createLinearGradient(gradientName, 0, 0, 1, 0, team.color, 1, team.color, 0);
+
+	// Create the rectangle with the gradient applied.
+	// TODO: Create rect function.
+	var rect = document.createElementNS(svgNs, "rect");
+
+	rect.setAttribute("x", xPosition);
+	rect.setAttribute("y", yPosition);
+	rect.setAttribute("width", width);
+	rect.setAttribute("height", height);
+	rect.setAttribute("fill-opacity", normalOpacity);
+	rect.setAttribute("class", "team-" + team.safeTeamName);
+	rect.setAttribute("fill", "url(#" + gradientName + ")");
+	rect.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
+	rect.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+
+	graph.appendChild(rect);
+}
+
+function createFadeIn(rankingIndexAfter, rankAfter, team)
+{
+	createLabel(team, rankingIndexAfter, rankAfter);
+
+	var yPosition = getYPosition(rankAfter) - (curveWidth / 2);
+	var height = curveWidth;
+
+	// Calculate the y position before and after the transition.
+	var xPosition = getXPosition(rankingIndexAfter) - curveFade;
+	var width = curveFade;
+
+	var gradientName = team.safeTeamName + "_after_" + rankingIndexAfter;
+	createLinearGradient(gradientName, 1, 0, 0, 0, team.color, 1, team.color, 0);
+
+	// Create the rectangle with the gradient applied.
+	// TODO: Create rect function.
+	var rect = document.createElementNS(svgNs, "rect");
+
+	rect.setAttribute("x", xPosition);
+	rect.setAttribute("y", yPosition);
+	rect.setAttribute("width", width);
+	rect.setAttribute("height", height);
+	rect.setAttribute("fill-opacity", normalOpacity);
+	rect.setAttribute("class", "team-" + team.safeTeamName);
+	rect.setAttribute("fill", "url(#" + gradientName + ")");
+	rect.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
+	rect.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+
+	graph.appendChild(rect);
+}
+
 // Draw team series.
 data.teams.forEach(function(team)
 {
-	// Gets the rank for a team in the given set of rankings.
-	function getRank(rankingIndex)
-	{
-		// We might be pointing to a ranking which doesn't exist.
-		// Duplicate the ranking to keep a flat line at the graph's edges.
-		rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
-
-		// Find the rank at the given rankings.
-		var rank = team.ranks[rankingIndex];
-
-		// If there was no rank then put the team off the bottom.
-		return rank === null ? numberOfRanks + 1 : rank;
-	}
-
-	// Calculate the line's x position at the given ranking.
-	function getXPosition(rankIndex)
-	{
-		return (rankIndex * spacingPerRanking) + paddingLeft;
-	}
-
-	// Calculate the line's y position at the given ranking.
-	function getYPosition(rank)
-	{
-		// Decrement the rankings so that it is 0-based rather than 1-based.
-		rank = rank - 1;
-
-		return (rank * spacingPerRank) + paddingTop;
-	}
-
 	// Create a safe team name to use in CSS/HTML identifiers.
 	team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
 
@@ -187,52 +340,24 @@ data.teams.forEach(function(team)
 		var rankingIndexBefore = j - 1;
 		var rankingIndexAfter = j;
 
-		// Calculate how to place the curve anchor points.
-		var curveSoftness = spacingPerRanking * 0.75;
+		var rankBefore = getRank(team, rankingIndexBefore);
+		var rankAfter = getRank(team, rankingIndexAfter);
 
-		var rankBefore = getRank(rankingIndexBefore);
-		var rankAfter = getRank(rankingIndexAfter);
-
-		// Calculate the y position before and after the transition.
-		var yPositionBefore = getYPosition(rankBefore);
-		var yPositionAfter = getYPosition(rankAfter);
-
-		// Calculate the y position before and after the transition.
-		var xPositionBefore = getXPosition(rankingIndexBefore);
-		var xPositionAfter = getXPosition(rankingIndexAfter);
-
-		if(j < numberOfRankings && rankAfter <= numberOfRanks)
+		if (rankBefore !== null)
 		{
-			var labelClass = "team-" + team.safeTeamName;
-			var labelText = team.name + " (" + rankAfter + ")";
-			var labelColor = team.textColor || team.color;
-
-			drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
+			if (rankAfter !== null)
+			{
+				createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team);
+			}
+			else
+			{
+				createFadeOut(rankingIndexBefore, rankBefore, team);
+			}
 		}
-
-		// Add the curve.
-		// TODO: Create long lines for big flat gaps.
-		var pathDefinition = "M" + xPositionBefore + " "
-		pathDefinition += yPositionBefore + " ";
-		pathDefinition += " C ";
-		pathDefinition += (xPositionBefore + curveSoftness) + " ";
-		pathDefinition += yPositionBefore + ", ";
-		pathDefinition += (xPositionAfter - curveSoftness) + " ";
-		pathDefinition += yPositionAfter + ", ";
-		pathDefinition += xPositionAfter + " ";
-		pathDefinition += yPositionAfter;
-
-		// Create the curve element.
-		var line = document.createElementNS(svgNs, "path");
-		line.setAttribute("d", pathDefinition);
-		line.setAttribute("stroke", team.color);
-		line.setAttribute("fill", "transparent");
-		line.setAttribute("stroke-width", 10);
-		line.setAttribute("stroke-opacity", normalOpacity);
-		line.setAttribute("class", "team-" + team.safeTeamName);
-		line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
-		line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
-		graph.appendChild(line);
+		else if (rankAfter !== null)
+		{
+			createFadeIn(rankingIndexAfter, rankAfter, team);
+		}
 	}
 });
 
@@ -241,32 +366,7 @@ var gradientHeight = paddingBottom;
 var gradientTop = height - gradientHeight;
 var gradientBottom = height;
 
-// Add a definitions section to the graph for gradient declarations.
-var definitions = document.createElementNS(svgNs, "defs");
-graph.appendChild(definitions);
-
-// Add a new gradient to the definitions.
-var gradient = document.createElementNS(svgNs, "linearGradient");
-gradient.setAttribute("id", "bottom");
-gradient.setAttribute("x1", 0);
-gradient.setAttribute("y1", 0);
-gradient.setAttribute("x2", 0);
-gradient.setAttribute("y2", 1);
-definitions.appendChild(gradient);
-
-// Create the transparent gradient stop.
-var topStop = document.createElementNS(svgNs, "stop");
-topStop.setAttribute("offset", "0%");
-topStop.setAttribute("stop-color", "black");
-topStop.setAttribute("stop-opacity", 0);
-gradient.appendChild(topStop);
-
-// Create the solid gradient stop.
-var bottomStop = document.createElementNS(svgNs, "stop");
-bottomStop.setAttribute("offset", "100%");
-bottomStop.setAttribute("stop-color", "black");
-bottomStop.setAttribute("stop-opacity", 1);
-gradient.appendChild(bottomStop);
+createLinearGradient("bottom", 0, 0, 0, 1, "black", 0, "black", 1);
 
 // Create the rectangle with the gradient applied.
 var gradientArea = document.createElementNS(svgNs, "rect");
@@ -290,8 +390,6 @@ function changeTeamOpacity(teamName, opacity)
 // Highlights the specified team's path.
 function handleMouseOver(teamName)
 {
-	console.log("Highlighting " + teamName);
-
 	data.teams.forEach(function(team)
 	{
 		var opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
@@ -303,15 +401,8 @@ function handleMouseOver(teamName)
 // Lowlights the specified team's path.
 function handleMouseOut(teamName)
 {
-	console.log("Lowlighting " + teamName);
-
 	data.teams.forEach(function(team)
 	{
 		changeTeamOpacity(team.safeTeamName, normalOpacity);
 	});
-}
-
-function showTeamLabels()
-{
-
 }
