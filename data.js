@@ -1213,7 +1213,6 @@ var data = {
 	],
 	teams: [
 		{ name: "Virtus.pro", color: "#F36801" },
-		//{ name: "SK", color: "#001B65", textColor: "#2D498E" },
 		{ name: "SK", color: "#2D498E" },
 		{ name: "Natus Vincere", color: "#FEE821" },
 		{ name: "NiP", color: "#A98C66" },

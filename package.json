@@ -1,0 +1,24 @@
+{
+  "name": "csgo-ranking-graph",
+  "version": "1.0.0",
+  "description": "Ranking graph for CSGO teams.",
+  "main": "loader.js",
+  "dependencies": {},
+  "devDependencies": {
+    "jquery": "^3.1.1",
+    "jsdom": "^9.8.3"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bencoveney/CsgoRankingsGraph.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bencoveney/CsgoRankingsGraph/issues"
+  },
+  "homepage": "https://github.com/bencoveney/CsgoRankingsGraph#readme"
+}
