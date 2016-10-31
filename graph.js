@@ -37,10 +37,16 @@ function drawText(string, x, y, color, fontSize, className, opacity)
 }
 
 // Set the dimensions
-var width = 2500;
-var height = 700;
+var width = 7000;
+var height = 1800;
 graph.setAttribute('width', width);
 graph.setAttribute('height', height);
+
+// Parse dates
+data.rankings.forEach(function(ranking)
+{
+	ranking.date = new Date(ranking.date);
+});
 
 // Ensure the rankings are sorted.
 data.rankings = data.rankings.sort(function(a, b)
@@ -49,18 +55,19 @@ data.rankings = data.rankings.sort(function(a, b)
 });
 
 // Populate a collection containing all the players.
+// Not currently used.
 data.players = {};
 data.rankings.forEach(function(ranking)
 {
 	ranking.ranks.forEach(function(rank, rankIndex)
 	{
-		rank.players.forEach(function(playerName)
+		rank.players.forEach(function(player)
 		{
 			// Attempt to find the existing player.
 			var player;
-			if (data.players[playerName])
+			if (data.players[player.player])
 			{
-				player = data.players[playerName];
+				player = data.players[player.player];
 			}
 			else
 			{
@@ -74,7 +81,7 @@ data.rankings.forEach(function(ranking)
 					player.teams.push(null);
 				});
 
-				data.players[playerName] = player
+				data.players[player.player] = player
 			}
 
 			// Put the team into the player's history.
@@ -113,7 +120,7 @@ var numberOfRankings = data.rankings.length;
 var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
 
 // Distribute the horizontal space between the number of ranks.
-var numberOfRanks = data.rankings[0].ranks.length;
+var numberOfRanks = data.rankings[numberOfRankings - 1].ranks.length;
 var spacingPerRank = remainingHeight / (numberOfRanks - 1);
 
 var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
@@ -318,7 +325,6 @@ function createFadeIn(rankingIndexAfter, rankAfter, team)
 	rect.setAttribute("y", yPosition);
 	rect.setAttribute("width", width);
 	rect.setAttribute("height", height);
-	rect.setAttribute("fill-opacity", normalOpacity);
 	rect.setAttribute("class", "team-" + team.safeTeamName);
 	rect.setAttribute("fill", "url(#" + gradientName + ")");
 	rect.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
@@ -331,7 +337,7 @@ function createFadeIn(rankingIndexAfter, rankAfter, team)
 data.teams.forEach(function(team)
 {
 	// Create a safe team name to use in CSS/HTML identifiers.
-	team.safeTeamName = team.name.replace(new RegExp("[\. ]", "g"), "_");
+	team.safeTeamName = team.name.replace(new RegExp("[\. ?!,()/\\\|<>&$%^#*;@+-]", "g"), "_");
 
 	// Iterate through the gaps on either side of the rankings.
 	for (var j = 0; j < (numberOfRankings + 1); j++)

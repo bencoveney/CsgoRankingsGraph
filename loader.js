@@ -15,7 +15,7 @@ var months = [
 	"october",
 	"november",
 	"december"
-]
+];
 
 var ratingDates = [
 	{ year: 2016, month: 10, day: 24 },
@@ -87,7 +87,7 @@ var ratingDates = [
 	{ year: 2015, month: 10, day: 12 },
 	{ year: 2015, month: 10, day: 5 },
 	{ year: 2015, month: 10, day: 1 },
-]
+];
 
 var data = {
 	rankings: [],
@@ -99,15 +99,40 @@ var data = {
 		{ name: "dignitas", color: "#F8C700" },
 		{ name: "Cloud9", color: "#1D9DD8" },
 		{ name: "G2", color: "#A8A8A8" },
-		{ name: "Liquid", color: "#253E77", textColor: "#5B76AF" },
-		{ name: "EnVyUs", color: "#0B1D4D", textColor: "#576DA5" },
+		{ name: "Liquid", color: "#5B76AF" },
+		{ name: "EnVyUs", color: "#576DA5" },
 		{ name: "GODSENT", color: "#F5C92E" },
 		{ name: "Astralis", color: "#EF3742" },
 		{ name: "Immortals", color: "#01B2AA" },
 		{ name: "Heroic", color: "#3EB243" },
-		{ name: "mousesports", color: "#B11237", textColor: "#C12E50" },
+		{ name: "mousesports", color: "#C12E50" },
 		{ name: "fnatic", color: "#F19E33" },
-		{ name: "Luminosity", color: "#0AA6C4" }
+		{ name: "TSM", color: "#EFEFEF" },
+		{ name: "CLG", color: "#008FEA" },
+		{ name: "FlipSid3", color: "#73EB2A" },
+		{ name: "Titan", color: "#80B8C7" },
+		{ name: "E-frag.net", color: "#4383BF" },
+		{ name: "HellRaisers", color: "#EC1C23" },
+		{ name: "Renegades", color: "#87202A" },
+		{ name: "Vexed", color: "#CD2029" },
+		{ name: "CSGL", color: "#DB8328" },
+		{ name: "Immunity", color: "#C9C9CA" },
+		{ name: "Conquest", color: "#D08685" },
+		{ name: "?", color: "#EFEFEF" },
+		{ name: "OpTic", color: "#98D106" },
+		{ name: "ex-Titan", color: "#80B8C7" },
+		{ name: "FaZe", color: "#E91E25" },
+		{ name: "Tempo Storm", color: "#3373BA" },
+		{ name: "Gambit", color: "#F00815" },
+		{ name: "NRG", color: "#ED2B7E" },
+		{ name: "AGG", color: "#EA001C" },
+		{ name: "Selfless", color: "#D79153" },
+		{ name: "TyLoo", color: "#D53A31" },
+		{ name: "Epsilon", color: "#0A5499" },
+		{ name: "X", color: "#EFEFEF" },
+		{ name: "Space Soldiers", color: "#F7E300" },
+		{ name: "MK", color: "#027C03" },
+		{ name: "VG.CyberZen", color: "#BC3728" },
 	]
 };
 

@@ -43570,13 +43570,11 @@ var data = {
 		},
 		{
 			"name": "Liquid",
-			"color": "#253E77",
-			"textColor": "#5B76AF"
+			"color": "#5B76AF"
 		},
 		{
 			"name": "EnVyUs",
-			"color": "#0B1D4D",
-			"textColor": "#576DA5"
+			"color": "#576DA5"
 		},
 		{
 			"name": "GODSENT",
@@ -43596,59 +43594,118 @@ var data = {
 		},
 		{
 			"name": "mousesports",
-			"color": "#B11237",
-			"textColor": "#C12E50"
+			"color": "#C12E50"
 		},
 		{
 			"name": "fnatic",
 			"color": "#F19E33"
 		},
 		{
-			"name": "Luminosity",
-			"color": "#0AA6C4"
-		},
-		{
 			"name": "TSM",
-			"color": "white"
+			"color": "#EFEFEF"
 		},
 		{
 			"name": "CLG",
-			"color": "white"
+			"color": "#008FEA"
 		},
 		{
 			"name": "FlipSid3",
-			"color": "white"
+			"color": "#73EB2A"
 		},
 		{
 			"name": "Titan",
-			"color": "white"
+			"color": "#80B8C7"
 		},
 		{
 			"name": "E-frag.net",
-			"color": "white"
+			"color": "#4383BF"
 		},
 		{
 			"name": "HellRaisers",
-			"color": "white"
+			"color": "#EC1C23"
 		},
 		{
 			"name": "Renegades",
-			"color": "white"
+			"color": "#87202A"
 		},
 		{
 			"name": "Vexed",
-			"color": "white"
+			"color": "#CD2029"
 		},
 		{
 			"name": "CSGL",
-			"color": "white"
+			"color": "#DB8328"
 		},
 		{
 			"name": "Immunity",
-			"color": "white"
+			"color": "#C9C9CA"
 		},
 		{
 			"name": "Conquest",
+			"color": "#D08685"
+		},
+		{
+			"name": "?",
+			"color": "#EFEFEF"
+		},
+		{
+			"name": "OpTic",
+			"color": "#98D106"
+		},
+		{
+			"name": "ex-Titan",
+			"color": "#80B8C7"
+		},
+		{
+			"name": "FaZe",
+			"color": "#E91E25"
+		},
+		{
+			"name": "Tempo Storm",
+			"color": "#3373BA"
+		},
+		{
+			"name": "Gambit",
+			"color": "#F00815"
+		},
+		{
+			"name": "NRG",
+			"color": "#ED2B7E"
+		},
+		{
+			"name": "AGG",
+			"color": "#EA001C"
+		},
+		{
+			"name": "Selfless",
+			"color": "#D79153"
+		},
+		{
+			"name": "TyLoo",
+			"color": "#D53A31"
+		},
+		{
+			"name": "Epsilon",
+			"color": "#0A5499"
+		},
+		{
+			"name": "X",
+			"color": "#EFEFEF"
+		},
+		{
+			"name": "Space Soldiers",
+			"color": "#F7E300"
+		},
+		{
+			"name": "MK",
+			"color": "#027C03"
+		},
+		{
+			"name": "VG.CyberZen",
+			"color": "#BC3728"
+		},
+		{
+			"name": "Luminosity",
 			"color": "white"
 		},
 		{
@@ -43688,14 +43745,6 @@ var data = {
 			"color": "white"
 		},
 		{
-			"name": "?",
-			"color": "white"
-		},
-		{
-			"name": "OpTic",
-			"color": "white"
-		},
-		{
 			"name": "Splyce",
 			"color": "white"
 		},
@@ -43713,18 +43762,6 @@ var data = {
 		},
 		{
 			"name": "EZG",
-			"color": "white"
-		},
-		{
-			"name": "FaZe",
-			"color": "white"
-		},
-		{
-			"name": "ex-Titan",
-			"color": "white"
-		},
-		{
-			"name": "Gambit",
 			"color": "white"
 		},
 		{
@@ -43812,10 +43849,6 @@ var data = {
 			"color": "white"
 		},
 		{
-			"name": "Tempo Storm",
-			"color": "white"
-		},
-		{
 			"name": "gBots",
 			"color": "white"
 		},
@@ -43828,27 +43861,11 @@ var data = {
 			"color": "white"
 		},
 		{
-			"name": "Selfless",
-			"color": "white"
-		},
-		{
 			"name": "Ancient",
 			"color": "white"
 		},
 		{
 			"name": "noKappa",
-			"color": "white"
-		},
-		{
-			"name": "AGG",
-			"color": "white"
-		},
-		{
-			"name": "NRG",
-			"color": "white"
-		},
-		{
-			"name": "Space Soldiers",
 			"color": "white"
 		},
 		{
@@ -43864,19 +43881,7 @@ var data = {
 			"color": "white"
 		},
 		{
-			"name": "TyLoo",
-			"color": "white"
-		},
-		{
-			"name": "MK",
-			"color": "white"
-		},
-		{
 			"name": "Orbit",
-			"color": "white"
-		},
-		{
-			"name": "Epsilon",
 			"color": "white"
 		},
 		{
@@ -43888,19 +43893,11 @@ var data = {
 			"color": "white"
 		},
 		{
-			"name": "X",
-			"color": "white"
-		},
-		{
 			"name": "Spirit",
 			"color": "white"
 		},
 		{
 			"name": "Echo Fox",
-			"color": "white"
-		},
-		{
-			"name": "VG.CyberZen",
 			"color": "white"
 		},
 		{
