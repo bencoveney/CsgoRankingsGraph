@@ -18,6 +18,8 @@ var months = [
 ];
 
 var ratingDates = [
+	{ year: 2016, month: 11, day: 1 },
+
 	{ year: 2016, month: 10, day: 24 },
 	{ year: 2016, month: 10, day: 17 },
 	{ year: 2016, month: 10, day: 10 },
@@ -133,6 +135,58 @@ var data = {
 		{ name: "Space Soldiers", color: "#F7E300" },
 		{ name: "MK", color: "#027C03" },
 		{ name: "VG.CyberZen", color: "#BC3728" },
+		{ name: "Luminosity", color: "#0A9FBD" },
+		{ name: "Winterfox", color: "#505283" },
+		{ name: "compLexity", color: "#870000" },
+		{ name: "Enemy", color: "#CC0000" },
+		{ name: "Method", color: "#F6872B" },
+		{ name: "Games Academy", color: "#71B6E1" },
+		{ name: "SKDC", color: "#79CED3" },
+		{ name: "Torqued", color: "#ED6B1D" },
+		{ name: "Nexus", color: "#A81C1F" },
+		{ name: "CLG Red", color: "#DC0031" },
+		{ name: "Splyce", color: "#EDBA00" },
+		{ name: "CyberZen", color: "#BC3728" },
+		{ name: "Leader-1", color: "#E60108" },
+		{ name: "Obey.Alliance", color: "#4CB0C8" },
+		{ name: "EZG", color: "#105CA0" },
+		{ name: "Arcade", color: "#A61280" },
+		{ name: "Rebels", color: "#DE0005" },
+		{ name: "eXplosive", color: "#FED54F" },
+		{ name: "Quest", color: "#FFAE64" },
+		{ name: "Fluffy Gangsters", color: "#3C66AE" },
+		{ name: "Binary Dragons", color: "#E10012" },
+		{ name: "LDLC White", color: "#EFEFEF" },
+		{ name: "PENTA", color: "#EFEFEF" },
+		{ name: "TheMongolz", color: "#CDCDCD" },
+		{ name: "PixelFire", color: "#E46016" },
+		{ name: "Chiefs", color: "#3996D9" },
+		{ name: "DenDD", color: "#EFEFEF" },
+		{ name: "Lemondogs", color: "#FFD900" },
+		{ name: "MVP.karnal", color: "#CF0103" },
+		{ name: "ENCE", color: "#865D31" },
+		{ name: "Orgless", color: "#EFEFEF" },
+		{ name: "CPH Wolves", color: "#FCBA2F" },
+		{ name: "RCTIC", color: "#00B5E7" },
+		{ name: "LDLC Blue", color: "#0099CF" },
+		{ name: "Epiphany Bolt", color: "#E8CC4F" },
+		{ name: "Millenium", color: "#9968FF" },
+		{ name: "gBots", color: "#3D7BB8" },
+		{ name: "x6tence", color: "#FD6200" },
+		{ name: "ALTERNATE aTTaX", color: "#E30714" },
+		{ name: "Ancient", color: "#EFEFEF" },
+		{ name: "Preparation", color: "#FF00CA" },
+		{ name: "Publiclir.se", color: "#47D3E2" },
+		{ name: "Escape", color: "#FF8B1C" },
+		{ name: "Dobry&Gaming", color: "#FFF382" },
+		{ name: "Orbit", color: "#28B0C8" },
+		{ name: "Kinguin", color: "#FE9901" },
+		{ name: "X", color: "#EFEFEF" },
+		{ name: "Spirit", color: "#067D47" },
+		{ name: "Echo Fox", color: "#E07026" },
+		{ name: "Crowns", color: "#E3DB9A" },
+		{ name: "iGame.com", color: "#39A2DB" },
+		{ name: "Platinium", color: "#AD0C1D" }
 	]
 };
 
@@ -199,6 +253,7 @@ function loadPageLoop(files)
 				{
 					var playerName = $(this).text().trim();
 					var playerUrl = "http://www.hltv.org" + $(this).attr("href");
+					var playerNationality = $(this).find("img").attr("src").match(/\/([a-zA-Z]+).gif$/)[1];
 
 					console.log(playerUrl);
 
@@ -210,10 +265,11 @@ function loadPageLoop(files)
 
 					rank.players.push({
 						player: playerName,
-						link: playerUrl
+						link: playerUrl,
+						nationality: playerNationality
 					})
 
-					rosterList += playerName + ", ";
+					rosterList += playerName + " (" + playerNationality + "), ";
 				});
 
 				if (!data.teams.some(function(team) {
