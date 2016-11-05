@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "module": "es2015",
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es6"
+  },
+  "files": [
+    "typings/index.d.ts",
+    "graph.ts",
+    "loader.ts"
+  ]
+}
