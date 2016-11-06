@@ -2,6 +2,8 @@ var fs = require("fs");
 var http = require("http");
 var jsdom = require("jsdom");
 
+var console = (require("better-console") as Console);
+
 var months: string[] = [
   "january",
   "february",
@@ -17,6 +19,7 @@ var months: string[] = [
   "december"
 ];
 
+// Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 var ratingDates: RatingDate[] = [
   { year: 2016, month: 11, day: 1 },
@@ -92,6 +95,103 @@ var ratingDates: RatingDate[] = [
   { year: 2015, month: 10, day: 1 },
 ];
 
+// Provide teams with a best-guessed colour (from their logo) for graph lines.
+var teamColors: { [teamName: string]: string } = {
+  "Virtus.pro": "#F36801",
+  "SK": "#2D498E",
+  "Natus Vincere": "#FEE821",
+  "NiP": "#A98C66",
+  "dignitas": "#F8C700",
+  "Cloud9": "#1D9DD8",
+  "G2": "#A8A8A8",
+  "Liquid": "#5B76AF",
+  "EnVyUs": "#576DA5",
+  "GODSENT": "#F5C92E",
+  "Astralis": "#EF3742",
+  "Immortals": "#01B2AA",
+  "Heroic": "#3EB243",
+  "mousesports": "#C12E50",
+  "fnatic": "#F19E33",
+  "TSM": "#EFEFEF",
+  "CLG": "#008FEA",
+  "FlipSid3": "#73EB2A",
+  "Titan": "#80B8C7",
+  "E-frag.net": "#4383BF",
+  "HellRaisers": "#EC1C23",
+  "Renegades": "#87202A",
+  "Vexed": "#CD2029",
+  "CSGL": "#DB8328",
+  "Immunity": "#C9C9CA",
+  "Conquest": "#D08685",
+  "?": "#EFEFEF",
+  "OpTic": "#98D106",
+  "ex-Titan": "#80B8C7",
+  "FaZe": "#E91E25",
+  "Tempo Storm": "#3373BA",
+  "Gambit": "#F00815",
+  "NRG": "#ED2B7E",
+  "AGG": "#EA001C",
+  "Selfless": "#D79153",
+  "TyLoo": "#D53A31",
+  "Epsilon": "#0A5499",
+  "X": "#EFEFEF",
+  "Space Soldiers": "#F7E300",
+  "MK": "#027C03",
+  "VG.CyberZen": "#BC3728",
+  "Luminosity": "#0A9FBD",
+  "Winterfox": "#505283",
+  "compLexity": "#870000",
+  "Enemy": "#CC0000",
+  "Method": "#F6872B",
+  "Games Academy": "#71B6E1",
+  "SKDC": "#79CED3",
+  "Torqued": "#ED6B1D",
+  "Nexus": "#A81C1F",
+  "CLG Red": "#DC0031",
+  "Splyce": "#EDBA00",
+  "CyberZen": "#BC3728",
+  "Leader-1": "#E60108",
+  "Obey.Alliance": "#4CB0C8",
+  "EZG": "#105CA0",
+  "Arcade": "#A61280",
+  "Rebels": "#DE0005",
+  "eXplosive": "#FED54F",
+  "Quest": "#FFAE64",
+  "Fluffy Gangsters": "#3C66AE",
+  "Binary Dragons": "#E10012",
+  "LDLC White": "#EFEFEF",
+  "PENTA": "#EFEFEF",
+  "TheMongolz": "#CDCDCD",
+  "PixelFire": "#E46016",
+  "Chiefs": "#3996D9",
+  "DenDD": "#EFEFEF",
+  "Lemondogs": "#FFD900",
+  "MVP.karnal": "#CF0103",
+  "ENCE": "#865D31",
+  "Orgless": "#EFEFEF",
+  "CPH Wolves": "#FCBA2F",
+  "RCTIC": "#00B5E7",
+  "LDLC Blue": "#0099CF",
+  "Epiphany Bolt": "#E8CC4F",
+  "Millenium": "#9968FF",
+  "gBots": "#3D7BB8",
+  "x6tence": "#FD6200",
+  "ALTERNATE aTTaX": "#E30714",
+  "Ancient": "#EFEFEF",
+  "Preparation": "#FF00CA",
+  "Publiclir.se": "#47D3E2",
+  "Escape": "#FF8B1C",
+  "Dobry&Gaming": "#FFF382",
+  "Orbit": "#28B0C8",
+  "Kinguin": "#FE9901",
+  "Spirit": "#067D47",
+  "Echo Fox": "#E07026",
+  "Crowns": "#E3DB9A",
+  "iGame.com": "#39A2DB",
+  "Platinium": "#AD0C1D"
+}
+
+// The end format of the downloaded data.
 type DataFormat = {
   rankings: {
     link: string,
@@ -111,7 +211,7 @@ type DataFormat = {
   teams: {
     name: string,
     color: string,
-    safeTeamName?: string,
+    safeTeamName: string,
     ranks?: number[]
   }[],
   players: {
@@ -120,101 +220,7 @@ type DataFormat = {
 }
 var data: DataFormat = {
   rankings: [],
-  teams: [
-    { name: "Virtus.pro", color: "#F36801" },
-    { name: "SK", color: "#2D498E" },
-    { name: "Natus Vincere", color: "#FEE821" },
-    { name: "NiP", color: "#A98C66" },
-    { name: "dignitas", color: "#F8C700" },
-    { name: "Cloud9", color: "#1D9DD8" },
-    { name: "G2", color: "#A8A8A8" },
-    { name: "Liquid", color: "#5B76AF" },
-    { name: "EnVyUs", color: "#576DA5" },
-    { name: "GODSENT", color: "#F5C92E" },
-    { name: "Astralis", color: "#EF3742" },
-    { name: "Immortals", color: "#01B2AA" },
-    { name: "Heroic", color: "#3EB243" },
-    { name: "mousesports", color: "#C12E50" },
-    { name: "fnatic", color: "#F19E33" },
-    { name: "TSM", color: "#EFEFEF" },
-    { name: "CLG", color: "#008FEA" },
-    { name: "FlipSid3", color: "#73EB2A" },
-    { name: "Titan", color: "#80B8C7" },
-    { name: "E-frag.net", color: "#4383BF" },
-    { name: "HellRaisers", color: "#EC1C23" },
-    { name: "Renegades", color: "#87202A" },
-    { name: "Vexed", color: "#CD2029" },
-    { name: "CSGL", color: "#DB8328" },
-    { name: "Immunity", color: "#C9C9CA" },
-    { name: "Conquest", color: "#D08685" },
-    { name: "?", color: "#EFEFEF" },
-    { name: "OpTic", color: "#98D106" },
-    { name: "ex-Titan", color: "#80B8C7" },
-    { name: "FaZe", color: "#E91E25" },
-    { name: "Tempo Storm", color: "#3373BA" },
-    { name: "Gambit", color: "#F00815" },
-    { name: "NRG", color: "#ED2B7E" },
-    { name: "AGG", color: "#EA001C" },
-    { name: "Selfless", color: "#D79153" },
-    { name: "TyLoo", color: "#D53A31" },
-    { name: "Epsilon", color: "#0A5499" },
-    { name: "X", color: "#EFEFEF" },
-    { name: "Space Soldiers", color: "#F7E300" },
-    { name: "MK", color: "#027C03" },
-    { name: "VG.CyberZen", color: "#BC3728" },
-    { name: "Luminosity", color: "#0A9FBD" },
-    { name: "Winterfox", color: "#505283" },
-    { name: "compLexity", color: "#870000" },
-    { name: "Enemy", color: "#CC0000" },
-    { name: "Method", color: "#F6872B" },
-    { name: "Games Academy", color: "#71B6E1" },
-    { name: "SKDC", color: "#79CED3" },
-    { name: "Torqued", color: "#ED6B1D" },
-    { name: "Nexus", color: "#A81C1F" },
-    { name: "CLG Red", color: "#DC0031" },
-    { name: "Splyce", color: "#EDBA00" },
-    { name: "CyberZen", color: "#BC3728" },
-    { name: "Leader-1", color: "#E60108" },
-    { name: "Obey.Alliance", color: "#4CB0C8" },
-    { name: "EZG", color: "#105CA0" },
-    { name: "Arcade", color: "#A61280" },
-    { name: "Rebels", color: "#DE0005" },
-    { name: "eXplosive", color: "#FED54F" },
-    { name: "Quest", color: "#FFAE64" },
-    { name: "Fluffy Gangsters", color: "#3C66AE" },
-    { name: "Binary Dragons", color: "#E10012" },
-    { name: "LDLC White", color: "#EFEFEF" },
-    { name: "PENTA", color: "#EFEFEF" },
-    { name: "TheMongolz", color: "#CDCDCD" },
-    { name: "PixelFire", color: "#E46016" },
-    { name: "Chiefs", color: "#3996D9" },
-    { name: "DenDD", color: "#EFEFEF" },
-    { name: "Lemondogs", color: "#FFD900" },
-    { name: "MVP.karnal", color: "#CF0103" },
-    { name: "ENCE", color: "#865D31" },
-    { name: "Orgless", color: "#EFEFEF" },
-    { name: "CPH Wolves", color: "#FCBA2F" },
-    { name: "RCTIC", color: "#00B5E7" },
-    { name: "LDLC Blue", color: "#0099CF" },
-    { name: "Epiphany Bolt", color: "#E8CC4F" },
-    { name: "Millenium", color: "#9968FF" },
-    { name: "gBots", color: "#3D7BB8" },
-    { name: "x6tence", color: "#FD6200" },
-    { name: "ALTERNATE aTTaX", color: "#E30714" },
-    { name: "Ancient", color: "#EFEFEF" },
-    { name: "Preparation", color: "#FF00CA" },
-    { name: "Publiclir.se", color: "#47D3E2" },
-    { name: "Escape", color: "#FF8B1C" },
-    { name: "Dobry&Gaming", color: "#FFF382" },
-    { name: "Orbit", color: "#28B0C8" },
-    { name: "Kinguin", color: "#FE9901" },
-    { name: "X", color: "#EFEFEF" },
-    { name: "Spirit", color: "#067D47" },
-    { name: "Echo Fox", color: "#E07026" },
-    { name: "Crowns", color: "#E3DB9A" },
-    { name: "iGame.com", color: "#39A2DB" },
-    { name: "Platinium", color: "#AD0C1D" }
-  ],
+  teams: [],
   players: {}
 };
 
@@ -257,13 +263,11 @@ function loadPageLoop(files)
         var rankNumber = thisElement.find(".ranking-number").text().substring(1);
 
         var teamName = thisElement.find(".ranking-teamName > a").text().trim();
+        var teamColor = teamColors[teamName];
 
         var points = thisElement.find(".ranking-teamName > span").text().match(/([\d]+)/g)[0];
 
         var details = "http://www.hltv.org" + thisElement.find(".ranking-teamName > span > a").attr('href');
-
-        console.log(rankNumber + " - " + teamName + " - Points: " + points);
-        console.log(details);
 
         var rank = {
           position: rankNumber,
@@ -275,15 +279,11 @@ function loadPageLoop(files)
 
         ranking.ranks.push(rank);
 
-        var rosterList = "Roster: ";
-
         thisElement.find(".ranking-lineup .ranking-playerNick > a").each(function ()
         {
           var playerName = $(this).text().trim();
           var playerUrl = "http://www.hltv.org" + $(this).attr("href");
           var playerNationality = $(this).find("img").attr("src").match(/\/([a-zA-Z]+).gif$/)[1];
-
-          console.log(playerUrl);
 
           // Some player names (seang@res specifically) break the parsing
           if (playerName.length > 30)
@@ -296,21 +296,26 @@ function loadPageLoop(files)
             link: playerUrl,
             nationality: playerNationality
           })
-
-          rosterList += playerName + " (" + playerNationality + "), ";
         });
 
         if (!data.teams.some(function(team) {
           return team.name === teamName
         }))
         {
+          let color = teamColors[teamName] || "white";
+
           data.teams.push({
             name: teamName,
-            color: "white"
+            color,
+            safeTeamName: teamName.replace(new RegExp("[\. ?!,()/\\\|<>&$%^#*;@+-]", "g"), "_")
           })
-        }
+        };
 
-        console.log(rosterList);
+        var numberOfPlayers = rank.players.length;
+        if (rank.players.length !== 5)
+        {
+          console.warn(`Team ${teamName} had an unexpected number of players: ${numberOfPlayers}`)
+        }
       });
 
       if (files.length > 0)

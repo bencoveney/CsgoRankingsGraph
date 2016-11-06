@@ -336,9 +336,6 @@ function createFadeIn(rankingIndexAfter, rankAfter, team)
 // Draw team series.
 data.teams.forEach(function(team)
 {
-  // Create a safe team name to use in CSS/HTML identifiers.
-  team.safeTeamName = team.name.replace(new RegExp("[\. ?!,()/\\\|<>&$%^#*;@+-]", "g"), "_");
-
   // Iterate through the gaps on either side of the rankings.
   for (var j = 0; j < (numberOfRankings + 1); j++)
   {
