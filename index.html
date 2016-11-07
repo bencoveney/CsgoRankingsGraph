@@ -43,6 +43,19 @@
 				border-style: solid;
 				border-color: grey;
 				padding: 5px 15px 15px 15px;
+				box-sizing: border-box;
+				line-height: 1.8;
+				height: 500px;
+				width: 350px;
+				transition: padding 1s, height 1s, width 1s;
+				overflow: hidden;
+				position: relative;
+			}
+
+			.flyout .body.hidden {
+				padding: 0 15px;
+				height: 0;
+				width: 50px;
 			}
 
 			.flyout .body h1,
@@ -64,21 +77,25 @@
 				clear: both;
 			}
 
-			.flyout .body .control label {
-				width: 50%;
-				float: left;
-				clear: left;
-				height: 20px;
+			.flyout .body .control .left, .flyout .body .control .right {
+				width: 48%;
+				min-height: 30px;
 				margin-bottom: 10px;
-				padding: 6px 0;
+				padding-top: 6px 0;
+				box-sizing: border-box;
 			}
 
-			.flyout .body .control select {
-				width: 50%;
+			.flyout .body .control .left {
+				float: left;
+				clear: left;
+			}
+
+			.flyout .body .control .right {
 				float: right;
 				clear: right;
-				height: 20px;
-				margin-bottom: 10px;
+			}
+
+			.flyout .body .control select.right, .flyout .body .control button {
 				border: 1px solid grey;
 				background-color: #0a0a0a;
 				color: white;
@@ -93,12 +110,12 @@
 		<svg id="graph"></svg>
 		<div class="flyout">
 			<a class="toggle">+</a>
-			<div class="body">
+			<div class="body hidden">
 				<h1>CSGO Rankings</h1>
 				<h2>Adjust Data</h1>
 				<div class="control">
-					<label for="dateFrom">First Date</label>
-					<select id="dateFrom">
+					<label for="dateFrom" class="left">First Date</label>
+					<select id="dateFrom" class="right">
 						<option value="FromDate1" selected="selected">30/09/1992</option>
 						<option value="FromDate2">30/09/1993</option>
 						<option value="FromDate3">30/09/1994</option>
@@ -107,8 +124,8 @@
 					</select>
 				</div>
 				<div class="control">
-					<label for="dateTo">Last Date</label>
-					<select id="dateTo">
+					<label for="dateTo" class="left">Last Date</label>
+					<select id="dateTo" class="right">
 						<option value="ToDate1">30/09/1992</option>
 						<option value="ToDate2">30/09/1993</option>
 						<option value="ToDate3">30/09/1994</option>
@@ -117,14 +134,18 @@
 					</select>
 				</div>
 				<div class="control">
-					<label for="topNRanks">Top <em>N</em> Ranks</label>
-					<select id="dateTo">
+					<label for="topNRanks" class="left">Top <em>N</em> Ranks</label>
+					<select id="dateTo" class="right">
 						<option value="1Rank">1</option>
 						<option value="2Rank">2</option>
 						<option value="3Rank" selected="selected">3</option>
 						<option value="4Rank">4</option>
 						<option value="5Rank">5</option>
 					</select>
+				</div>
+				<div class="control">
+					<button class="left">Show Default Data</button>
+					<button class="right">Show All Data</button>
 				</div>
 				<div class="clearfix"></div>
 				<h2>About</h2>
@@ -137,5 +158,10 @@
 
 		<script src="output.js"></script>
 		<script src="graph.js"></script>
+		<script>
+			document.querySelector(".flyout .toggle").addEventListener("click", function() {
+				document.querySelector(".flyout .body").classList.toggle("hidden")
+			});
+		</script>
 	</body>
 </html>
