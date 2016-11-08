@@ -36,11 +36,27 @@ function drawText(string, x, y, color, fontSize, className, opacity)
   graph.appendChild(text);
 }
 
+// Distribute the vertical space between the number of rankings.
+var numberOfRankings = data.rankings.length;
+var spacingPerRanking = 160;
+
+// Distribute the horizontal space between the number of ranks.
+var numberOfRanks = data.rankings[numberOfRankings - 1].ranks.length;
+var spacingPerRank = 60;
+
 // Set the dimensions
-var width = 7000;
-var height = 1800;
+var width = spacingPerRanking * numberOfRankings;
+var height = spacingPerRank * numberOfRanks;
 graph.setAttribute('width', width.toString());
 graph.setAttribute('height', height.toString());
+
+// Apply some padding to the graph area so that the points are not pressed up against the side.
+var paddingTop = 100;
+var paddingLeft = 50;
+var paddingRight = 50;
+var paddingBottom = 50;
+var remainingHeight = height - paddingTop - paddingBottom;
+var remainingWidth = width - paddingLeft - paddingRight;
 
 // Parse dates
 data.rankings.forEach(function(ranking)
@@ -105,22 +121,6 @@ data.teams.forEach(function(team)
     team.ranks.push(foundRank ? foundRank.position : null);
   });
 });
-
-// Apply some padding to the graph area so that the points are not pressed up against the side.
-var paddingTop = 100;
-var paddingLeft = 50;
-var paddingRight = 50;
-var paddingBottom = 50;
-var remainingHeight = height - paddingTop - paddingBottom;
-var remainingWidth = width - paddingLeft - paddingRight;
-
-// Distribute the vertical space between the number of rankings.
-var numberOfRankings = data.rankings.length;
-var spacingPerRanking = remainingWidth / (numberOfRankings - 1);
-
-// Distribute the horizontal space between the number of ranks.
-var numberOfRanks = data.rankings[numberOfRankings - 1].ranks.length;
-var spacingPerRank = remainingHeight / (numberOfRanks - 1);
 
 var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 

@@ -22,6 +22,7 @@ var months: string[] = [
 // Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 var ratingDates: RatingDate[] = [
+  { year: 2016, month: 11, day: 7 },
   { year: 2016, month: 11, day: 1 },
 
   { year: 2016, month: 10, day: 24 },
@@ -33,7 +34,7 @@ var ratingDates: RatingDate[] = [
   { year: 2016, month: 9, day: 19 },
   { year: 2016, month: 9, day: 12 },
   { year: 2016, month: 9, day: 5 },
-
+/*
   { year: 2016, month: 8, day: 29 },
   { year: 2016, month: 8, day: 22 },
   { year: 2016, month: 8, day: 15 },
@@ -93,6 +94,7 @@ var ratingDates: RatingDate[] = [
   { year: 2015, month: 10, day: 12 },
   { year: 2015, month: 10, day: 5 },
   { year: 2015, month: 10, day: 1 },
+*/
 ];
 
 // Provide teams with a best-guessed colour (from their logo) for graph lines.
@@ -263,7 +265,6 @@ function loadPageLoop(files)
         var rankNumber = thisElement.find(".ranking-number").text().substring(1);
 
         var teamName = thisElement.find(".ranking-teamName > a").text().trim();
-        var teamColor = teamColors[teamName];
 
         var points = thisElement.find(".ranking-teamName > span").text().match(/([\d]+)/g)[0];
 
@@ -302,13 +303,13 @@ function loadPageLoop(files)
           return team.name === teamName
         }))
         {
-          let color = teamColors[teamName] || "white";
+          var color = teamColors[teamName] || "white";
 
           data.teams.push({
             name: teamName,
             color,
             safeTeamName: teamName.replace(new RegExp("[\. ?!,()/\\\|<>&$%^#*;@+-]", "g"), "_")
-          })
+          });
         };
 
         var numberOfPlayers = rank.players.length;
