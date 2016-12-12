@@ -1,3980 +1,6 @@
 var data = {
   "rankings": [
     {
-      "link": "http://www.hltv.org/ranking/teams/2016/september/5/",
-      "date": "september 5, 2016",
-      "ranks": [
-        {
-          "position": "1",
-          "team": "SK",
-          "points": "814",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6137/",
-          "players": [
-            {
-              "player": "fnx",
-              "link": "http://www.hltv.org/player/557-fnx",
-              "nationality": "br"
-            },
-            {
-              "player": "FalleN",
-              "link": "http://www.hltv.org/player/2023-fallen",
-              "nationality": "br"
-            },
-            {
-              "player": "fer",
-              "link": "http://www.hltv.org/player/8564-fer",
-              "nationality": "br"
-            },
-            {
-              "player": "coldzera",
-              "link": "http://www.hltv.org/player/9216-coldzera",
-              "nationality": "br"
-            },
-            {
-              "player": "TACO",
-              "link": "http://www.hltv.org/player/9217-taco",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "2",
-          "team": "Virtus.pro",
-          "points": "697",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5378/",
-          "players": [
-            {
-              "player": "TaZ",
-              "link": "http://www.hltv.org/player/161-taz",
-              "nationality": "pl"
-            },
-            {
-              "player": "NEO",
-              "link": "http://www.hltv.org/player/165-neo",
-              "nationality": "pl"
-            },
-            {
-              "player": "pashaBiceps",
-              "link": "http://www.hltv.org/player/317-pashabiceps",
-              "nationality": "pl"
-            },
-            {
-              "player": "Snax",
-              "link": "http://www.hltv.org/player/2553-snax",
-              "nationality": "pl"
-            },
-            {
-              "player": "byali",
-              "link": "http://www.hltv.org/player/5386-byali",
-              "nationality": "pl"
-            }
-          ]
-        },
-        {
-          "position": "3",
-          "team": "G2",
-          "points": "375",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5995/",
-          "players": [
-            {
-              "player": "shox",
-              "link": "http://www.hltv.org/player/1225-shox",
-              "nationality": "fr"
-            },
-            {
-              "player": "RpK",
-              "link": "http://www.hltv.org/player/7169-rpk",
-              "nationality": "fr"
-            },
-            {
-              "player": "SmithZz",
-              "link": "http://www.hltv.org/player/7170-smithzz",
-              "nationality": "fr"
-            },
-            {
-              "player": "ScreaM",
-              "link": "http://www.hltv.org/player/7390-scream",
-              "nationality": "be"
-            },
-            {
-              "player": "bodyy",
-              "link": "http://www.hltv.org/player/8374-bodyy",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "4",
-          "team": "GODSENT",
-          "points": "368",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6902/",
-          "players": [
-            {
-              "player": "pronax",
-              "link": "http://www.hltv.org/player/41-pronax",
-              "nationality": "se"
-            },
-            {
-              "player": "flusha",
-              "link": "http://www.hltv.org/player/3055-flusha",
-              "nationality": "se"
-            },
-            {
-              "player": "znajder",
-              "link": "http://www.hltv.org/player/3847-znajder",
-              "nationality": "se"
-            },
-            {
-              "player": "JW",
-              "link": "http://www.hltv.org/player/3849-jw",
-              "nationality": "se"
-            },
-            {
-              "player": "KRIMZ",
-              "link": "http://www.hltv.org/player/7528-krimz",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "5",
-          "team": "Natus Vincere",
-          "points": "361",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4608/",
-          "players": [
-            {
-              "player": "Edward",
-              "link": "http://www.hltv.org/player/483-edward",
-              "nationality": "ua"
-            },
-            {
-              "player": "GuardiaN",
-              "link": "http://www.hltv.org/player/2757-guardian",
-              "nationality": "sk"
-            },
-            {
-              "player": "seized",
-              "link": "http://www.hltv.org/player/3347-seized",
-              "nationality": "ru"
-            },
-            {
-              "player": "flamie",
-              "link": "http://www.hltv.org/player/7594-flamie",
-              "nationality": "ru"
-            },
-            {
-              "player": "s1mple",
-              "link": "http://www.hltv.org/player/7998-s1mple",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "6",
-          "team": "Astralis",
-          "points": "348",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6665/",
-          "players": [
-            {
-              "player": "karrigan",
-              "link": "http://www.hltv.org/player/429-karrigan",
-              "nationality": "dk"
-            },
-            {
-              "player": "Xyp9x",
-              "link": "http://www.hltv.org/player/4954-xyp9x",
-              "nationality": "dk"
-            },
-            {
-              "player": "dupreeh",
-              "link": "http://www.hltv.org/player/7398-dupreeh",
-              "nationality": "dk"
-            },
-            {
-              "player": "device",
-              "link": "http://www.hltv.org/player/7592-device",
-              "nationality": "dk"
-            },
-            {
-              "player": "Kjaerbye",
-              "link": "http://www.hltv.org/player/8394-kjaerbye",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "7",
-          "team": "NiP",
-          "points": "324",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4411/",
-          "players": [
-            {
-              "player": "f0rest",
-              "link": "http://www.hltv.org/player/29-f0rest",
-              "nationality": "se"
-            },
-            {
-              "player": "GeT_RiGhT",
-              "link": "http://www.hltv.org/player/39-get-right",
-              "nationality": "se"
-            },
-            {
-              "player": "Xizt",
-              "link": "http://www.hltv.org/player/884-xizt",
-              "nationality": "se"
-            },
-            {
-              "player": "friberg",
-              "link": "http://www.hltv.org/player/7148-friberg",
-              "nationality": "se"
-            },
-            {
-              "player": "pyth",
-              "link": "http://www.hltv.org/player/7527-pyth",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "8",
-          "team": "Cloud9",
-          "points": "283",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5752/",
-          "players": [
-            {
-              "player": "n0thing",
-              "link": "http://www.hltv.org/player/203-n0thing",
-              "nationality": "us"
-            },
-            {
-              "player": "Skadoodle",
-              "link": "http://www.hltv.org/player/7440-skadoodle",
-              "nationality": "us"
-            },
-            {
-              "player": "shroud",
-              "link": "http://www.hltv.org/player/8349-shroud",
-              "nationality": "ca"
-            },
-            {
-              "player": "autimatic",
-              "link": "http://www.hltv.org/player/8735-autimatic",
-              "nationality": "us"
-            },
-            {
-              "player": "Stewie2K",
-              "link": "http://www.hltv.org/player/8797-stewie2k",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "9",
-          "team": "Liquid",
-          "points": "271",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5973/",
-          "players": [
-            {
-              "player": "Hiko",
-              "link": "http://www.hltv.org/player/2644-hiko",
-              "nationality": "us"
-            },
-            {
-              "player": "Pimp",
-              "link": "http://www.hltv.org/player/7154-pimp",
-              "nationality": "dk"
-            },
-            {
-              "player": "nitr0",
-              "link": "http://www.hltv.org/player/7687-nitr0",
-              "nationality": "us"
-            },
-            {
-              "player": "jdm64",
-              "link": "http://www.hltv.org/player/8346-jdm64",
-              "nationality": "us"
-            },
-            {
-              "player": "EliGE",
-              "link": "http://www.hltv.org/player/8738-elige",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "10",
-          "team": "Immortals",
-          "points": "257",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/7010/",
-          "players": [
-            {
-              "player": "zews",
-              "link": "http://www.hltv.org/player/6608-zews",
-              "nationality": "br"
-            },
-            {
-              "player": "hen1",
-              "link": "http://www.hltv.org/player/8565-hen1",
-              "nationality": "br"
-            },
-            {
-              "player": "lucas",
-              "link": "http://www.hltv.org/player/8566-lucas",
-              "nationality": "br"
-            },
-            {
-              "player": "boltz",
-              "link": "http://www.hltv.org/player/8568-boltz",
-              "nationality": "br"
-            },
-            {
-              "player": "felps",
-              "link": "http://www.hltv.org/player/9219-felps",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "11",
-          "team": "Heroic",
-          "points": "253",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/7175/",
-          "players": [
-            {
-              "player": "Friis",
-              "link": "http://www.hltv.org/player/7-friis",
-              "nationality": "dk"
-            },
-            {
-              "player": "MODDII",
-              "link": "http://www.hltv.org/player/545-moddii",
-              "nationality": "se"
-            },
-            {
-              "player": "Snappi",
-              "link": "http://www.hltv.org/player/922-snappi",
-              "nationality": "dk"
-            },
-            {
-              "player": "gla1ve",
-              "link": "http://www.hltv.org/player/7412-gla1ve",
-              "nationality": "dk"
-            },
-            {
-              "player": "valde",
-              "link": "http://www.hltv.org/player/9031-valde",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "12",
-          "team": "EnVyUs",
-          "points": "234",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5991/",
-          "players": [
-            {
-              "player": "kennyS",
-              "link": "http://www.hltv.org/player/7167-kennys",
-              "nationality": "fr"
-            },
-            {
-              "player": "NBK-",
-              "link": "http://www.hltv.org/player/7168-nbk",
-              "nationality": "fr"
-            },
-            {
-              "player": "apEX",
-              "link": "http://www.hltv.org/player/7322-apex",
-              "nationality": "fr"
-            },
-            {
-              "player": "Happy",
-              "link": "http://www.hltv.org/player/7429-happy",
-              "nationality": "fr"
-            },
-            {
-              "player": "DEVIL",
-              "link": "http://www.hltv.org/player/8569-devil",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "13",
-          "team": "mousesports",
-          "points": "213",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4494/",
-          "players": [
-            {
-              "player": "oskar",
-              "link": "http://www.hltv.org/player/798-oskar",
-              "nationality": "cz"
-            },
-            {
-              "player": "chrisJ",
-              "link": "http://www.hltv.org/player/2730-chrisj",
-              "nationality": "nl"
-            },
-            {
-              "player": "NiKo",
-              "link": "http://www.hltv.org/player/3741-niko",
-              "nationality": "ba"
-            },
-            {
-              "player": "Spiidi",
-              "link": "http://www.hltv.org/player/7499-spiidi",
-              "nationality": "de"
-            },
-            {
-              "player": "denis",
-              "link": "http://www.hltv.org/player/7511-denis",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "14",
-          "team": "FaZe",
-          "points": "188",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6667/",
-          "players": [
-            {
-              "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
-              "nationality": "fi"
-            },
-            {
-              "player": "kioShiMa",
-              "link": "http://www.hltv.org/player/4959-kioshima",
-              "nationality": "fr"
-            },
-            {
-              "player": "aizy",
-              "link": "http://www.hltv.org/player/8095-aizy",
-              "nationality": "dk"
-            },
-            {
-              "player": "rain",
-              "link": "http://www.hltv.org/player/8183-rain",
-              "nationality": "no"
-            },
-            {
-              "player": "jkaem",
-              "link": "http://www.hltv.org/player/8248-jkaem",
-              "nationality": "no"
-            }
-          ]
-        },
-        {
-          "position": "15",
-          "team": "Gambit",
-          "points": "173",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6651/",
-          "players": [
-            {
-              "player": "AdreN",
-              "link": "http://www.hltv.org/player/334-adren",
-              "nationality": "kz"
-            },
-            {
-              "player": "hooch",
-              "link": "http://www.hltv.org/player/499-hooch",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dosia",
-              "link": "http://www.hltv.org/player/735-dosia",
-              "nationality": "ru"
-            },
-            {
-              "player": "mou",
-              "link": "http://www.hltv.org/player/964-mou",
-              "nationality": "kz"
-            },
-            {
-              "player": "spaze",
-              "link": "http://www.hltv.org/player/8345-spaze",
-              "nationality": "ru"
-            }
-          ]
-        },
-        {
-          "position": "16",
-          "team": "dignitas",
-          "points": "159",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5422/",
-          "players": [
-            {
-              "player": "RUBINO",
-              "link": "http://www.hltv.org/player/1485-rubino",
-              "nationality": "no"
-            },
-            {
-              "player": "cajunb",
-              "link": "http://www.hltv.org/player/2469-cajunb",
-              "nationality": "dk"
-            },
-            {
-              "player": "MSL",
-              "link": "http://www.hltv.org/player/7156-msl",
-              "nationality": "dk"
-            },
-            {
-              "player": "Magiskb0Y",
-              "link": "http://www.hltv.org/player/9032-magiskb0y",
-              "nationality": "dk"
-            },
-            {
-              "player": "k0nfig",
-              "link": "http://www.hltv.org/player/9078-k0nfig",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "17",
-          "team": "FlipSid3",
-          "points": "153",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5988/",
-          "players": [
-            {
-              "player": "markeloff",
-              "link": "http://www.hltv.org/player/338-markeloff",
-              "nationality": "ua"
-            },
-            {
-              "player": "B1ad3",
-              "link": "http://www.hltv.org/player/472-b1ad3",
-              "nationality": "ua"
-            },
-            {
-              "player": "Shara",
-              "link": "http://www.hltv.org/player/1866-shara",
-              "nationality": "ua"
-            },
-            {
-              "player": "WorldEdit",
-              "link": "http://www.hltv.org/player/7403-worldedit",
-              "nationality": "ru"
-            },
-            {
-              "player": "wayLander",
-              "link": "http://www.hltv.org/player/7796-waylander",
-              "nationality": "fi"
-            }
-          ]
-        },
-        {
-          "position": "18",
-          "team": "Echo Fox",
-          "points": "138",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6680/",
-          "players": [
-            {
-              "player": "Broken_player_name",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1916",
-              "nationality": "us"
-            },
-            {
-              "player": "freakazoid",
-              "link": "http://www.hltv.org/player/7808-freakazoid",
-              "nationality": "us"
-            },
-            {
-              "player": "ShahZaM",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7810",
-              "nationality": "us"
-            },
-            {
-              "player": "roca",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7935",
-              "nationality": "us"
-            },
-            {
-              "player": "ryx",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9042",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "19",
-          "team": "MK",
-          "points": "129",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6959/",
-          "players": [
-            {
-              "player": "bubble",
-              "link": "http://www.hltv.org/player/2799-bubble",
-              "nationality": "bg"
-            },
-            {
-              "player": "spyleadeR",
-              "link": "http://www.hltv.org/player/3183-spyleader",
-              "nationality": "bg"
-            },
-            {
-              "player": "nkl",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5327",
-              "nationality": "bg"
-            },
-            {
-              "player": "v1c7oR",
-              "link": "http://www.hltv.org/player/7834-v1c7or",
-              "nationality": "bg"
-            },
-            {
-              "player": "dream3r",
-              "link": "http://www.hltv.org/player/8412-dream3r",
-              "nationality": "bg"
-            }
-          ]
-        },
-        {
-          "position": "20",
-          "team": "OpTic",
-          "points": "113",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6615/",
-          "players": [
-            {
-              "player": "RUSH",
-              "link": "http://www.hltv.org/player/7805-rush",
-              "nationality": "us"
-            },
-            {
-              "player": "mixwell",
-              "link": "http://www.hltv.org/player/8370-mixwell",
-              "nationality": "es"
-            },
-            {
-              "player": "NAF",
-              "link": "http://www.hltv.org/player/8520-naf",
-              "nationality": "ca"
-            },
-            {
-              "player": "daps",
-              "link": "http://www.hltv.org/player/8521-daps",
-              "nationality": "ca"
-            },
-            {
-              "player": "tarik",
-              "link": "http://www.hltv.org/player/8523-tarik",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "21",
-          "team": "Renegades",
-          "points": "97",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6211/",
-          "players": [
-            {
-              "player": "yam",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
-              "nationality": "au"
-            },
-            {
-              "player": "jks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
-              "nationality": "au"
-            },
-            {
-              "player": "AZR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
-              "nationality": "au"
-            },
-            {
-              "player": "Rickeh",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
-              "nationality": "au"
-            },
-            {
-              "player": "USTILO",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
-              "nationality": "au"
-            }
-          ]
-        },
-        {
-          "position": "22",
-          "team": "TSM",
-          "points": "95",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5996/",
-          "players": [
-            {
-              "player": "SEMPHIS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1915",
-              "nationality": "ca"
-            },
-            {
-              "player": "FNS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=6451",
-              "nationality": "ca"
-            },
-            {
-              "player": "Relyks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8517",
-              "nationality": "us"
-            },
-            {
-              "player": "SicK",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9258",
-              "nationality": "us"
-            },
-            {
-              "player": "Twistzz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10394",
-              "nationality": "ca"
-            }
-          ]
-        },
-        {
-          "position": "23",
-          "team": "HellRaisers",
-          "points": "92",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5310/",
-          "players": [
-            {
-              "player": "ANGE1",
-              "link": "http://www.hltv.org/player/339-ange1",
-              "nationality": "ua"
-            },
-            {
-              "player": "bondik",
-              "link": "http://www.hltv.org/player/2131-bondik",
-              "nationality": "ua"
-            },
-            {
-              "player": "STYKO",
-              "link": "http://www.hltv.org/player/6904-styko",
-              "nationality": "sk"
-            },
-            {
-              "player": "Zero",
-              "link": "http://www.hltv.org/player/8413-zero",
-              "nationality": "sk"
-            },
-            {
-              "player": "smike",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8526",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "24",
-          "team": "Space Soldiers",
-          "points": "90",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/5929/",
-          "players": [
-            {
-              "player": "TuGuX",
-              "link": "http://www.hltv.org/player/7321-tugux",
-              "nationality": "de"
-            },
-            {
-              "player": "XANTARES",
-              "link": "http://www.hltv.org/player/7938-xantares",
-              "nationality": "tr"
-            },
-            {
-              "player": "DESPE",
-              "link": "http://www.hltv.org/player/7980-despe",
-              "nationality": "tr"
-            },
-            {
-              "player": "paz",
-              "link": "http://www.hltv.org/player/9353-paz",
-              "nationality": "tr"
-            },
-            {
-              "player": "ngiN",
-              "link": "http://www.hltv.org/player/9857-ngin",
-              "nationality": "tr"
-            }
-          ]
-        },
-        {
-          "position": "25",
-          "team": "Epsilon",
-          "points": "86",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4688/",
-          "players": [
-            {
-              "player": "pauf",
-              "link": "http://www.hltv.org/player/8096-pauf",
-              "nationality": "se"
-            },
-            {
-              "player": "draken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
-              "nationality": "se"
-            },
-            {
-              "player": "disco doplan",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
-              "nationality": "se"
-            },
-            {
-              "player": "freddieb",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
-              "nationality": "se"
-            },
-            {
-              "player": "REZ",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "26",
-          "team": "TyLoo",
-          "points": "83",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4863/",
-          "players": [
-            {
-              "player": "Mo",
-              "link": "http://www.hltv.org/player/5187-mo",
-              "nationality": "cn"
-            },
-            {
-              "player": "DD",
-              "link": "http://www.hltv.org/player/7026-dd",
-              "nationality": "cn"
-            },
-            {
-              "player": "fancy1",
-              "link": "http://www.hltv.org/player/7028-fancy1",
-              "nationality": "cn"
-            },
-            {
-              "player": "AttackeR",
-              "link": "http://www.hltv.org/player/8552-attacker",
-              "nationality": "cn"
-            },
-            {
-              "player": "somebody",
-              "link": "http://www.hltv.org/player/8605-somebody",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "27",
-          "team": "Crowns",
-          "points": "68",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/7168/",
-          "players": [
-            {
-              "player": "zape",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5483",
-              "nationality": "se"
-            },
-            {
-              "player": "Krewmer",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9412",
-              "nationality": "se"
-            },
-            {
-              "player": "Jayzwalkingz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9763",
-              "nationality": "se"
-            },
-            {
-              "player": "xajdish",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10655",
-              "nationality": "se"
-            },
-            {
-              "player": "bENNY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10658",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "28",
-          "team": "Spirit",
-          "points": "64",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/7020/",
-          "players": [
-            {
-              "player": "kibaken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1950",
-              "nationality": "ru"
-            },
-            {
-              "player": "DavCost",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8124",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dima",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8125",
-              "nationality": "ru"
-            },
-            {
-              "player": "S0tF1k",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9081",
-              "nationality": "ru"
-            },
-            {
-              "player": "COLDYY1",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9083",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "29",
-          "team": "VG.CyberZen",
-          "points": "62",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/6773/",
-          "players": [
-            {
-              "player": "Savage",
-              "link": "http://www.hltv.org/player/180-savage",
-              "nationality": "cn"
-            },
-            {
-              "player": "tb",
-              "link": "http://www.hltv.org/player/839-tb",
-              "nationality": "cn"
-            },
-            {
-              "player": "advent",
-              "link": "http://www.hltv.org/player/8600-advent",
-              "nationality": "cn"
-            },
-            {
-              "player": "zhokiNg",
-              "link": "http://www.hltv.org/player/8601-zhoking",
-              "nationality": "cn"
-            },
-            {
-              "player": "LOVEYY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "30",
-          "team": "ALTERNATE aTTaX",
-          "points": "59",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/5/details/4501/",
-          "players": [
-            {
-              "player": "crisby",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
-              "nationality": "de"
-            },
-            {
-              "player": "kzy",
-              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
-              "nationality": "de"
-            },
-            {
-              "player": "tiziaN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
-              "nationality": "de"
-            },
-            {
-              "player": "keev",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5799",
-              "nationality": "de"
-            },
-            {
-              "player": "syrsoN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
-              "nationality": "de"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "link": "http://www.hltv.org/ranking/teams/2016/september/12/",
-      "date": "september 12, 2016",
-      "ranks": [
-        {
-          "position": "1",
-          "team": "SK",
-          "points": "816",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6137/",
-          "players": [
-            {
-              "player": "fnx",
-              "link": "http://www.hltv.org/player/557-fnx",
-              "nationality": "br"
-            },
-            {
-              "player": "FalleN",
-              "link": "http://www.hltv.org/player/2023-fallen",
-              "nationality": "br"
-            },
-            {
-              "player": "fer",
-              "link": "http://www.hltv.org/player/8564-fer",
-              "nationality": "br"
-            },
-            {
-              "player": "coldzera",
-              "link": "http://www.hltv.org/player/9216-coldzera",
-              "nationality": "br"
-            },
-            {
-              "player": "TACO",
-              "link": "http://www.hltv.org/player/9217-taco",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "2",
-          "team": "Virtus.pro",
-          "points": "587",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5378/",
-          "players": [
-            {
-              "player": "TaZ",
-              "link": "http://www.hltv.org/player/161-taz",
-              "nationality": "pl"
-            },
-            {
-              "player": "NEO",
-              "link": "http://www.hltv.org/player/165-neo",
-              "nationality": "pl"
-            },
-            {
-              "player": "pashaBiceps",
-              "link": "http://www.hltv.org/player/317-pashabiceps",
-              "nationality": "pl"
-            },
-            {
-              "player": "Snax",
-              "link": "http://www.hltv.org/player/2553-snax",
-              "nationality": "pl"
-            },
-            {
-              "player": "byali",
-              "link": "http://www.hltv.org/player/5386-byali",
-              "nationality": "pl"
-            }
-          ]
-        },
-        {
-          "position": "3",
-          "team": "G2",
-          "points": "562",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5995/",
-          "players": [
-            {
-              "player": "shox",
-              "link": "http://www.hltv.org/player/1225-shox",
-              "nationality": "fr"
-            },
-            {
-              "player": "RpK",
-              "link": "http://www.hltv.org/player/7169-rpk",
-              "nationality": "fr"
-            },
-            {
-              "player": "SmithZz",
-              "link": "http://www.hltv.org/player/7170-smithzz",
-              "nationality": "fr"
-            },
-            {
-              "player": "ScreaM",
-              "link": "http://www.hltv.org/player/7390-scream",
-              "nationality": "be"
-            },
-            {
-              "player": "bodyy",
-              "link": "http://www.hltv.org/player/8374-bodyy",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "4",
-          "team": "NiP",
-          "points": "527",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4411/",
-          "players": [
-            {
-              "player": "f0rest",
-              "link": "http://www.hltv.org/player/29-f0rest",
-              "nationality": "se"
-            },
-            {
-              "player": "GeT_RiGhT",
-              "link": "http://www.hltv.org/player/39-get-right",
-              "nationality": "se"
-            },
-            {
-              "player": "Xizt",
-              "link": "http://www.hltv.org/player/884-xizt",
-              "nationality": "se"
-            },
-            {
-              "player": "friberg",
-              "link": "http://www.hltv.org/player/7148-friberg",
-              "nationality": "se"
-            },
-            {
-              "player": "pyth",
-              "link": "http://www.hltv.org/player/7527-pyth",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "5",
-          "team": "Cloud9",
-          "points": "412",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5752/",
-          "players": [
-            {
-              "player": "n0thing",
-              "link": "http://www.hltv.org/player/203-n0thing",
-              "nationality": "us"
-            },
-            {
-              "player": "Skadoodle",
-              "link": "http://www.hltv.org/player/7440-skadoodle",
-              "nationality": "us"
-            },
-            {
-              "player": "shroud",
-              "link": "http://www.hltv.org/player/8349-shroud",
-              "nationality": "ca"
-            },
-            {
-              "player": "autimatic",
-              "link": "http://www.hltv.org/player/8735-autimatic",
-              "nationality": "us"
-            },
-            {
-              "player": "Stewie2K",
-              "link": "http://www.hltv.org/player/8797-stewie2k",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "6",
-          "team": "Astralis",
-          "points": "410",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6665/",
-          "players": [
-            {
-              "player": "karrigan",
-              "link": "http://www.hltv.org/player/429-karrigan",
-              "nationality": "dk"
-            },
-            {
-              "player": "Xyp9x",
-              "link": "http://www.hltv.org/player/4954-xyp9x",
-              "nationality": "dk"
-            },
-            {
-              "player": "dupreeh",
-              "link": "http://www.hltv.org/player/7398-dupreeh",
-              "nationality": "dk"
-            },
-            {
-              "player": "device",
-              "link": "http://www.hltv.org/player/7592-device",
-              "nationality": "dk"
-            },
-            {
-              "player": "Kjaerbye",
-              "link": "http://www.hltv.org/player/8394-kjaerbye",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "7",
-          "team": "GODSENT",
-          "points": "380",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6902/",
-          "players": [
-            {
-              "player": "pronax",
-              "link": "http://www.hltv.org/player/41-pronax",
-              "nationality": "se"
-            },
-            {
-              "player": "flusha",
-              "link": "http://www.hltv.org/player/3055-flusha",
-              "nationality": "se"
-            },
-            {
-              "player": "znajder",
-              "link": "http://www.hltv.org/player/3847-znajder",
-              "nationality": "se"
-            },
-            {
-              "player": "JW",
-              "link": "http://www.hltv.org/player/3849-jw",
-              "nationality": "se"
-            },
-            {
-              "player": "KRIMZ",
-              "link": "http://www.hltv.org/player/7528-krimz",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "8",
-          "team": "dignitas",
-          "points": "352",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5422/",
-          "players": [
-            {
-              "player": "RUBINO",
-              "link": "http://www.hltv.org/player/1485-rubino",
-              "nationality": "no"
-            },
-            {
-              "player": "cajunb",
-              "link": "http://www.hltv.org/player/2469-cajunb",
-              "nationality": "dk"
-            },
-            {
-              "player": "MSL",
-              "link": "http://www.hltv.org/player/7156-msl",
-              "nationality": "dk"
-            },
-            {
-              "player": "Magiskb0Y",
-              "link": "http://www.hltv.org/player/9032-magiskb0y",
-              "nationality": "dk"
-            },
-            {
-              "player": "k0nfig",
-              "link": "http://www.hltv.org/player/9078-k0nfig",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "9",
-          "team": "Natus Vincere",
-          "points": "349",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4608/",
-          "players": [
-            {
-              "player": "Edward",
-              "link": "http://www.hltv.org/player/483-edward",
-              "nationality": "ua"
-            },
-            {
-              "player": "GuardiaN",
-              "link": "http://www.hltv.org/player/2757-guardian",
-              "nationality": "sk"
-            },
-            {
-              "player": "seized",
-              "link": "http://www.hltv.org/player/3347-seized",
-              "nationality": "ru"
-            },
-            {
-              "player": "flamie",
-              "link": "http://www.hltv.org/player/7594-flamie",
-              "nationality": "ru"
-            },
-            {
-              "player": "s1mple",
-              "link": "http://www.hltv.org/player/7998-s1mple",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "10",
-          "team": "Heroic",
-          "points": "309",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/7175/",
-          "players": [
-            {
-              "player": "Friis",
-              "link": "http://www.hltv.org/player/7-friis",
-              "nationality": "dk"
-            },
-            {
-              "player": "MODDII",
-              "link": "http://www.hltv.org/player/545-moddii",
-              "nationality": "se"
-            },
-            {
-              "player": "Snappi",
-              "link": "http://www.hltv.org/player/922-snappi",
-              "nationality": "dk"
-            },
-            {
-              "player": "gla1ve",
-              "link": "http://www.hltv.org/player/7412-gla1ve",
-              "nationality": "dk"
-            },
-            {
-              "player": "valde",
-              "link": "http://www.hltv.org/player/9031-valde",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "11",
-          "team": "EnVyUs",
-          "points": "291",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5991/",
-          "players": [
-            {
-              "player": "kennyS",
-              "link": "http://www.hltv.org/player/7167-kennys",
-              "nationality": "fr"
-            },
-            {
-              "player": "NBK-",
-              "link": "http://www.hltv.org/player/7168-nbk",
-              "nationality": "fr"
-            },
-            {
-              "player": "apEX",
-              "link": "http://www.hltv.org/player/7322-apex",
-              "nationality": "fr"
-            },
-            {
-              "player": "Happy",
-              "link": "http://www.hltv.org/player/7429-happy",
-              "nationality": "fr"
-            },
-            {
-              "player": "DEVIL",
-              "link": "http://www.hltv.org/player/8569-devil",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "12",
-          "team": "Liquid",
-          "points": "264",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5973/",
-          "players": [
-            {
-              "player": "Hiko",
-              "link": "http://www.hltv.org/player/2644-hiko",
-              "nationality": "us"
-            },
-            {
-              "player": "Pimp",
-              "link": "http://www.hltv.org/player/7154-pimp",
-              "nationality": "dk"
-            },
-            {
-              "player": "nitr0",
-              "link": "http://www.hltv.org/player/7687-nitr0",
-              "nationality": "us"
-            },
-            {
-              "player": "jdm64",
-              "link": "http://www.hltv.org/player/8346-jdm64",
-              "nationality": "us"
-            },
-            {
-              "player": "EliGE",
-              "link": "http://www.hltv.org/player/8738-elige",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "13",
-          "team": "Immortals",
-          "points": "246",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/7010/",
-          "players": [
-            {
-              "player": "zews",
-              "link": "http://www.hltv.org/player/6608-zews",
-              "nationality": "br"
-            },
-            {
-              "player": "hen1",
-              "link": "http://www.hltv.org/player/8565-hen1",
-              "nationality": "br"
-            },
-            {
-              "player": "lucas",
-              "link": "http://www.hltv.org/player/8566-lucas",
-              "nationality": "br"
-            },
-            {
-              "player": "boltz",
-              "link": "http://www.hltv.org/player/8568-boltz",
-              "nationality": "br"
-            },
-            {
-              "player": "felps",
-              "link": "http://www.hltv.org/player/9219-felps",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "14",
-          "team": "FaZe",
-          "points": "224",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6667/",
-          "players": [
-            {
-              "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
-              "nationality": "fi"
-            },
-            {
-              "player": "kioShiMa",
-              "link": "http://www.hltv.org/player/4959-kioshima",
-              "nationality": "fr"
-            },
-            {
-              "player": "aizy",
-              "link": "http://www.hltv.org/player/8095-aizy",
-              "nationality": "dk"
-            },
-            {
-              "player": "rain",
-              "link": "http://www.hltv.org/player/8183-rain",
-              "nationality": "no"
-            },
-            {
-              "player": "jkaem",
-              "link": "http://www.hltv.org/player/8248-jkaem",
-              "nationality": "no"
-            }
-          ]
-        },
-        {
-          "position": "15",
-          "team": "FlipSid3",
-          "points": "215",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5988/",
-          "players": [
-            {
-              "player": "markeloff",
-              "link": "http://www.hltv.org/player/338-markeloff",
-              "nationality": "ua"
-            },
-            {
-              "player": "B1ad3",
-              "link": "http://www.hltv.org/player/472-b1ad3",
-              "nationality": "ua"
-            },
-            {
-              "player": "Shara",
-              "link": "http://www.hltv.org/player/1866-shara",
-              "nationality": "ua"
-            },
-            {
-              "player": "WorldEdit",
-              "link": "http://www.hltv.org/player/7403-worldedit",
-              "nationality": "ru"
-            },
-            {
-              "player": "wayLander",
-              "link": "http://www.hltv.org/player/7796-waylander",
-              "nationality": "fi"
-            }
-          ]
-        },
-        {
-          "position": "16",
-          "team": "mousesports",
-          "points": "179",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4494/",
-          "players": [
-            {
-              "player": "oskar",
-              "link": "http://www.hltv.org/player/798-oskar",
-              "nationality": "cz"
-            },
-            {
-              "player": "chrisJ",
-              "link": "http://www.hltv.org/player/2730-chrisj",
-              "nationality": "nl"
-            },
-            {
-              "player": "NiKo",
-              "link": "http://www.hltv.org/player/3741-niko",
-              "nationality": "ba"
-            },
-            {
-              "player": "Spiidi",
-              "link": "http://www.hltv.org/player/7499-spiidi",
-              "nationality": "de"
-            },
-            {
-              "player": "denis",
-              "link": "http://www.hltv.org/player/7511-denis",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "17",
-          "team": "Gambit",
-          "points": "166",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6651/",
-          "players": [
-            {
-              "player": "AdreN",
-              "link": "http://www.hltv.org/player/334-adren",
-              "nationality": "kz"
-            },
-            {
-              "player": "hooch",
-              "link": "http://www.hltv.org/player/499-hooch",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dosia",
-              "link": "http://www.hltv.org/player/735-dosia",
-              "nationality": "ru"
-            },
-            {
-              "player": "mou",
-              "link": "http://www.hltv.org/player/964-mou",
-              "nationality": "kz"
-            },
-            {
-              "player": "spaze",
-              "link": "http://www.hltv.org/player/8345-spaze",
-              "nationality": "ru"
-            }
-          ]
-        },
-        {
-          "position": "18",
-          "team": "Echo Fox",
-          "points": "117",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6680/",
-          "players": [
-            {
-              "player": "Broken_player_name",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1916",
-              "nationality": "us"
-            },
-            {
-              "player": "freakazoid",
-              "link": "http://www.hltv.org/player/7808-freakazoid",
-              "nationality": "us"
-            },
-            {
-              "player": "ShahZaM",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7810",
-              "nationality": "us"
-            },
-            {
-              "player": "roca",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7935",
-              "nationality": "us"
-            },
-            {
-              "player": "ryx",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9042",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "19",
-          "team": "TyLoo",
-          "points": "114",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4863/",
-          "players": [
-            {
-              "player": "Mo",
-              "link": "http://www.hltv.org/player/5187-mo",
-              "nationality": "cn"
-            },
-            {
-              "player": "DD",
-              "link": "http://www.hltv.org/player/7026-dd",
-              "nationality": "cn"
-            },
-            {
-              "player": "fancy1",
-              "link": "http://www.hltv.org/player/7028-fancy1",
-              "nationality": "cn"
-            },
-            {
-              "player": "AttackeR",
-              "link": "http://www.hltv.org/player/8552-attacker",
-              "nationality": "cn"
-            },
-            {
-              "player": "somebody",
-              "link": "http://www.hltv.org/player/8605-somebody",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "20",
-          "team": "OpTic",
-          "points": "112",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6615/",
-          "players": [
-            {
-              "player": "RUSH",
-              "link": "http://www.hltv.org/player/7805-rush",
-              "nationality": "us"
-            },
-            {
-              "player": "mixwell",
-              "link": "http://www.hltv.org/player/8370-mixwell",
-              "nationality": "es"
-            },
-            {
-              "player": "NAF",
-              "link": "http://www.hltv.org/player/8520-naf",
-              "nationality": "ca"
-            },
-            {
-              "player": "daps",
-              "link": "http://www.hltv.org/player/8521-daps",
-              "nationality": "ca"
-            },
-            {
-              "player": "tarik",
-              "link": "http://www.hltv.org/player/8523-tarik",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "21",
-          "team": "HellRaisers",
-          "points": "98",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5310/",
-          "players": [
-            {
-              "player": "ANGE1",
-              "link": "http://www.hltv.org/player/339-ange1",
-              "nationality": "ua"
-            },
-            {
-              "player": "bondik",
-              "link": "http://www.hltv.org/player/2131-bondik",
-              "nationality": "ua"
-            },
-            {
-              "player": "STYKO",
-              "link": "http://www.hltv.org/player/6904-styko",
-              "nationality": "sk"
-            },
-            {
-              "player": "Zero",
-              "link": "http://www.hltv.org/player/8413-zero",
-              "nationality": "sk"
-            },
-            {
-              "player": "smike",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8526",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "22",
-          "team": "VG.CyberZen",
-          "points": "98",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6773/",
-          "players": [
-            {
-              "player": "Savage",
-              "link": "http://www.hltv.org/player/180-savage",
-              "nationality": "cn"
-            },
-            {
-              "player": "tb",
-              "link": "http://www.hltv.org/player/839-tb",
-              "nationality": "cn"
-            },
-            {
-              "player": "advent",
-              "link": "http://www.hltv.org/player/8600-advent",
-              "nationality": "cn"
-            },
-            {
-              "player": "zhokiNg",
-              "link": "http://www.hltv.org/player/8601-zhoking",
-              "nationality": "cn"
-            },
-            {
-              "player": "LOVEYY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "23",
-          "team": "Space Soldiers",
-          "points": "85",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5929/",
-          "players": [
-            {
-              "player": "TuGuX",
-              "link": "http://www.hltv.org/player/7321-tugux",
-              "nationality": "de"
-            },
-            {
-              "player": "XANTARES",
-              "link": "http://www.hltv.org/player/7938-xantares",
-              "nationality": "tr"
-            },
-            {
-              "player": "DESPE",
-              "link": "http://www.hltv.org/player/7980-despe",
-              "nationality": "tr"
-            },
-            {
-              "player": "paz",
-              "link": "http://www.hltv.org/player/9353-paz",
-              "nationality": "tr"
-            },
-            {
-              "player": "ngiN",
-              "link": "http://www.hltv.org/player/9857-ngin",
-              "nationality": "tr"
-            }
-          ]
-        },
-        {
-          "position": "24",
-          "team": "Epsilon",
-          "points": "81",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4688/",
-          "players": [
-            {
-              "player": "pauf",
-              "link": "http://www.hltv.org/player/8096-pauf",
-              "nationality": "se"
-            },
-            {
-              "player": "draken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
-              "nationality": "se"
-            },
-            {
-              "player": "disco doplan",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
-              "nationality": "se"
-            },
-            {
-              "player": "freddieb",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
-              "nationality": "se"
-            },
-            {
-              "player": "REZ",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "25",
-          "team": "TSM",
-          "points": "79",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/5996/",
-          "players": [
-            {
-              "player": "SEMPHIS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1915",
-              "nationality": "ca"
-            },
-            {
-              "player": "FNS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=6451",
-              "nationality": "ca"
-            },
-            {
-              "player": "Relyks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8517",
-              "nationality": "us"
-            },
-            {
-              "player": "SicK",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9258",
-              "nationality": "us"
-            },
-            {
-              "player": "Twistzz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10394",
-              "nationality": "ca"
-            }
-          ]
-        },
-        {
-          "position": "26",
-          "team": "ALTERNATE aTTaX",
-          "points": "68",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/4501/",
-          "players": [
-            {
-              "player": "crisby",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
-              "nationality": "de"
-            },
-            {
-              "player": "kzy",
-              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
-              "nationality": "de"
-            },
-            {
-              "player": "tiziaN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
-              "nationality": "de"
-            },
-            {
-              "player": "keev",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5799",
-              "nationality": "de"
-            },
-            {
-              "player": "syrsoN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "27",
-          "team": "Renegades",
-          "points": "67",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6211/",
-          "players": [
-            {
-              "player": "yam",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
-              "nationality": "au"
-            },
-            {
-              "player": "jks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
-              "nationality": "au"
-            },
-            {
-              "player": "AZR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
-              "nationality": "au"
-            },
-            {
-              "player": "Rickeh",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
-              "nationality": "au"
-            },
-            {
-              "player": "USTILO",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
-              "nationality": "au"
-            }
-          ]
-        },
-        {
-          "position": "28",
-          "team": "Crowns",
-          "points": "63",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/7168/",
-          "players": [
-            {
-              "player": "zape",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5483",
-              "nationality": "se"
-            },
-            {
-              "player": "Krewmer",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9412",
-              "nationality": "se"
-            },
-            {
-              "player": "Jayzwalkingz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9763",
-              "nationality": "se"
-            },
-            {
-              "player": "xajdish",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10655",
-              "nationality": "se"
-            },
-            {
-              "player": "bENNY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10658",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "29",
-          "team": "Spirit",
-          "points": "62",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/7020/",
-          "players": [
-            {
-              "player": "kibaken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1950",
-              "nationality": "ru"
-            },
-            {
-              "player": "DavCost",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8124",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dima",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8125",
-              "nationality": "ru"
-            },
-            {
-              "player": "S0tF1k",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9081",
-              "nationality": "ru"
-            },
-            {
-              "player": "COLDYY1",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9083",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "30",
-          "team": "MK",
-          "points": "61",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/12/details/6959/",
-          "players": [
-            {
-              "player": "nkl",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5327",
-              "nationality": "bg"
-            },
-            {
-              "player": "v1c7oR",
-              "link": "http://www.hltv.org/player/7834-v1c7or",
-              "nationality": "bg"
-            },
-            {
-              "player": "dream3r",
-              "link": "http://www.hltv.org/player/8412-dream3r",
-              "nationality": "bg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "link": "http://www.hltv.org/ranking/teams/2016/september/19/",
-      "date": "september 19, 2016",
-      "ranks": [
-        {
-          "position": "1",
-          "team": "SK",
-          "points": "839",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6137/",
-          "players": [
-            {
-              "player": "fnx",
-              "link": "http://www.hltv.org/player/557-fnx",
-              "nationality": "br"
-            },
-            {
-              "player": "FalleN",
-              "link": "http://www.hltv.org/player/2023-fallen",
-              "nationality": "br"
-            },
-            {
-              "player": "fer",
-              "link": "http://www.hltv.org/player/8564-fer",
-              "nationality": "br"
-            },
-            {
-              "player": "coldzera",
-              "link": "http://www.hltv.org/player/9216-coldzera",
-              "nationality": "br"
-            },
-            {
-              "player": "TACO",
-              "link": "http://www.hltv.org/player/9217-taco",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "2",
-          "team": "Virtus.pro",
-          "points": "711",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5378/",
-          "players": [
-            {
-              "player": "TaZ",
-              "link": "http://www.hltv.org/player/161-taz",
-              "nationality": "pl"
-            },
-            {
-              "player": "NEO",
-              "link": "http://www.hltv.org/player/165-neo",
-              "nationality": "pl"
-            },
-            {
-              "player": "pashaBiceps",
-              "link": "http://www.hltv.org/player/317-pashabiceps",
-              "nationality": "pl"
-            },
-            {
-              "player": "Snax",
-              "link": "http://www.hltv.org/player/2553-snax",
-              "nationality": "pl"
-            },
-            {
-              "player": "byali",
-              "link": "http://www.hltv.org/player/5386-byali",
-              "nationality": "pl"
-            }
-          ]
-        },
-        {
-          "position": "3",
-          "team": "G2",
-          "points": "578",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5995/",
-          "players": [
-            {
-              "player": "shox",
-              "link": "http://www.hltv.org/player/1225-shox",
-              "nationality": "fr"
-            },
-            {
-              "player": "RpK",
-              "link": "http://www.hltv.org/player/7169-rpk",
-              "nationality": "fr"
-            },
-            {
-              "player": "SmithZz",
-              "link": "http://www.hltv.org/player/7170-smithzz",
-              "nationality": "fr"
-            },
-            {
-              "player": "ScreaM",
-              "link": "http://www.hltv.org/player/7390-scream",
-              "nationality": "be"
-            },
-            {
-              "player": "bodyy",
-              "link": "http://www.hltv.org/player/8374-bodyy",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "4",
-          "team": "NiP",
-          "points": "524",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4411/",
-          "players": [
-            {
-              "player": "f0rest",
-              "link": "http://www.hltv.org/player/29-f0rest",
-              "nationality": "se"
-            },
-            {
-              "player": "GeT_RiGhT",
-              "link": "http://www.hltv.org/player/39-get-right",
-              "nationality": "se"
-            },
-            {
-              "player": "Xizt",
-              "link": "http://www.hltv.org/player/884-xizt",
-              "nationality": "se"
-            },
-            {
-              "player": "friberg",
-              "link": "http://www.hltv.org/player/7148-friberg",
-              "nationality": "se"
-            },
-            {
-              "player": "pyth",
-              "link": "http://www.hltv.org/player/7527-pyth",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "5",
-          "team": "Cloud9",
-          "points": "501",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5752/",
-          "players": [
-            {
-              "player": "n0thing",
-              "link": "http://www.hltv.org/player/203-n0thing",
-              "nationality": "us"
-            },
-            {
-              "player": "Skadoodle",
-              "link": "http://www.hltv.org/player/7440-skadoodle",
-              "nationality": "us"
-            },
-            {
-              "player": "shroud",
-              "link": "http://www.hltv.org/player/8349-shroud",
-              "nationality": "ca"
-            },
-            {
-              "player": "autimatic",
-              "link": "http://www.hltv.org/player/8735-autimatic",
-              "nationality": "us"
-            },
-            {
-              "player": "Stewie2K",
-              "link": "http://www.hltv.org/player/8797-stewie2k",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "6",
-          "team": "dignitas",
-          "points": "431",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5422/",
-          "players": [
-            {
-              "player": "RUBINO",
-              "link": "http://www.hltv.org/player/1485-rubino",
-              "nationality": "no"
-            },
-            {
-              "player": "cajunb",
-              "link": "http://www.hltv.org/player/2469-cajunb",
-              "nationality": "dk"
-            },
-            {
-              "player": "MSL",
-              "link": "http://www.hltv.org/player/7156-msl",
-              "nationality": "dk"
-            },
-            {
-              "player": "Magiskb0Y",
-              "link": "http://www.hltv.org/player/9032-magiskb0y",
-              "nationality": "dk"
-            },
-            {
-              "player": "k0nfig",
-              "link": "http://www.hltv.org/player/9078-k0nfig",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "7",
-          "team": "Astralis",
-          "points": "419",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6665/",
-          "players": [
-            {
-              "player": "karrigan",
-              "link": "http://www.hltv.org/player/429-karrigan",
-              "nationality": "dk"
-            },
-            {
-              "player": "Xyp9x",
-              "link": "http://www.hltv.org/player/4954-xyp9x",
-              "nationality": "dk"
-            },
-            {
-              "player": "dupreeh",
-              "link": "http://www.hltv.org/player/7398-dupreeh",
-              "nationality": "dk"
-            },
-            {
-              "player": "device",
-              "link": "http://www.hltv.org/player/7592-device",
-              "nationality": "dk"
-            },
-            {
-              "player": "Kjaerbye",
-              "link": "http://www.hltv.org/player/8394-kjaerbye",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "8",
-          "team": "GODSENT",
-          "points": "365",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6902/",
-          "players": [
-            {
-              "player": "pronax",
-              "link": "http://www.hltv.org/player/41-pronax",
-              "nationality": "se"
-            },
-            {
-              "player": "flusha",
-              "link": "http://www.hltv.org/player/3055-flusha",
-              "nationality": "se"
-            },
-            {
-              "player": "znajder",
-              "link": "http://www.hltv.org/player/3847-znajder",
-              "nationality": "se"
-            },
-            {
-              "player": "JW",
-              "link": "http://www.hltv.org/player/3849-jw",
-              "nationality": "se"
-            },
-            {
-              "player": "KRIMZ",
-              "link": "http://www.hltv.org/player/7528-krimz",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "9",
-          "team": "EnVyUs",
-          "points": "353",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5991/",
-          "players": [
-            {
-              "player": "kennyS",
-              "link": "http://www.hltv.org/player/7167-kennys",
-              "nationality": "fr"
-            },
-            {
-              "player": "NBK-",
-              "link": "http://www.hltv.org/player/7168-nbk",
-              "nationality": "fr"
-            },
-            {
-              "player": "apEX",
-              "link": "http://www.hltv.org/player/7322-apex",
-              "nationality": "fr"
-            },
-            {
-              "player": "Happy",
-              "link": "http://www.hltv.org/player/7429-happy",
-              "nationality": "fr"
-            },
-            {
-              "player": "DEVIL",
-              "link": "http://www.hltv.org/player/8569-devil",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "10",
-          "team": "Natus Vincere",
-          "points": "333",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4608/",
-          "players": [
-            {
-              "player": "Edward",
-              "link": "http://www.hltv.org/player/483-edward",
-              "nationality": "ua"
-            },
-            {
-              "player": "GuardiaN",
-              "link": "http://www.hltv.org/player/2757-guardian",
-              "nationality": "sk"
-            },
-            {
-              "player": "seized",
-              "link": "http://www.hltv.org/player/3347-seized",
-              "nationality": "ru"
-            },
-            {
-              "player": "flamie",
-              "link": "http://www.hltv.org/player/7594-flamie",
-              "nationality": "ru"
-            },
-            {
-              "player": "s1mple",
-              "link": "http://www.hltv.org/player/7998-s1mple",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "11",
-          "team": "Heroic",
-          "points": "298",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/7175/",
-          "players": [
-            {
-              "player": "Friis",
-              "link": "http://www.hltv.org/player/7-friis",
-              "nationality": "dk"
-            },
-            {
-              "player": "MODDII",
-              "link": "http://www.hltv.org/player/545-moddii",
-              "nationality": "se"
-            },
-            {
-              "player": "Snappi",
-              "link": "http://www.hltv.org/player/922-snappi",
-              "nationality": "dk"
-            },
-            {
-              "player": "gla1ve",
-              "link": "http://www.hltv.org/player/7412-gla1ve",
-              "nationality": "dk"
-            },
-            {
-              "player": "valde",
-              "link": "http://www.hltv.org/player/9031-valde",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "12",
-          "team": "Immortals",
-          "points": "294",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/7010/",
-          "players": [
-            {
-              "player": "zews",
-              "link": "http://www.hltv.org/player/6608-zews",
-              "nationality": "br"
-            },
-            {
-              "player": "hen1",
-              "link": "http://www.hltv.org/player/8565-hen1",
-              "nationality": "br"
-            },
-            {
-              "player": "lucas",
-              "link": "http://www.hltv.org/player/8566-lucas",
-              "nationality": "br"
-            },
-            {
-              "player": "boltz",
-              "link": "http://www.hltv.org/player/8568-boltz",
-              "nationality": "br"
-            },
-            {
-              "player": "felps",
-              "link": "http://www.hltv.org/player/9219-felps",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "13",
-          "team": "Liquid",
-          "points": "268",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5973/",
-          "players": [
-            {
-              "player": "Hiko",
-              "link": "http://www.hltv.org/player/2644-hiko",
-              "nationality": "us"
-            },
-            {
-              "player": "Pimp",
-              "link": "http://www.hltv.org/player/7154-pimp",
-              "nationality": "dk"
-            },
-            {
-              "player": "nitr0",
-              "link": "http://www.hltv.org/player/7687-nitr0",
-              "nationality": "us"
-            },
-            {
-              "player": "jdm64",
-              "link": "http://www.hltv.org/player/8346-jdm64",
-              "nationality": "us"
-            },
-            {
-              "player": "EliGE",
-              "link": "http://www.hltv.org/player/8738-elige",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "14",
-          "team": "FaZe",
-          "points": "228",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6667/",
-          "players": [
-            {
-              "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
-              "nationality": "fi"
-            },
-            {
-              "player": "kioShiMa",
-              "link": "http://www.hltv.org/player/4959-kioshima",
-              "nationality": "fr"
-            },
-            {
-              "player": "aizy",
-              "link": "http://www.hltv.org/player/8095-aizy",
-              "nationality": "dk"
-            },
-            {
-              "player": "rain",
-              "link": "http://www.hltv.org/player/8183-rain",
-              "nationality": "no"
-            },
-            {
-              "player": "jkaem",
-              "link": "http://www.hltv.org/player/8248-jkaem",
-              "nationality": "no"
-            }
-          ]
-        },
-        {
-          "position": "15",
-          "team": "FlipSid3",
-          "points": "212",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5988/",
-          "players": [
-            {
-              "player": "markeloff",
-              "link": "http://www.hltv.org/player/338-markeloff",
-              "nationality": "ua"
-            },
-            {
-              "player": "B1ad3",
-              "link": "http://www.hltv.org/player/472-b1ad3",
-              "nationality": "ua"
-            },
-            {
-              "player": "Shara",
-              "link": "http://www.hltv.org/player/1866-shara",
-              "nationality": "ua"
-            },
-            {
-              "player": "WorldEdit",
-              "link": "http://www.hltv.org/player/7403-worldedit",
-              "nationality": "ru"
-            },
-            {
-              "player": "wayLander",
-              "link": "http://www.hltv.org/player/7796-waylander",
-              "nationality": "fi"
-            }
-          ]
-        },
-        {
-          "position": "16",
-          "team": "mousesports",
-          "points": "176",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4494/",
-          "players": [
-            {
-              "player": "oskar",
-              "link": "http://www.hltv.org/player/798-oskar",
-              "nationality": "cz"
-            },
-            {
-              "player": "chrisJ",
-              "link": "http://www.hltv.org/player/2730-chrisj",
-              "nationality": "nl"
-            },
-            {
-              "player": "NiKo",
-              "link": "http://www.hltv.org/player/3741-niko",
-              "nationality": "ba"
-            },
-            {
-              "player": "Spiidi",
-              "link": "http://www.hltv.org/player/7499-spiidi",
-              "nationality": "de"
-            },
-            {
-              "player": "denis",
-              "link": "http://www.hltv.org/player/7511-denis",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "17",
-          "team": "Gambit",
-          "points": "160",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6651/",
-          "players": [
-            {
-              "player": "AdreN",
-              "link": "http://www.hltv.org/player/334-adren",
-              "nationality": "kz"
-            },
-            {
-              "player": "hooch",
-              "link": "http://www.hltv.org/player/499-hooch",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dosia",
-              "link": "http://www.hltv.org/player/735-dosia",
-              "nationality": "ru"
-            },
-            {
-              "player": "mou",
-              "link": "http://www.hltv.org/player/964-mou",
-              "nationality": "kz"
-            },
-            {
-              "player": "spaze",
-              "link": "http://www.hltv.org/player/8345-spaze",
-              "nationality": "ru"
-            }
-          ]
-        },
-        {
-          "position": "18",
-          "team": "OpTic",
-          "points": "138",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6615/",
-          "players": [
-            {
-              "player": "RUSH",
-              "link": "http://www.hltv.org/player/7805-rush",
-              "nationality": "us"
-            },
-            {
-              "player": "mixwell",
-              "link": "http://www.hltv.org/player/8370-mixwell",
-              "nationality": "es"
-            },
-            {
-              "player": "stanislaw",
-              "link": "http://www.hltv.org/player/8507-stanislaw",
-              "nationality": "ca"
-            },
-            {
-              "player": "NAF",
-              "link": "http://www.hltv.org/player/8520-naf",
-              "nationality": "ca"
-            },
-            {
-              "player": "tarik",
-              "link": "http://www.hltv.org/player/8523-tarik",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "19",
-          "team": "Echo Fox",
-          "points": "118",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6680/",
-          "players": [
-            {
-              "player": "Broken_player_name",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1916",
-              "nationality": "us"
-            },
-            {
-              "player": "freakazoid",
-              "link": "http://www.hltv.org/player/7808-freakazoid",
-              "nationality": "us"
-            },
-            {
-              "player": "ShahZaM",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7810",
-              "nationality": "us"
-            },
-            {
-              "player": "roca",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7935",
-              "nationality": "us"
-            },
-            {
-              "player": "ryx",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9042",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "20",
-          "team": "TyLoo",
-          "points": "110",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4863/",
-          "players": [
-            {
-              "player": "Mo",
-              "link": "http://www.hltv.org/player/5187-mo",
-              "nationality": "cn"
-            },
-            {
-              "player": "DD",
-              "link": "http://www.hltv.org/player/7026-dd",
-              "nationality": "cn"
-            },
-            {
-              "player": "fancy1",
-              "link": "http://www.hltv.org/player/7028-fancy1",
-              "nationality": "cn"
-            },
-            {
-              "player": "AttackeR",
-              "link": "http://www.hltv.org/player/8552-attacker",
-              "nationality": "cn"
-            },
-            {
-              "player": "somebody",
-              "link": "http://www.hltv.org/player/8605-somebody",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "21",
-          "team": "TSM",
-          "points": "90",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5996/",
-          "players": [
-            {
-              "player": "SEMPHIS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1915",
-              "nationality": "ca"
-            },
-            {
-              "player": "FNS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=6451",
-              "nationality": "ca"
-            },
-            {
-              "player": "Relyks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8517",
-              "nationality": "us"
-            },
-            {
-              "player": "SicK",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9258",
-              "nationality": "us"
-            },
-            {
-              "player": "Twistzz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10394",
-              "nationality": "ca"
-            }
-          ]
-        },
-        {
-          "position": "22",
-          "team": "Renegades",
-          "points": "90",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6211/",
-          "players": [
-            {
-              "player": "yam",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
-              "nationality": "au"
-            },
-            {
-              "player": "jks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
-              "nationality": "au"
-            },
-            {
-              "player": "AZR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
-              "nationality": "au"
-            },
-            {
-              "player": "Rickeh",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
-              "nationality": "au"
-            },
-            {
-              "player": "USTILO",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
-              "nationality": "au"
-            }
-          ]
-        },
-        {
-          "position": "23",
-          "team": "VG.CyberZen",
-          "points": "88",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6773/",
-          "players": [
-            {
-              "player": "Savage",
-              "link": "http://www.hltv.org/player/180-savage",
-              "nationality": "cn"
-            },
-            {
-              "player": "tb",
-              "link": "http://www.hltv.org/player/839-tb",
-              "nationality": "cn"
-            },
-            {
-              "player": "advent",
-              "link": "http://www.hltv.org/player/8600-advent",
-              "nationality": "cn"
-            },
-            {
-              "player": "zhokiNg",
-              "link": "http://www.hltv.org/player/8601-zhoking",
-              "nationality": "cn"
-            },
-            {
-              "player": "LOVEYY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "24",
-          "team": "HellRaisers",
-          "points": "83",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5310/",
-          "players": [
-            {
-              "player": "ANGE1",
-              "link": "http://www.hltv.org/player/339-ange1",
-              "nationality": "ua"
-            },
-            {
-              "player": "bondik",
-              "link": "http://www.hltv.org/player/2131-bondik",
-              "nationality": "ua"
-            },
-            {
-              "player": "STYKO",
-              "link": "http://www.hltv.org/player/6904-styko",
-              "nationality": "sk"
-            },
-            {
-              "player": "Zero",
-              "link": "http://www.hltv.org/player/8413-zero",
-              "nationality": "sk"
-            },
-            {
-              "player": "DeadFox",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
-              "nationality": "hu"
-            }
-          ]
-        },
-        {
-          "position": "25",
-          "team": "Space Soldiers",
-          "points": "76",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/5929/",
-          "players": [
-            {
-              "player": "TuGuX",
-              "link": "http://www.hltv.org/player/7321-tugux",
-              "nationality": "de"
-            },
-            {
-              "player": "XANTARES",
-              "link": "http://www.hltv.org/player/7938-xantares",
-              "nationality": "tr"
-            },
-            {
-              "player": "DESPE",
-              "link": "http://www.hltv.org/player/7980-despe",
-              "nationality": "tr"
-            },
-            {
-              "player": "paz",
-              "link": "http://www.hltv.org/player/9353-paz",
-              "nationality": "tr"
-            },
-            {
-              "player": "ngiN",
-              "link": "http://www.hltv.org/player/9857-ngin",
-              "nationality": "tr"
-            }
-          ]
-        },
-        {
-          "position": "26",
-          "team": "NRG",
-          "points": "73",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/6673/",
-          "players": [
-            {
-              "player": "gob b",
-              "link": "http://www.hltv.org/?pageid=173&playerid=136",
-              "nationality": "de"
-            },
-            {
-              "player": "LEGIJA",
-              "link": "http://www.hltv.org/?pageid=173&playerid=3252",
-              "nationality": "rs"
-            },
-            {
-              "player": "tabseN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5794",
-              "nationality": "de"
-            },
-            {
-              "player": "FugLy",
-              "link": "http://www.hltv.org/player/8522-fugly",
-              "nationality": "us"
-            },
-            {
-              "player": "ptr",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8707",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "27",
-          "team": "ALTERNATE aTTaX",
-          "points": "68",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4501/",
-          "players": [
-            {
-              "player": "crisby",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
-              "nationality": "de"
-            },
-            {
-              "player": "kzy",
-              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
-              "nationality": "de"
-            },
-            {
-              "player": "tiziaN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
-              "nationality": "de"
-            },
-            {
-              "player": "keev",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5799",
-              "nationality": "de"
-            },
-            {
-              "player": "syrsoN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "28",
-          "team": "fnatic",
-          "points": "67",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/4991/",
-          "players": [
-            {
-              "player": "olofmeister",
-              "link": "http://www.hltv.org/player/885-olofmeister",
-              "nationality": "se"
-            },
-            {
-              "player": "dennis",
-              "link": "http://www.hltv.org/player/1146-dennis",
-              "nationality": "se"
-            },
-            {
-              "player": "wenton",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2031",
-              "nationality": "se"
-            },
-            {
-              "player": "twist",
-              "link": "http://www.hltv.org/player/7443-twist",
-              "nationality": "se"
-            },
-            {
-              "player": "Lekr0",
-              "link": "http://www.hltv.org/player/9261-lekr0",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "29",
-          "team": "Crowns",
-          "points": "60",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/7168/",
-          "players": [
-            {
-              "player": "zape",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5483",
-              "nationality": "se"
-            },
-            {
-              "player": "Krewmer",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9412",
-              "nationality": "se"
-            },
-            {
-              "player": "Jayzwalkingz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9763",
-              "nationality": "se"
-            },
-            {
-              "player": "xajdish",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10655",
-              "nationality": "se"
-            },
-            {
-              "player": "bENNY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10658",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "30",
-          "team": "Spirit",
-          "points": "58",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/19/details/7020/",
-          "players": [
-            {
-              "player": "kibaken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1950",
-              "nationality": "ru"
-            },
-            {
-              "player": "DavCost",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8124",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dima",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8125",
-              "nationality": "ru"
-            },
-            {
-              "player": "S0tF1k",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9081",
-              "nationality": "ru"
-            },
-            {
-              "player": "COLDYY1",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9083",
-              "nationality": "ua"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "link": "http://www.hltv.org/ranking/teams/2016/september/26/",
-      "date": "september 26, 2016",
-      "ranks": [
-        {
-          "position": "1",
-          "team": "SK",
-          "points": "854",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6137/",
-          "players": [
-            {
-              "player": "fnx",
-              "link": "http://www.hltv.org/player/557-fnx",
-              "nationality": "br"
-            },
-            {
-              "player": "FalleN",
-              "link": "http://www.hltv.org/player/2023-fallen",
-              "nationality": "br"
-            },
-            {
-              "player": "fer",
-              "link": "http://www.hltv.org/player/8564-fer",
-              "nationality": "br"
-            },
-            {
-              "player": "coldzera",
-              "link": "http://www.hltv.org/player/9216-coldzera",
-              "nationality": "br"
-            },
-            {
-              "player": "TACO",
-              "link": "http://www.hltv.org/player/9217-taco",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "2",
-          "team": "Virtus.pro",
-          "points": "679",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5378/",
-          "players": [
-            {
-              "player": "TaZ",
-              "link": "http://www.hltv.org/player/161-taz",
-              "nationality": "pl"
-            },
-            {
-              "player": "NEO",
-              "link": "http://www.hltv.org/player/165-neo",
-              "nationality": "pl"
-            },
-            {
-              "player": "pashaBiceps",
-              "link": "http://www.hltv.org/player/317-pashabiceps",
-              "nationality": "pl"
-            },
-            {
-              "player": "Snax",
-              "link": "http://www.hltv.org/player/2553-snax",
-              "nationality": "pl"
-            },
-            {
-              "player": "byali",
-              "link": "http://www.hltv.org/player/5386-byali",
-              "nationality": "pl"
-            }
-          ]
-        },
-        {
-          "position": "3",
-          "team": "G2",
-          "points": "568",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5995/",
-          "players": [
-            {
-              "player": "shox",
-              "link": "http://www.hltv.org/player/1225-shox",
-              "nationality": "fr"
-            },
-            {
-              "player": "RpK",
-              "link": "http://www.hltv.org/player/7169-rpk",
-              "nationality": "fr"
-            },
-            {
-              "player": "SmithZz",
-              "link": "http://www.hltv.org/player/7170-smithzz",
-              "nationality": "fr"
-            },
-            {
-              "player": "ScreaM",
-              "link": "http://www.hltv.org/player/7390-scream",
-              "nationality": "be"
-            },
-            {
-              "player": "bodyy",
-              "link": "http://www.hltv.org/player/8374-bodyy",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "4",
-          "team": "NiP",
-          "points": "510",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4411/",
-          "players": [
-            {
-              "player": "f0rest",
-              "link": "http://www.hltv.org/player/29-f0rest",
-              "nationality": "se"
-            },
-            {
-              "player": "GeT_RiGhT",
-              "link": "http://www.hltv.org/player/39-get-right",
-              "nationality": "se"
-            },
-            {
-              "player": "Xizt",
-              "link": "http://www.hltv.org/player/884-xizt",
-              "nationality": "se"
-            },
-            {
-              "player": "friberg",
-              "link": "http://www.hltv.org/player/7148-friberg",
-              "nationality": "se"
-            },
-            {
-              "player": "pyth",
-              "link": "http://www.hltv.org/player/7527-pyth",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "5",
-          "team": "Cloud9",
-          "points": "504",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5752/",
-          "players": [
-            {
-              "player": "n0thing",
-              "link": "http://www.hltv.org/player/203-n0thing",
-              "nationality": "us"
-            },
-            {
-              "player": "Skadoodle",
-              "link": "http://www.hltv.org/player/7440-skadoodle",
-              "nationality": "us"
-            },
-            {
-              "player": "shroud",
-              "link": "http://www.hltv.org/player/8349-shroud",
-              "nationality": "ca"
-            },
-            {
-              "player": "autimatic",
-              "link": "http://www.hltv.org/player/8735-autimatic",
-              "nationality": "us"
-            },
-            {
-              "player": "Stewie2K",
-              "link": "http://www.hltv.org/player/8797-stewie2k",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "6",
-          "team": "dignitas",
-          "points": "427",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5422/",
-          "players": [
-            {
-              "player": "RUBINO",
-              "link": "http://www.hltv.org/player/1485-rubino",
-              "nationality": "no"
-            },
-            {
-              "player": "cajunb",
-              "link": "http://www.hltv.org/player/2469-cajunb",
-              "nationality": "dk"
-            },
-            {
-              "player": "MSL",
-              "link": "http://www.hltv.org/player/7156-msl",
-              "nationality": "dk"
-            },
-            {
-              "player": "Magiskb0Y",
-              "link": "http://www.hltv.org/player/9032-magiskb0y",
-              "nationality": "dk"
-            },
-            {
-              "player": "k0nfig",
-              "link": "http://www.hltv.org/player/9078-k0nfig",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "7",
-          "team": "EnVyUs",
-          "points": "416",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5991/",
-          "players": [
-            {
-              "player": "kennyS",
-              "link": "http://www.hltv.org/player/7167-kennys",
-              "nationality": "fr"
-            },
-            {
-              "player": "NBK-",
-              "link": "http://www.hltv.org/player/7168-nbk",
-              "nationality": "fr"
-            },
-            {
-              "player": "apEX",
-              "link": "http://www.hltv.org/player/7322-apex",
-              "nationality": "fr"
-            },
-            {
-              "player": "Happy",
-              "link": "http://www.hltv.org/player/7429-happy",
-              "nationality": "fr"
-            },
-            {
-              "player": "DEVIL",
-              "link": "http://www.hltv.org/player/8569-devil",
-              "nationality": "fr"
-            }
-          ]
-        },
-        {
-          "position": "8",
-          "team": "Astralis",
-          "points": "393",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6665/",
-          "players": [
-            {
-              "player": "karrigan",
-              "link": "http://www.hltv.org/player/429-karrigan",
-              "nationality": "dk"
-            },
-            {
-              "player": "Xyp9x",
-              "link": "http://www.hltv.org/player/4954-xyp9x",
-              "nationality": "dk"
-            },
-            {
-              "player": "dupreeh",
-              "link": "http://www.hltv.org/player/7398-dupreeh",
-              "nationality": "dk"
-            },
-            {
-              "player": "device",
-              "link": "http://www.hltv.org/player/7592-device",
-              "nationality": "dk"
-            },
-            {
-              "player": "Kjaerbye",
-              "link": "http://www.hltv.org/player/8394-kjaerbye",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "9",
-          "team": "GODSENT",
-          "points": "344",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6902/",
-          "players": [
-            {
-              "player": "pronax",
-              "link": "http://www.hltv.org/player/41-pronax",
-              "nationality": "se"
-            },
-            {
-              "player": "flusha",
-              "link": "http://www.hltv.org/player/3055-flusha",
-              "nationality": "se"
-            },
-            {
-              "player": "znajder",
-              "link": "http://www.hltv.org/player/3847-znajder",
-              "nationality": "se"
-            },
-            {
-              "player": "JW",
-              "link": "http://www.hltv.org/player/3849-jw",
-              "nationality": "se"
-            },
-            {
-              "player": "KRIMZ",
-              "link": "http://www.hltv.org/player/7528-krimz",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "10",
-          "team": "Natus Vincere",
-          "points": "334",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4608/",
-          "players": [
-            {
-              "player": "Edward",
-              "link": "http://www.hltv.org/player/483-edward",
-              "nationality": "ua"
-            },
-            {
-              "player": "GuardiaN",
-              "link": "http://www.hltv.org/player/2757-guardian",
-              "nationality": "sk"
-            },
-            {
-              "player": "seized",
-              "link": "http://www.hltv.org/player/3347-seized",
-              "nationality": "ru"
-            },
-            {
-              "player": "flamie",
-              "link": "http://www.hltv.org/player/7594-flamie",
-              "nationality": "ru"
-            },
-            {
-              "player": "s1mple",
-              "link": "http://www.hltv.org/player/7998-s1mple",
-              "nationality": "ua"
-            }
-          ]
-        },
-        {
-          "position": "11",
-          "team": "Heroic",
-          "points": "273",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/7175/",
-          "players": [
-            {
-              "player": "Friis",
-              "link": "http://www.hltv.org/player/7-friis",
-              "nationality": "dk"
-            },
-            {
-              "player": "MODDII",
-              "link": "http://www.hltv.org/player/545-moddii",
-              "nationality": "se"
-            },
-            {
-              "player": "Snappi",
-              "link": "http://www.hltv.org/player/922-snappi",
-              "nationality": "dk"
-            },
-            {
-              "player": "gla1ve",
-              "link": "http://www.hltv.org/player/7412-gla1ve",
-              "nationality": "dk"
-            },
-            {
-              "player": "valde",
-              "link": "http://www.hltv.org/player/9031-valde",
-              "nationality": "dk"
-            }
-          ]
-        },
-        {
-          "position": "12",
-          "team": "Immortals",
-          "points": "264",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/7010/",
-          "players": [
-            {
-              "player": "zews",
-              "link": "http://www.hltv.org/player/6608-zews",
-              "nationality": "br"
-            },
-            {
-              "player": "hen1",
-              "link": "http://www.hltv.org/player/8565-hen1",
-              "nationality": "br"
-            },
-            {
-              "player": "lucas",
-              "link": "http://www.hltv.org/player/8566-lucas",
-              "nationality": "br"
-            },
-            {
-              "player": "boltz",
-              "link": "http://www.hltv.org/player/8568-boltz",
-              "nationality": "br"
-            },
-            {
-              "player": "felps",
-              "link": "http://www.hltv.org/player/9219-felps",
-              "nationality": "br"
-            }
-          ]
-        },
-        {
-          "position": "13",
-          "team": "Liquid",
-          "points": "260",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5973/",
-          "players": [
-            {
-              "player": "Hiko",
-              "link": "http://www.hltv.org/player/2644-hiko",
-              "nationality": "us"
-            },
-            {
-              "player": "Pimp",
-              "link": "http://www.hltv.org/player/7154-pimp",
-              "nationality": "dk"
-            },
-            {
-              "player": "nitr0",
-              "link": "http://www.hltv.org/player/7687-nitr0",
-              "nationality": "us"
-            },
-            {
-              "player": "jdm64",
-              "link": "http://www.hltv.org/player/8346-jdm64",
-              "nationality": "us"
-            },
-            {
-              "player": "EliGE",
-              "link": "http://www.hltv.org/player/8738-elige",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "14",
-          "team": "FaZe",
-          "points": "227",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6667/",
-          "players": [
-            {
-              "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
-              "nationality": "fi"
-            },
-            {
-              "player": "kioShiMa",
-              "link": "http://www.hltv.org/player/4959-kioshima",
-              "nationality": "fr"
-            },
-            {
-              "player": "aizy",
-              "link": "http://www.hltv.org/player/8095-aizy",
-              "nationality": "dk"
-            },
-            {
-              "player": "rain",
-              "link": "http://www.hltv.org/player/8183-rain",
-              "nationality": "no"
-            },
-            {
-              "player": "jkaem",
-              "link": "http://www.hltv.org/player/8248-jkaem",
-              "nationality": "no"
-            }
-          ]
-        },
-        {
-          "position": "15",
-          "team": "mousesports",
-          "points": "223",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4494/",
-          "players": [
-            {
-              "player": "oskar",
-              "link": "http://www.hltv.org/player/798-oskar",
-              "nationality": "cz"
-            },
-            {
-              "player": "chrisJ",
-              "link": "http://www.hltv.org/player/2730-chrisj",
-              "nationality": "nl"
-            },
-            {
-              "player": "NiKo",
-              "link": "http://www.hltv.org/player/3741-niko",
-              "nationality": "ba"
-            },
-            {
-              "player": "Spiidi",
-              "link": "http://www.hltv.org/player/7499-spiidi",
-              "nationality": "de"
-            },
-            {
-              "player": "denis",
-              "link": "http://www.hltv.org/player/7511-denis",
-              "nationality": "de"
-            }
-          ]
-        },
-        {
-          "position": "16",
-          "team": "FlipSid3",
-          "points": "149",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5988/",
-          "players": [
-            {
-              "player": "markeloff",
-              "link": "http://www.hltv.org/player/338-markeloff",
-              "nationality": "ua"
-            },
-            {
-              "player": "B1ad3",
-              "link": "http://www.hltv.org/player/472-b1ad3",
-              "nationality": "ua"
-            },
-            {
-              "player": "WorldEdit",
-              "link": "http://www.hltv.org/player/7403-worldedit",
-              "nationality": "ru"
-            },
-            {
-              "player": "wayLander",
-              "link": "http://www.hltv.org/player/7796-waylander",
-              "nationality": "fi"
-            },
-            {
-              "player": "electronic",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
-              "nationality": "ru"
-            }
-          ]
-        },
-        {
-          "position": "17",
-          "team": "OpTic",
-          "points": "148",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6615/",
-          "players": [
-            {
-              "player": "RUSH",
-              "link": "http://www.hltv.org/player/7805-rush",
-              "nationality": "us"
-            },
-            {
-              "player": "mixwell",
-              "link": "http://www.hltv.org/player/8370-mixwell",
-              "nationality": "es"
-            },
-            {
-              "player": "stanislaw",
-              "link": "http://www.hltv.org/player/8507-stanislaw",
-              "nationality": "ca"
-            },
-            {
-              "player": "NAF",
-              "link": "http://www.hltv.org/player/8520-naf",
-              "nationality": "ca"
-            },
-            {
-              "player": "tarik",
-              "link": "http://www.hltv.org/player/8523-tarik",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "18",
-          "team": "Echo Fox",
-          "points": "111",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6680/",
-          "players": [
-            {
-              "player": "Broken_player_name",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1916",
-              "nationality": "us"
-            },
-            {
-              "player": "freakazoid",
-              "link": "http://www.hltv.org/player/7808-freakazoid",
-              "nationality": "us"
-            },
-            {
-              "player": "ShahZaM",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7810",
-              "nationality": "us"
-            },
-            {
-              "player": "roca",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7935",
-              "nationality": "us"
-            },
-            {
-              "player": "ryx",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9042",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "19",
-          "team": "TyLoo",
-          "points": "108",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4863/",
-          "players": [
-            {
-              "player": "Mo",
-              "link": "http://www.hltv.org/player/5187-mo",
-              "nationality": "cn"
-            },
-            {
-              "player": "DD",
-              "link": "http://www.hltv.org/player/7026-dd",
-              "nationality": "cn"
-            },
-            {
-              "player": "fancy1",
-              "link": "http://www.hltv.org/player/7028-fancy1",
-              "nationality": "cn"
-            },
-            {
-              "player": "AttackeR",
-              "link": "http://www.hltv.org/player/8552-attacker",
-              "nationality": "cn"
-            },
-            {
-              "player": "somebody",
-              "link": "http://www.hltv.org/player/8605-somebody",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "20",
-          "team": "Gambit",
-          "points": "107",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6651/",
-          "players": [
-            {
-              "player": "kUcheR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=302",
-              "nationality": "ru"
-            },
-            {
-              "player": "AdreN",
-              "link": "http://www.hltv.org/player/334-adren",
-              "nationality": "kz"
-            },
-            {
-              "player": "hooch",
-              "link": "http://www.hltv.org/player/499-hooch",
-              "nationality": "ru"
-            },
-            {
-              "player": "Dosia",
-              "link": "http://www.hltv.org/player/735-dosia",
-              "nationality": "ru"
-            },
-            {
-              "player": "mou",
-              "link": "http://www.hltv.org/player/964-mou",
-              "nationality": "kz"
-            }
-          ]
-        },
-        {
-          "position": "21",
-          "team": "VG.CyberZen",
-          "points": "104",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6773/",
-          "players": [
-            {
-              "player": "Savage",
-              "link": "http://www.hltv.org/player/180-savage",
-              "nationality": "cn"
-            },
-            {
-              "player": "tb",
-              "link": "http://www.hltv.org/player/839-tb",
-              "nationality": "cn"
-            },
-            {
-              "player": "advent",
-              "link": "http://www.hltv.org/player/8600-advent",
-              "nationality": "cn"
-            },
-            {
-              "player": "zhokiNg",
-              "link": "http://www.hltv.org/player/8601-zhoking",
-              "nationality": "cn"
-            },
-            {
-              "player": "LOVEYY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
-              "nationality": "cn"
-            }
-          ]
-        },
-        {
-          "position": "22",
-          "team": "HellRaisers",
-          "points": "103",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5310/",
-          "players": [
-            {
-              "player": "ANGE1",
-              "link": "http://www.hltv.org/player/339-ange1",
-              "nationality": "ua"
-            },
-            {
-              "player": "bondik",
-              "link": "http://www.hltv.org/player/2131-bondik",
-              "nationality": "ua"
-            },
-            {
-              "player": "STYKO",
-              "link": "http://www.hltv.org/player/6904-styko",
-              "nationality": "sk"
-            },
-            {
-              "player": "Zero",
-              "link": "http://www.hltv.org/player/8413-zero",
-              "nationality": "sk"
-            },
-            {
-              "player": "DeadFox",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
-              "nationality": "hu"
-            }
-          ]
-        },
-        {
-          "position": "23",
-          "team": "Renegades",
-          "points": "98",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6211/",
-          "players": [
-            {
-              "player": "yam",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
-              "nationality": "au"
-            },
-            {
-              "player": "jks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
-              "nationality": "au"
-            },
-            {
-              "player": "AZR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
-              "nationality": "au"
-            },
-            {
-              "player": "Rickeh",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
-              "nationality": "au"
-            },
-            {
-              "player": "USTILO",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
-              "nationality": "au"
-            }
-          ]
-        },
-        {
-          "position": "24",
-          "team": "TSM",
-          "points": "86",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5996/",
-          "players": [
-            {
-              "player": "SEMPHIS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=1915",
-              "nationality": "ca"
-            },
-            {
-              "player": "FNS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=6451",
-              "nationality": "ca"
-            },
-            {
-              "player": "Relyks",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8517",
-              "nationality": "us"
-            },
-            {
-              "player": "SicK",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9258",
-              "nationality": "us"
-            },
-            {
-              "player": "Twistzz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10394",
-              "nationality": "ca"
-            }
-          ]
-        },
-        {
-          "position": "25",
-          "team": "NRG",
-          "points": "78",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/6673/",
-          "players": [
-            {
-              "player": "gob b",
-              "link": "http://www.hltv.org/?pageid=173&playerid=136",
-              "nationality": "de"
-            },
-            {
-              "player": "LEGIJA",
-              "link": "http://www.hltv.org/?pageid=173&playerid=3252",
-              "nationality": "rs"
-            },
-            {
-              "player": "tabseN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5794",
-              "nationality": "de"
-            },
-            {
-              "player": "FugLy",
-              "link": "http://www.hltv.org/player/8522-fugly",
-              "nationality": "us"
-            },
-            {
-              "player": "ptr",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8707",
-              "nationality": "us"
-            }
-          ]
-        },
-        {
-          "position": "26",
-          "team": "fnatic",
-          "points": "72",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4991/",
-          "players": [
-            {
-              "player": "olofmeister",
-              "link": "http://www.hltv.org/player/885-olofmeister",
-              "nationality": "se"
-            },
-            {
-              "player": "dennis",
-              "link": "http://www.hltv.org/player/1146-dennis",
-              "nationality": "se"
-            },
-            {
-              "player": "wenton",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2031",
-              "nationality": "se"
-            },
-            {
-              "player": "twist",
-              "link": "http://www.hltv.org/player/7443-twist",
-              "nationality": "se"
-            },
-            {
-              "player": "Lekr0",
-              "link": "http://www.hltv.org/player/9261-lekr0",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "27",
-          "team": "Space Soldiers",
-          "points": "69",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5929/",
-          "players": [
-            {
-              "player": "TuGuX",
-              "link": "http://www.hltv.org/player/7321-tugux",
-              "nationality": "de"
-            },
-            {
-              "player": "XANTARES",
-              "link": "http://www.hltv.org/player/7938-xantares",
-              "nationality": "tr"
-            },
-            {
-              "player": "DESPE",
-              "link": "http://www.hltv.org/player/7980-despe",
-              "nationality": "tr"
-            },
-            {
-              "player": "paz",
-              "link": "http://www.hltv.org/player/9353-paz",
-              "nationality": "tr"
-            },
-            {
-              "player": "ngiN",
-              "link": "http://www.hltv.org/player/9857-ngin",
-              "nationality": "tr"
-            }
-          ]
-        },
-        {
-          "position": "28",
-          "team": "Crowns",
-          "points": "55",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/7168/",
-          "players": [
-            {
-              "player": "zape",
-              "link": "http://www.hltv.org/?pageid=173&playerid=5483",
-              "nationality": "se"
-            },
-            {
-              "player": "Krewmer",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9412",
-              "nationality": "se"
-            },
-            {
-              "player": "Jayzwalkingz",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9763",
-              "nationality": "se"
-            },
-            {
-              "player": "xajdish",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10655",
-              "nationality": "se"
-            },
-            {
-              "player": "bENNY",
-              "link": "http://www.hltv.org/?pageid=173&playerid=10658",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "29",
-          "team": "Epsilon",
-          "points": "52",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/4688/",
-          "players": [
-            {
-              "player": "BARBARR",
-              "link": "http://www.hltv.org/?pageid=173&playerid=44",
-              "nationality": "se"
-            },
-            {
-              "player": "draken",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
-              "nationality": "se"
-            },
-            {
-              "player": "disco doplan",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
-              "nationality": "se"
-            },
-            {
-              "player": "freddieb",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
-              "nationality": "se"
-            },
-            {
-              "player": "REZ",
-              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
-              "nationality": "se"
-            }
-          ]
-        },
-        {
-          "position": "30",
-          "team": "PENTA",
-          "points": "51",
-          "link": "http://www.hltv.org/ranking/teams/2016/september/26/details/5395/",
-          "players": [
-            {
-              "player": "tahsiN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=2148",
-              "nationality": "de"
-            },
-            {
-              "player": "loWel",
-              "link": "http://www.hltv.org/player/3997-lowel",
-              "nationality": "es"
-            },
-            {
-              "player": "kRYSTAL",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7218",
-              "nationality": "de"
-            },
-            {
-              "player": "mikeS",
-              "link": "http://www.hltv.org/?pageid=173&playerid=7673",
-              "nationality": "nl"
-            },
-            {
-              "player": "stfN",
-              "link": "http://www.hltv.org/?pageid=173&playerid=8800",
-              "nationality": "de"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "link": "http://www.hltv.org/ranking/teams/2016/october/3/",
       "date": "october 3, 2016",
       "ranks": [
@@ -4448,7 +474,7 @@ var data = {
           "players": [
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -5467,7 +1493,7 @@ var data = {
           "players": [
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -6415,7 +2441,7 @@ var data = {
           "players": [
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -7416,7 +3442,7 @@ var data = {
             },
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -8346,7 +4372,7 @@ var data = {
             },
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -8873,7 +4899,7 @@ var data = {
               "nationality": "fr"
             },
             {
-              "player": "scara",
+              "player": "Roombang",
               "link": "http://www.hltv.org/?pageid=173&playerid=7813",
               "nationality": "be"
             },
@@ -9342,7 +5368,7 @@ var data = {
             },
             {
               "player": "allu",
-              "link": "http://www.hltv.org/?pageid=173&playerid=695",
+              "link": "http://www.hltv.org/player/695-allu",
               "nationality": "fi"
             },
             {
@@ -9902,7 +5928,7 @@ var data = {
               "nationality": "fr"
             },
             {
-              "player": "scara",
+              "player": "Roombang",
               "link": "http://www.hltv.org/?pageid=173&playerid=7813",
               "nationality": "be"
             },
@@ -9924,6 +5950,4946 @@ var data = {
           ]
         }
       ]
+    },
+    {
+      "link": "http://www.hltv.org/ranking/teams/2016/november/14/",
+      "date": "november 14, 2016",
+      "ranks": [
+        {
+          "position": "1",
+          "team": "SK",
+          "points": "977",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6137/",
+          "players": [
+            {
+              "player": "fnx",
+              "link": "http://www.hltv.org/player/557-fnx",
+              "nationality": "br"
+            },
+            {
+              "player": "FalleN",
+              "link": "http://www.hltv.org/player/2023-fallen",
+              "nationality": "br"
+            },
+            {
+              "player": "fer",
+              "link": "http://www.hltv.org/player/8564-fer",
+              "nationality": "br"
+            },
+            {
+              "player": "coldzera",
+              "link": "http://www.hltv.org/player/9216-coldzera",
+              "nationality": "br"
+            },
+            {
+              "player": "TACO",
+              "link": "http://www.hltv.org/player/9217-taco",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "2",
+          "team": "Virtus.pro",
+          "points": "905",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5378/",
+          "players": [
+            {
+              "player": "TaZ",
+              "link": "http://www.hltv.org/player/161-taz",
+              "nationality": "pl"
+            },
+            {
+              "player": "NEO",
+              "link": "http://www.hltv.org/player/165-neo",
+              "nationality": "pl"
+            },
+            {
+              "player": "pashaBiceps",
+              "link": "http://www.hltv.org/player/317-pashabiceps",
+              "nationality": "pl"
+            },
+            {
+              "player": "Snax",
+              "link": "http://www.hltv.org/player/2553-snax",
+              "nationality": "pl"
+            },
+            {
+              "player": "byali",
+              "link": "http://www.hltv.org/player/5386-byali",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "3",
+          "team": "dignitas",
+          "points": "782",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5422/",
+          "players": [
+            {
+              "player": "RUBINO",
+              "link": "http://www.hltv.org/player/1485-rubino",
+              "nationality": "no"
+            },
+            {
+              "player": "cajunb",
+              "link": "http://www.hltv.org/player/2469-cajunb",
+              "nationality": "dk"
+            },
+            {
+              "player": "MSL",
+              "link": "http://www.hltv.org/player/7156-msl",
+              "nationality": "dk"
+            },
+            {
+              "player": "Magiskb0Y",
+              "link": "http://www.hltv.org/player/9032-magiskb0y",
+              "nationality": "dk"
+            },
+            {
+              "player": "k0nfig",
+              "link": "http://www.hltv.org/player/9078-k0nfig",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "4",
+          "team": "Natus Vincere",
+          "points": "726",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4608/",
+          "players": [
+            {
+              "player": "Edward",
+              "link": "http://www.hltv.org/player/483-edward",
+              "nationality": "ua"
+            },
+            {
+              "player": "GuardiaN",
+              "link": "http://www.hltv.org/player/2757-guardian",
+              "nationality": "sk"
+            },
+            {
+              "player": "seized",
+              "link": "http://www.hltv.org/player/3347-seized",
+              "nationality": "ru"
+            },
+            {
+              "player": "flamie",
+              "link": "http://www.hltv.org/player/7594-flamie",
+              "nationality": "ru"
+            },
+            {
+              "player": "s1mple",
+              "link": "http://www.hltv.org/player/7998-s1mple",
+              "nationality": "ua"
+            }
+          ]
+        },
+        {
+          "position": "5",
+          "team": "Cloud9",
+          "points": "647",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5752/",
+          "players": [
+            {
+              "player": "n0thing",
+              "link": "http://www.hltv.org/player/203-n0thing",
+              "nationality": "us"
+            },
+            {
+              "player": "Skadoodle",
+              "link": "http://www.hltv.org/player/7440-skadoodle",
+              "nationality": "us"
+            },
+            {
+              "player": "shroud",
+              "link": "http://www.hltv.org/player/8349-shroud",
+              "nationality": "ca"
+            },
+            {
+              "player": "autimatic",
+              "link": "http://www.hltv.org/player/8735-autimatic",
+              "nationality": "us"
+            },
+            {
+              "player": "Stewie2K",
+              "link": "http://www.hltv.org/player/8797-stewie2k",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "6",
+          "team": "G2",
+          "points": "477",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5995/",
+          "players": [
+            {
+              "player": "shox",
+              "link": "http://www.hltv.org/player/1225-shox",
+              "nationality": "fr"
+            },
+            {
+              "player": "RpK",
+              "link": "http://www.hltv.org/player/7169-rpk",
+              "nationality": "fr"
+            },
+            {
+              "player": "SmithZz",
+              "link": "http://www.hltv.org/player/7170-smithzz",
+              "nationality": "fr"
+            },
+            {
+              "player": "ScreaM",
+              "link": "http://www.hltv.org/player/7390-scream",
+              "nationality": "be"
+            },
+            {
+              "player": "bodyy",
+              "link": "http://www.hltv.org/player/8374-bodyy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "7",
+          "team": "NiP",
+          "points": "447",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4411/",
+          "players": [
+            {
+              "player": "f0rest",
+              "link": "http://www.hltv.org/player/29-f0rest",
+              "nationality": "se"
+            },
+            {
+              "player": "GeT_RiGhT",
+              "link": "http://www.hltv.org/player/39-get-right",
+              "nationality": "se"
+            },
+            {
+              "player": "Xizt",
+              "link": "http://www.hltv.org/player/884-xizt",
+              "nationality": "se"
+            },
+            {
+              "player": "friberg",
+              "link": "http://www.hltv.org/player/7148-friberg",
+              "nationality": "se"
+            },
+            {
+              "player": "pyth",
+              "link": "http://www.hltv.org/player/7527-pyth",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "8",
+          "team": "EnVyUs",
+          "points": "389",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5991/",
+          "players": [
+            {
+              "player": "SIXER",
+              "link": "http://www.hltv.org/player/147-sixer",
+              "nationality": "fr"
+            },
+            {
+              "player": "kennyS",
+              "link": "http://www.hltv.org/player/7167-kennys",
+              "nationality": "fr"
+            },
+            {
+              "player": "NBK-",
+              "link": "http://www.hltv.org/player/7168-nbk",
+              "nationality": "fr"
+            },
+            {
+              "player": "apEX",
+              "link": "http://www.hltv.org/player/7322-apex",
+              "nationality": "fr"
+            },
+            {
+              "player": "Happy",
+              "link": "http://www.hltv.org/player/7429-happy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "9",
+          "team": "OpTic",
+          "points": "360",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6615/",
+          "players": [
+            {
+              "player": "RUSH",
+              "link": "http://www.hltv.org/player/7805-rush",
+              "nationality": "us"
+            },
+            {
+              "player": "mixwell",
+              "link": "http://www.hltv.org/player/8370-mixwell",
+              "nationality": "es"
+            },
+            {
+              "player": "stanislaw",
+              "link": "http://www.hltv.org/player/8507-stanislaw",
+              "nationality": "ca"
+            },
+            {
+              "player": "NAF",
+              "link": "http://www.hltv.org/player/8520-naf",
+              "nationality": "ca"
+            },
+            {
+              "player": "tarik",
+              "link": "http://www.hltv.org/player/8523-tarik",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "10",
+          "team": "mousesports",
+          "points": "349",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4494/",
+          "players": [
+            {
+              "player": "chrisJ",
+              "link": "http://www.hltv.org/player/2730-chrisj",
+              "nationality": "nl"
+            },
+            {
+              "player": "NiKo",
+              "link": "http://www.hltv.org/player/3741-niko",
+              "nationality": "ba"
+            },
+            {
+              "player": "loWel",
+              "link": "http://www.hltv.org/player/3997-lowel",
+              "nationality": "es"
+            },
+            {
+              "player": "Spiidi",
+              "link": "http://www.hltv.org/player/7499-spiidi",
+              "nationality": "de"
+            },
+            {
+              "player": "denis",
+              "link": "http://www.hltv.org/player/7511-denis",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "11",
+          "team": "Liquid",
+          "points": "325",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5973/",
+          "players": [
+            {
+              "player": "Hiko",
+              "link": "http://www.hltv.org/player/2644-hiko",
+              "nationality": "us"
+            },
+            {
+              "player": "Pimp",
+              "link": "http://www.hltv.org/player/7154-pimp",
+              "nationality": "dk"
+            },
+            {
+              "player": "nitr0",
+              "link": "http://www.hltv.org/player/7687-nitr0",
+              "nationality": "us"
+            },
+            {
+              "player": "jdm64",
+              "link": "http://www.hltv.org/player/8346-jdm64",
+              "nationality": "us"
+            },
+            {
+              "player": "EliGE",
+              "link": "http://www.hltv.org/player/8738-elige",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "12",
+          "team": "fnatic",
+          "points": "266",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4991/",
+          "players": [
+            {
+              "player": "olofmeister",
+              "link": "http://www.hltv.org/player/885-olofmeister",
+              "nationality": "se"
+            },
+            {
+              "player": "dennis",
+              "link": "http://www.hltv.org/player/1146-dennis",
+              "nationality": "se"
+            },
+            {
+              "player": "twist",
+              "link": "http://www.hltv.org/player/7443-twist",
+              "nationality": "se"
+            },
+            {
+              "player": "KRIMZ",
+              "link": "http://www.hltv.org/player/7528-krimz",
+              "nationality": "se"
+            },
+            {
+              "player": "disco doplan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "13",
+          "team": "Immortals",
+          "points": "229",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/7010/",
+          "players": [
+            {
+              "player": "steel",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7382",
+              "nationality": "br"
+            },
+            {
+              "player": "hen1",
+              "link": "http://www.hltv.org/player/8565-hen1",
+              "nationality": "br"
+            },
+            {
+              "player": "lucas",
+              "link": "http://www.hltv.org/player/8566-lucas",
+              "nationality": "br"
+            },
+            {
+              "player": "boltz",
+              "link": "http://www.hltv.org/player/8568-boltz",
+              "nationality": "br"
+            },
+            {
+              "player": "felps",
+              "link": "http://www.hltv.org/player/9219-felps",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "14",
+          "team": "FaZe",
+          "points": "223",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6667/",
+          "players": [
+            {
+              "player": "karrigan",
+              "link": "http://www.hltv.org/player/429-karrigan",
+              "nationality": "dk"
+            },
+            {
+              "player": "allu",
+              "link": "http://www.hltv.org/player/695-allu",
+              "nationality": "fi"
+            },
+            {
+              "player": "kioShiMa",
+              "link": "http://www.hltv.org/player/4959-kioshima",
+              "nationality": "fr"
+            },
+            {
+              "player": "aizy",
+              "link": "http://www.hltv.org/player/8095-aizy",
+              "nationality": "dk"
+            },
+            {
+              "player": "rain",
+              "link": "http://www.hltv.org/player/8183-rain",
+              "nationality": "no"
+            }
+          ]
+        },
+        {
+          "position": "15",
+          "team": "Astralis",
+          "points": "188",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6665/",
+          "players": [
+            {
+              "player": "Xyp9x",
+              "link": "http://www.hltv.org/player/4954-xyp9x",
+              "nationality": "dk"
+            },
+            {
+              "player": "dupreeh",
+              "link": "http://www.hltv.org/player/7398-dupreeh",
+              "nationality": "dk"
+            },
+            {
+              "player": "gla1ve",
+              "link": "http://www.hltv.org/player/7412-gla1ve",
+              "nationality": "dk"
+            },
+            {
+              "player": "device",
+              "link": "http://www.hltv.org/player/7592-device",
+              "nationality": "dk"
+            },
+            {
+              "player": "Kjaerbye",
+              "link": "http://www.hltv.org/player/8394-kjaerbye",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "16",
+          "team": "GODSENT",
+          "points": "180",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6902/",
+          "players": [
+            {
+              "player": "pronax",
+              "link": "http://www.hltv.org/player/41-pronax",
+              "nationality": "se"
+            },
+            {
+              "player": "flusha",
+              "link": "http://www.hltv.org/player/3055-flusha",
+              "nationality": "se"
+            },
+            {
+              "player": "znajder",
+              "link": "http://www.hltv.org/player/3847-znajder",
+              "nationality": "se"
+            },
+            {
+              "player": "JW",
+              "link": "http://www.hltv.org/player/3849-jw",
+              "nationality": "se"
+            },
+            {
+              "player": "Lekr0",
+              "link": "http://www.hltv.org/player/9261-lekr0",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "17",
+          "team": "HellRaisers",
+          "points": "176",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5310/",
+          "players": [
+            {
+              "player": "ANGE1",
+              "link": "http://www.hltv.org/player/339-ange1",
+              "nationality": "ua"
+            },
+            {
+              "player": "bondik",
+              "link": "http://www.hltv.org/player/2131-bondik",
+              "nationality": "ua"
+            },
+            {
+              "player": "STYKO",
+              "link": "http://www.hltv.org/player/6904-styko",
+              "nationality": "sk"
+            },
+            {
+              "player": "Zero",
+              "link": "http://www.hltv.org/player/8413-zero",
+              "nationality": "sk"
+            },
+            {
+              "player": "DeadFox",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
+              "nationality": "hu"
+            }
+          ]
+        },
+        {
+          "position": "18",
+          "team": "TyLoo",
+          "points": "151",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4863/",
+          "players": [
+            {
+              "player": "Mo",
+              "link": "http://www.hltv.org/player/5187-mo",
+              "nationality": "cn"
+            },
+            {
+              "player": "DD",
+              "link": "http://www.hltv.org/player/7026-dd",
+              "nationality": "cn"
+            },
+            {
+              "player": "fancy1",
+              "link": "http://www.hltv.org/player/7028-fancy1",
+              "nationality": "cn"
+            },
+            {
+              "player": "AttackeR",
+              "link": "http://www.hltv.org/player/8552-attacker",
+              "nationality": "cn"
+            },
+            {
+              "player": "somebody",
+              "link": "http://www.hltv.org/player/8605-somebody",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "19",
+          "team": "Heroic",
+          "points": "146",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/7175/",
+          "players": [
+            {
+              "player": "Friis",
+              "link": "http://www.hltv.org/player/7-friis",
+              "nationality": "dk"
+            },
+            {
+              "player": "MODDII",
+              "link": "http://www.hltv.org/player/545-moddii",
+              "nationality": "se"
+            },
+            {
+              "player": "Snappi",
+              "link": "http://www.hltv.org/player/922-snappi",
+              "nationality": "dk"
+            },
+            {
+              "player": "valde",
+              "link": "http://www.hltv.org/player/9031-valde",
+              "nationality": "dk"
+            },
+            {
+              "player": "niko",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10264",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "20",
+          "team": "FlipSid3",
+          "points": "127",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5988/",
+          "players": [
+            {
+              "player": "markeloff",
+              "link": "http://www.hltv.org/player/338-markeloff",
+              "nationality": "ua"
+            },
+            {
+              "player": "B1ad3",
+              "link": "http://www.hltv.org/player/472-b1ad3",
+              "nationality": "ua"
+            },
+            {
+              "player": "WorldEdit",
+              "link": "http://www.hltv.org/player/7403-worldedit",
+              "nationality": "ru"
+            },
+            {
+              "player": "wayLander",
+              "link": "http://www.hltv.org/player/7796-waylander",
+              "nationality": "fi"
+            },
+            {
+              "player": "electronic",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
+              "nationality": "ru"
+            }
+          ]
+        },
+        {
+          "position": "21",
+          "team": "Gambit",
+          "points": "119",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6651/",
+          "players": [
+            {
+              "player": "AdreN",
+              "link": "http://www.hltv.org/player/334-adren",
+              "nationality": "kz"
+            },
+            {
+              "player": "Zeus",
+              "link": "http://www.hltv.org/player/484-zeus",
+              "nationality": "ua"
+            },
+            {
+              "player": "Dosia",
+              "link": "http://www.hltv.org/player/735-dosia",
+              "nationality": "ru"
+            },
+            {
+              "player": "mou",
+              "link": "http://www.hltv.org/player/964-mou",
+              "nationality": "kz"
+            },
+            {
+              "player": "HObbit",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8528",
+              "nationality": "kz"
+            }
+          ]
+        },
+        {
+          "position": "22",
+          "team": "VG.CyberZen",
+          "points": "105",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6773/",
+          "players": [
+            {
+              "player": "Savage",
+              "link": "http://www.hltv.org/player/180-savage",
+              "nationality": "cn"
+            },
+            {
+              "player": "tb",
+              "link": "http://www.hltv.org/player/839-tb",
+              "nationality": "cn"
+            },
+            {
+              "player": "advent",
+              "link": "http://www.hltv.org/player/8600-advent",
+              "nationality": "cn"
+            },
+            {
+              "player": "zhokiNg",
+              "link": "http://www.hltv.org/player/8601-zhoking",
+              "nationality": "cn"
+            },
+            {
+              "player": "LOVEYY",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "23",
+          "team": "Renegades",
+          "points": "98",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6211/",
+          "players": [
+            {
+              "player": "yam",
+              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
+              "nationality": "au"
+            },
+            {
+              "player": "jks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
+              "nationality": "au"
+            },
+            {
+              "player": "AZR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
+              "nationality": "au"
+            },
+            {
+              "player": "Rickeh",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
+              "nationality": "au"
+            },
+            {
+              "player": "USTILO",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
+              "nationality": "au"
+            }
+          ]
+        },
+        {
+          "position": "24",
+          "team": "Kinguin",
+          "points": "93",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6134/",
+          "players": [
+            {
+              "player": "SZPERO",
+              "link": "http://www.hltv.org/player/973-szpero",
+              "nationality": "pl"
+            },
+            {
+              "player": "rallen",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5388",
+              "nationality": "pl"
+            },
+            {
+              "player": "MICHU",
+              "link": "http://www.hltv.org/player/7356-michu",
+              "nationality": "pl"
+            },
+            {
+              "player": "mouz",
+              "link": "http://www.hltv.org/player/8323-mouz",
+              "nationality": "pl"
+            },
+            {
+              "player": "Furlan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8327",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "25",
+          "team": "Epsilon",
+          "points": "82",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4688/",
+          "players": [
+            {
+              "player": "BARBARR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=44",
+              "nationality": "se"
+            },
+            {
+              "player": "draken",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
+              "nationality": "se"
+            },
+            {
+              "player": "freddieb",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
+              "nationality": "se"
+            },
+            {
+              "player": "REZ",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "26",
+          "team": "ALTERNATE aTTaX",
+          "points": "80",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4501/",
+          "players": [
+            {
+              "player": "crisby",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
+              "nationality": "de"
+            },
+            {
+              "player": "kzy",
+              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
+              "nationality": "de"
+            },
+            {
+              "player": "tiziaN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
+              "nationality": "de"
+            },
+            {
+              "player": "keev",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5799",
+              "nationality": "de"
+            },
+            {
+              "player": "syrsoN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "27",
+          "team": "Space Soldiers",
+          "points": "78",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5929/",
+          "players": [
+            {
+              "player": "TuGuX",
+              "link": "http://www.hltv.org/player/7321-tugux",
+              "nationality": "de"
+            },
+            {
+              "player": "XANTARES",
+              "link": "http://www.hltv.org/player/7938-xantares",
+              "nationality": "tr"
+            },
+            {
+              "player": "DESPE",
+              "link": "http://www.hltv.org/player/7980-despe",
+              "nationality": "tr"
+            },
+            {
+              "player": "paz",
+              "link": "http://www.hltv.org/player/9353-paz",
+              "nationality": "tr"
+            },
+            {
+              "player": "ngiN",
+              "link": "http://www.hltv.org/player/9857-ngin",
+              "nationality": "tr"
+            }
+          ]
+        },
+        {
+          "position": "28",
+          "team": "NRG",
+          "points": "72",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/6673/",
+          "players": [
+            {
+              "player": "gob b",
+              "link": "http://www.hltv.org/?pageid=173&playerid=136",
+              "nationality": "de"
+            },
+            {
+              "player": "LEGIJA",
+              "link": "http://www.hltv.org/?pageid=173&playerid=3252",
+              "nationality": "rs"
+            },
+            {
+              "player": "tabseN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5794",
+              "nationality": "de"
+            },
+            {
+              "player": "FugLy",
+              "link": "http://www.hltv.org/player/8522-fugly",
+              "nationality": "us"
+            },
+            {
+              "player": "ptr",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8707",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "29",
+          "team": "LDLC",
+          "points": "71",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/4674/",
+          "players": [
+            {
+              "player": "Ex6TenZ",
+              "link": "http://www.hltv.org/player/7166-ex6tenz",
+              "nationality": "be"
+            },
+            {
+              "player": "to1nou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7982",
+              "nationality": "be"
+            },
+            {
+              "player": "ALEX",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8184",
+              "nationality": "gb"
+            },
+            {
+              "player": "mistou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8302",
+              "nationality": "fr"
+            },
+            {
+              "player": "xms",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9545",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "30",
+          "team": "Platinium",
+          "points": "62",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/14/details/5596/",
+          "players": [
+            {
+              "player": "jarod",
+              "link": "http://www.hltv.org/?pageid=173&playerid=269",
+              "nationality": "fr"
+            },
+            {
+              "player": "Roombang",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7813",
+              "nationality": "be"
+            },
+            {
+              "player": "AmaNEk",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9616",
+              "nationality": "fr"
+            },
+            {
+              "player": "hAdji",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9656",
+              "nationality": "fr"
+            },
+            {
+              "player": "devoduvek",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10569",
+              "nationality": "fr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "http://www.hltv.org/ranking/teams/2016/november/21/",
+      "date": "november 21, 2016",
+      "ranks": [
+        {
+          "position": "1",
+          "team": "SK",
+          "points": "933",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6137/",
+          "players": [
+            {
+              "player": "fnx",
+              "link": "http://www.hltv.org/player/557-fnx",
+              "nationality": "br"
+            },
+            {
+              "player": "FalleN",
+              "link": "http://www.hltv.org/player/2023-fallen",
+              "nationality": "br"
+            },
+            {
+              "player": "fer",
+              "link": "http://www.hltv.org/player/8564-fer",
+              "nationality": "br"
+            },
+            {
+              "player": "coldzera",
+              "link": "http://www.hltv.org/player/9216-coldzera",
+              "nationality": "br"
+            },
+            {
+              "player": "TACO",
+              "link": "http://www.hltv.org/player/9217-taco",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "2",
+          "team": "NiP",
+          "points": "789",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4411/",
+          "players": [
+            {
+              "player": "f0rest",
+              "link": "http://www.hltv.org/player/29-f0rest",
+              "nationality": "se"
+            },
+            {
+              "player": "GeT_RiGhT",
+              "link": "http://www.hltv.org/player/39-get-right",
+              "nationality": "se"
+            },
+            {
+              "player": "Xizt",
+              "link": "http://www.hltv.org/player/884-xizt",
+              "nationality": "se"
+            },
+            {
+              "player": "friberg",
+              "link": "http://www.hltv.org/player/7148-friberg",
+              "nationality": "se"
+            },
+            {
+              "player": "pyth",
+              "link": "http://www.hltv.org/player/7527-pyth",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "3",
+          "team": "Virtus.pro",
+          "points": "703",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5378/",
+          "players": [
+            {
+              "player": "TaZ",
+              "link": "http://www.hltv.org/player/161-taz",
+              "nationality": "pl"
+            },
+            {
+              "player": "NEO",
+              "link": "http://www.hltv.org/player/165-neo",
+              "nationality": "pl"
+            },
+            {
+              "player": "pashaBiceps",
+              "link": "http://www.hltv.org/player/317-pashabiceps",
+              "nationality": "pl"
+            },
+            {
+              "player": "Snax",
+              "link": "http://www.hltv.org/player/2553-snax",
+              "nationality": "pl"
+            },
+            {
+              "player": "byali",
+              "link": "http://www.hltv.org/player/5386-byali",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "4",
+          "team": "dignitas",
+          "points": "610",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5422/",
+          "players": [
+            {
+              "player": "RUBINO",
+              "link": "http://www.hltv.org/player/1485-rubino",
+              "nationality": "no"
+            },
+            {
+              "player": "cajunb",
+              "link": "http://www.hltv.org/player/2469-cajunb",
+              "nationality": "dk"
+            },
+            {
+              "player": "MSL",
+              "link": "http://www.hltv.org/player/7156-msl",
+              "nationality": "dk"
+            },
+            {
+              "player": "Magiskb0Y",
+              "link": "http://www.hltv.org/player/9032-magiskb0y",
+              "nationality": "dk"
+            },
+            {
+              "player": "k0nfig",
+              "link": "http://www.hltv.org/player/9078-k0nfig",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "5",
+          "team": "Natus Vincere",
+          "points": "545",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4608/",
+          "players": [
+            {
+              "player": "Edward",
+              "link": "http://www.hltv.org/player/483-edward",
+              "nationality": "ua"
+            },
+            {
+              "player": "GuardiaN",
+              "link": "http://www.hltv.org/player/2757-guardian",
+              "nationality": "sk"
+            },
+            {
+              "player": "seized",
+              "link": "http://www.hltv.org/player/3347-seized",
+              "nationality": "ru"
+            },
+            {
+              "player": "flamie",
+              "link": "http://www.hltv.org/player/7594-flamie",
+              "nationality": "ru"
+            },
+            {
+              "player": "s1mple",
+              "link": "http://www.hltv.org/player/7998-s1mple",
+              "nationality": "ua"
+            }
+          ]
+        },
+        {
+          "position": "6",
+          "team": "Cloud9",
+          "points": "521",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5752/",
+          "players": [
+            {
+              "player": "n0thing",
+              "link": "http://www.hltv.org/player/203-n0thing",
+              "nationality": "us"
+            },
+            {
+              "player": "Skadoodle",
+              "link": "http://www.hltv.org/player/7440-skadoodle",
+              "nationality": "us"
+            },
+            {
+              "player": "shroud",
+              "link": "http://www.hltv.org/player/8349-shroud",
+              "nationality": "ca"
+            },
+            {
+              "player": "autimatic",
+              "link": "http://www.hltv.org/player/8735-autimatic",
+              "nationality": "us"
+            },
+            {
+              "player": "Stewie2K",
+              "link": "http://www.hltv.org/player/8797-stewie2k",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "7",
+          "team": "G2",
+          "points": "425",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5995/",
+          "players": [
+            {
+              "player": "shox",
+              "link": "http://www.hltv.org/player/1225-shox",
+              "nationality": "fr"
+            },
+            {
+              "player": "RpK",
+              "link": "http://www.hltv.org/player/7169-rpk",
+              "nationality": "fr"
+            },
+            {
+              "player": "SmithZz",
+              "link": "http://www.hltv.org/player/7170-smithzz",
+              "nationality": "fr"
+            },
+            {
+              "player": "ScreaM",
+              "link": "http://www.hltv.org/player/7390-scream",
+              "nationality": "be"
+            },
+            {
+              "player": "bodyy",
+              "link": "http://www.hltv.org/player/8374-bodyy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "8",
+          "team": "FaZe",
+          "points": "383",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6667/",
+          "players": [
+            {
+              "player": "karrigan",
+              "link": "http://www.hltv.org/player/429-karrigan",
+              "nationality": "dk"
+            },
+            {
+              "player": "allu",
+              "link": "http://www.hltv.org/player/695-allu",
+              "nationality": "fi"
+            },
+            {
+              "player": "kioShiMa",
+              "link": "http://www.hltv.org/player/4959-kioshima",
+              "nationality": "fr"
+            },
+            {
+              "player": "aizy",
+              "link": "http://www.hltv.org/player/8095-aizy",
+              "nationality": "dk"
+            },
+            {
+              "player": "rain",
+              "link": "http://www.hltv.org/player/8183-rain",
+              "nationality": "no"
+            }
+          ]
+        },
+        {
+          "position": "9",
+          "team": "Astralis",
+          "points": "365",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6665/",
+          "players": [
+            {
+              "player": "Xyp9x",
+              "link": "http://www.hltv.org/player/4954-xyp9x",
+              "nationality": "dk"
+            },
+            {
+              "player": "dupreeh",
+              "link": "http://www.hltv.org/player/7398-dupreeh",
+              "nationality": "dk"
+            },
+            {
+              "player": "gla1ve",
+              "link": "http://www.hltv.org/player/7412-gla1ve",
+              "nationality": "dk"
+            },
+            {
+              "player": "device",
+              "link": "http://www.hltv.org/player/7592-device",
+              "nationality": "dk"
+            },
+            {
+              "player": "Kjaerbye",
+              "link": "http://www.hltv.org/player/8394-kjaerbye",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "10",
+          "team": "Liquid",
+          "points": "288",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5973/",
+          "players": [
+            {
+              "player": "Hiko",
+              "link": "http://www.hltv.org/player/2644-hiko",
+              "nationality": "us"
+            },
+            {
+              "player": "Pimp",
+              "link": "http://www.hltv.org/player/7154-pimp",
+              "nationality": "dk"
+            },
+            {
+              "player": "nitr0",
+              "link": "http://www.hltv.org/player/7687-nitr0",
+              "nationality": "us"
+            },
+            {
+              "player": "jdm64",
+              "link": "http://www.hltv.org/player/8346-jdm64",
+              "nationality": "us"
+            },
+            {
+              "player": "EliGE",
+              "link": "http://www.hltv.org/player/8738-elige",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "11",
+          "team": "EnVyUs",
+          "points": "287",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5991/",
+          "players": [
+            {
+              "player": "SIXER",
+              "link": "http://www.hltv.org/player/147-sixer",
+              "nationality": "fr"
+            },
+            {
+              "player": "kennyS",
+              "link": "http://www.hltv.org/player/7167-kennys",
+              "nationality": "fr"
+            },
+            {
+              "player": "NBK-",
+              "link": "http://www.hltv.org/player/7168-nbk",
+              "nationality": "fr"
+            },
+            {
+              "player": "apEX",
+              "link": "http://www.hltv.org/player/7322-apex",
+              "nationality": "fr"
+            },
+            {
+              "player": "Happy",
+              "link": "http://www.hltv.org/player/7429-happy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "12",
+          "team": "OpTic",
+          "points": "276",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6615/",
+          "players": [
+            {
+              "player": "RUSH",
+              "link": "http://www.hltv.org/player/7805-rush",
+              "nationality": "us"
+            },
+            {
+              "player": "mixwell",
+              "link": "http://www.hltv.org/player/8370-mixwell",
+              "nationality": "es"
+            },
+            {
+              "player": "stanislaw",
+              "link": "http://www.hltv.org/player/8507-stanislaw",
+              "nationality": "ca"
+            },
+            {
+              "player": "NAF",
+              "link": "http://www.hltv.org/player/8520-naf",
+              "nationality": "ca"
+            },
+            {
+              "player": "tarik",
+              "link": "http://www.hltv.org/player/8523-tarik",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "13",
+          "team": "Immortals",
+          "points": "264",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/7010/",
+          "players": [
+            {
+              "player": "steel",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7382",
+              "nationality": "br"
+            },
+            {
+              "player": "hen1",
+              "link": "http://www.hltv.org/player/8565-hen1",
+              "nationality": "br"
+            },
+            {
+              "player": "lucas",
+              "link": "http://www.hltv.org/player/8566-lucas",
+              "nationality": "br"
+            },
+            {
+              "player": "boltz",
+              "link": "http://www.hltv.org/player/8568-boltz",
+              "nationality": "br"
+            },
+            {
+              "player": "felps",
+              "link": "http://www.hltv.org/player/9219-felps",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "14",
+          "team": "mousesports",
+          "points": "218",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4494/",
+          "players": [
+            {
+              "player": "chrisJ",
+              "link": "http://www.hltv.org/player/2730-chrisj",
+              "nationality": "nl"
+            },
+            {
+              "player": "NiKo",
+              "link": "http://www.hltv.org/player/3741-niko",
+              "nationality": "ba"
+            },
+            {
+              "player": "loWel",
+              "link": "http://www.hltv.org/player/3997-lowel",
+              "nationality": "es"
+            },
+            {
+              "player": "Spiidi",
+              "link": "http://www.hltv.org/player/7499-spiidi",
+              "nationality": "de"
+            },
+            {
+              "player": "denis",
+              "link": "http://www.hltv.org/player/7511-denis",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "15",
+          "team": "fnatic",
+          "points": "213",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4991/",
+          "players": [
+            {
+              "player": "olofmeister",
+              "link": "http://www.hltv.org/player/885-olofmeister",
+              "nationality": "se"
+            },
+            {
+              "player": "dennis",
+              "link": "http://www.hltv.org/player/1146-dennis",
+              "nationality": "se"
+            },
+            {
+              "player": "twist",
+              "link": "http://www.hltv.org/player/7443-twist",
+              "nationality": "se"
+            },
+            {
+              "player": "KRIMZ",
+              "link": "http://www.hltv.org/player/7528-krimz",
+              "nationality": "se"
+            },
+            {
+              "player": "disco doplan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "16",
+          "team": "Heroic",
+          "points": "155",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/7175/",
+          "players": [
+            {
+              "player": "Friis",
+              "link": "http://www.hltv.org/player/7-friis",
+              "nationality": "dk"
+            },
+            {
+              "player": "MODDII",
+              "link": "http://www.hltv.org/player/545-moddii",
+              "nationality": "se"
+            },
+            {
+              "player": "Snappi",
+              "link": "http://www.hltv.org/player/922-snappi",
+              "nationality": "dk"
+            },
+            {
+              "player": "valde",
+              "link": "http://www.hltv.org/player/9031-valde",
+              "nationality": "dk"
+            },
+            {
+              "player": "niko",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10264",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "17",
+          "team": "GODSENT",
+          "points": "141",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6902/",
+          "players": [
+            {
+              "player": "pronax",
+              "link": "http://www.hltv.org/player/41-pronax",
+              "nationality": "se"
+            },
+            {
+              "player": "flusha",
+              "link": "http://www.hltv.org/player/3055-flusha",
+              "nationality": "se"
+            },
+            {
+              "player": "znajder",
+              "link": "http://www.hltv.org/player/3847-znajder",
+              "nationality": "se"
+            },
+            {
+              "player": "JW",
+              "link": "http://www.hltv.org/player/3849-jw",
+              "nationality": "se"
+            },
+            {
+              "player": "Lekr0",
+              "link": "http://www.hltv.org/player/9261-lekr0",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "18",
+          "team": "TyLoo",
+          "points": "120",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4863/",
+          "players": [
+            {
+              "player": "Mo",
+              "link": "http://www.hltv.org/player/5187-mo",
+              "nationality": "cn"
+            },
+            {
+              "player": "DD",
+              "link": "http://www.hltv.org/player/7026-dd",
+              "nationality": "cn"
+            },
+            {
+              "player": "fancy1",
+              "link": "http://www.hltv.org/player/7028-fancy1",
+              "nationality": "cn"
+            },
+            {
+              "player": "AttackeR",
+              "link": "http://www.hltv.org/player/8552-attacker",
+              "nationality": "cn"
+            },
+            {
+              "player": "somebody",
+              "link": "http://www.hltv.org/player/8605-somebody",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "19",
+          "team": "HellRaisers",
+          "points": "115",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5310/",
+          "players": [
+            {
+              "player": "ANGE1",
+              "link": "http://www.hltv.org/player/339-ange1",
+              "nationality": "ua"
+            },
+            {
+              "player": "bondik",
+              "link": "http://www.hltv.org/player/2131-bondik",
+              "nationality": "ua"
+            },
+            {
+              "player": "STYKO",
+              "link": "http://www.hltv.org/player/6904-styko",
+              "nationality": "sk"
+            },
+            {
+              "player": "Zero",
+              "link": "http://www.hltv.org/player/8413-zero",
+              "nationality": "sk"
+            },
+            {
+              "player": "DeadFox",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
+              "nationality": "hu"
+            }
+          ]
+        },
+        {
+          "position": "20",
+          "team": "Gambit",
+          "points": "105",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6651/",
+          "players": [
+            {
+              "player": "AdreN",
+              "link": "http://www.hltv.org/player/334-adren",
+              "nationality": "kz"
+            },
+            {
+              "player": "Zeus",
+              "link": "http://www.hltv.org/player/484-zeus",
+              "nationality": "ua"
+            },
+            {
+              "player": "Dosia",
+              "link": "http://www.hltv.org/player/735-dosia",
+              "nationality": "ru"
+            },
+            {
+              "player": "mou",
+              "link": "http://www.hltv.org/player/964-mou",
+              "nationality": "kz"
+            },
+            {
+              "player": "HObbit",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8528",
+              "nationality": "kz"
+            }
+          ]
+        },
+        {
+          "position": "21",
+          "team": "FlipSid3",
+          "points": "99",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5988/",
+          "players": [
+            {
+              "player": "markeloff",
+              "link": "http://www.hltv.org/player/338-markeloff",
+              "nationality": "ua"
+            },
+            {
+              "player": "B1ad3",
+              "link": "http://www.hltv.org/player/472-b1ad3",
+              "nationality": "ua"
+            },
+            {
+              "player": "WorldEdit",
+              "link": "http://www.hltv.org/player/7403-worldedit",
+              "nationality": "ru"
+            },
+            {
+              "player": "wayLander",
+              "link": "http://www.hltv.org/player/7796-waylander",
+              "nationality": "fi"
+            },
+            {
+              "player": "electronic",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
+              "nationality": "ru"
+            }
+          ]
+        },
+        {
+          "position": "22",
+          "team": "Kinguin",
+          "points": "77",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6134/",
+          "players": [
+            {
+              "player": "SZPERO",
+              "link": "http://www.hltv.org/player/973-szpero",
+              "nationality": "pl"
+            },
+            {
+              "player": "rallen",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5388",
+              "nationality": "pl"
+            },
+            {
+              "player": "MICHU",
+              "link": "http://www.hltv.org/player/7356-michu",
+              "nationality": "pl"
+            },
+            {
+              "player": "mouz",
+              "link": "http://www.hltv.org/player/8323-mouz",
+              "nationality": "pl"
+            },
+            {
+              "player": "Furlan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8327",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "23",
+          "team": "Epsilon",
+          "points": "75",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4688/",
+          "players": [
+            {
+              "player": "BARBARR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=44",
+              "nationality": "se"
+            },
+            {
+              "player": "draken",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
+              "nationality": "se"
+            },
+            {
+              "player": "freddieb",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
+              "nationality": "se"
+            },
+            {
+              "player": "REZ",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "24",
+          "team": "VG.CyberZen",
+          "points": "75",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6773/",
+          "players": [
+            {
+              "player": "Savage",
+              "link": "http://www.hltv.org/player/180-savage",
+              "nationality": "cn"
+            },
+            {
+              "player": "tb",
+              "link": "http://www.hltv.org/player/839-tb",
+              "nationality": "cn"
+            },
+            {
+              "player": "advent",
+              "link": "http://www.hltv.org/player/8600-advent",
+              "nationality": "cn"
+            },
+            {
+              "player": "zhokiNg",
+              "link": "http://www.hltv.org/player/8601-zhoking",
+              "nationality": "cn"
+            },
+            {
+              "player": "LOVEYY",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "25",
+          "team": "Renegades",
+          "points": "74",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6211/",
+          "players": [
+            {
+              "player": "yam",
+              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
+              "nationality": "au"
+            },
+            {
+              "player": "jks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
+              "nationality": "au"
+            },
+            {
+              "player": "AZR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
+              "nationality": "au"
+            },
+            {
+              "player": "Rickeh",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
+              "nationality": "au"
+            },
+            {
+              "player": "USTILO",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
+              "nationality": "au"
+            }
+          ]
+        },
+        {
+          "position": "26",
+          "team": "ALTERNATE aTTaX",
+          "points": "63",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4501/",
+          "players": [
+            {
+              "player": "crisby",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
+              "nationality": "de"
+            },
+            {
+              "player": "kzy",
+              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
+              "nationality": "de"
+            },
+            {
+              "player": "tiziaN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
+              "nationality": "de"
+            },
+            {
+              "player": "keev",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5799",
+              "nationality": "de"
+            },
+            {
+              "player": "syrsoN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "27",
+          "team": "LDLC",
+          "points": "57",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/4674/",
+          "players": [
+            {
+              "player": "Ex6TenZ",
+              "link": "http://www.hltv.org/player/7166-ex6tenz",
+              "nationality": "be"
+            },
+            {
+              "player": "to1nou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7982",
+              "nationality": "be"
+            },
+            {
+              "player": "ALEX",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8184",
+              "nationality": "gb"
+            },
+            {
+              "player": "mistou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8302",
+              "nationality": "fr"
+            },
+            {
+              "player": "xms",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9545",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "28",
+          "team": "NRG",
+          "points": "55",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/6673/",
+          "players": [
+            {
+              "player": "gob b",
+              "link": "http://www.hltv.org/?pageid=173&playerid=136",
+              "nationality": "de"
+            },
+            {
+              "player": "LEGIJA",
+              "link": "http://www.hltv.org/?pageid=173&playerid=3252",
+              "nationality": "rs"
+            },
+            {
+              "player": "tabseN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5794",
+              "nationality": "de"
+            },
+            {
+              "player": "FugLy",
+              "link": "http://www.hltv.org/player/8522-fugly",
+              "nationality": "us"
+            },
+            {
+              "player": "ptr",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8707",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "29",
+          "team": "iGame.com",
+          "points": "48",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/7331/",
+          "players": [
+            {
+              "player": "Twista",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1964",
+              "nationality": "fi"
+            },
+            {
+              "player": "xseveN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7248",
+              "nationality": "fi"
+            },
+            {
+              "player": "SAGGERTON",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7529",
+              "nationality": "fi"
+            },
+            {
+              "player": "sAw",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7821",
+              "nationality": "fi"
+            },
+            {
+              "player": "ZOREE",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8576",
+              "nationality": "fi"
+            }
+          ]
+        },
+        {
+          "position": "30",
+          "team": "Platinium",
+          "points": "47",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/21/details/5596/",
+          "players": [
+            {
+              "player": "jarod",
+              "link": "http://www.hltv.org/?pageid=173&playerid=269",
+              "nationality": "fr"
+            },
+            {
+              "player": "Roombang",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7813",
+              "nationality": "be"
+            },
+            {
+              "player": "AmaNEk",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9616",
+              "nationality": "fr"
+            },
+            {
+              "player": "hAdji",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9656",
+              "nationality": "fr"
+            },
+            {
+              "player": "devoduvek",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10569",
+              "nationality": "fr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "http://www.hltv.org/ranking/teams/2016/november/28/",
+      "date": "november 28, 2016",
+      "ranks": [
+        {
+          "position": "1",
+          "team": "SK",
+          "points": "933",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6137/",
+          "players": [
+            {
+              "player": "fnx",
+              "link": "http://www.hltv.org/player/557-fnx",
+              "nationality": "br"
+            },
+            {
+              "player": "FalleN",
+              "link": "http://www.hltv.org/player/2023-fallen",
+              "nationality": "br"
+            },
+            {
+              "player": "fer",
+              "link": "http://www.hltv.org/player/8564-fer",
+              "nationality": "br"
+            },
+            {
+              "player": "coldzera",
+              "link": "http://www.hltv.org/player/9216-coldzera",
+              "nationality": "br"
+            },
+            {
+              "player": "TACO",
+              "link": "http://www.hltv.org/player/9217-taco",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "2",
+          "team": "NiP",
+          "points": "801",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4411/",
+          "players": [
+            {
+              "player": "f0rest",
+              "link": "http://www.hltv.org/player/29-f0rest",
+              "nationality": "se"
+            },
+            {
+              "player": "GeT_RiGhT",
+              "link": "http://www.hltv.org/player/39-get-right",
+              "nationality": "se"
+            },
+            {
+              "player": "Xizt",
+              "link": "http://www.hltv.org/player/884-xizt",
+              "nationality": "se"
+            },
+            {
+              "player": "friberg",
+              "link": "http://www.hltv.org/player/7148-friberg",
+              "nationality": "se"
+            },
+            {
+              "player": "pyth",
+              "link": "http://www.hltv.org/player/7527-pyth",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "3",
+          "team": "Virtus.pro",
+          "points": "692",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5378/",
+          "players": [
+            {
+              "player": "TaZ",
+              "link": "http://www.hltv.org/player/161-taz",
+              "nationality": "pl"
+            },
+            {
+              "player": "NEO",
+              "link": "http://www.hltv.org/player/165-neo",
+              "nationality": "pl"
+            },
+            {
+              "player": "pashaBiceps",
+              "link": "http://www.hltv.org/player/317-pashabiceps",
+              "nationality": "pl"
+            },
+            {
+              "player": "Snax",
+              "link": "http://www.hltv.org/player/2553-snax",
+              "nationality": "pl"
+            },
+            {
+              "player": "byali",
+              "link": "http://www.hltv.org/player/5386-byali",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "4",
+          "team": "dignitas",
+          "points": "608",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5422/",
+          "players": [
+            {
+              "player": "RUBINO",
+              "link": "http://www.hltv.org/player/1485-rubino",
+              "nationality": "no"
+            },
+            {
+              "player": "cajunb",
+              "link": "http://www.hltv.org/player/2469-cajunb",
+              "nationality": "dk"
+            },
+            {
+              "player": "MSL",
+              "link": "http://www.hltv.org/player/7156-msl",
+              "nationality": "dk"
+            },
+            {
+              "player": "Magiskb0Y",
+              "link": "http://www.hltv.org/player/9032-magiskb0y",
+              "nationality": "dk"
+            },
+            {
+              "player": "k0nfig",
+              "link": "http://www.hltv.org/player/9078-k0nfig",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "5",
+          "team": "Cloud9",
+          "points": "545",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5752/",
+          "players": [
+            {
+              "player": "n0thing",
+              "link": "http://www.hltv.org/player/203-n0thing",
+              "nationality": "us"
+            },
+            {
+              "player": "Skadoodle",
+              "link": "http://www.hltv.org/player/7440-skadoodle",
+              "nationality": "us"
+            },
+            {
+              "player": "shroud",
+              "link": "http://www.hltv.org/player/8349-shroud",
+              "nationality": "ca"
+            },
+            {
+              "player": "autimatic",
+              "link": "http://www.hltv.org/player/8735-autimatic",
+              "nationality": "us"
+            },
+            {
+              "player": "Stewie2K",
+              "link": "http://www.hltv.org/player/8797-stewie2k",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "6",
+          "team": "Natus Vincere",
+          "points": "527",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4608/",
+          "players": [
+            {
+              "player": "Edward",
+              "link": "http://www.hltv.org/player/483-edward",
+              "nationality": "ua"
+            },
+            {
+              "player": "GuardiaN",
+              "link": "http://www.hltv.org/player/2757-guardian",
+              "nationality": "sk"
+            },
+            {
+              "player": "seized",
+              "link": "http://www.hltv.org/player/3347-seized",
+              "nationality": "ru"
+            },
+            {
+              "player": "flamie",
+              "link": "http://www.hltv.org/player/7594-flamie",
+              "nationality": "ru"
+            },
+            {
+              "player": "s1mple",
+              "link": "http://www.hltv.org/player/7998-s1mple",
+              "nationality": "ua"
+            }
+          ]
+        },
+        {
+          "position": "7",
+          "team": "G2",
+          "points": "453",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5995/",
+          "players": [
+            {
+              "player": "shox",
+              "link": "http://www.hltv.org/player/1225-shox",
+              "nationality": "fr"
+            },
+            {
+              "player": "RpK",
+              "link": "http://www.hltv.org/player/7169-rpk",
+              "nationality": "fr"
+            },
+            {
+              "player": "SmithZz",
+              "link": "http://www.hltv.org/player/7170-smithzz",
+              "nationality": "fr"
+            },
+            {
+              "player": "ScreaM",
+              "link": "http://www.hltv.org/player/7390-scream",
+              "nationality": "be"
+            },
+            {
+              "player": "bodyy",
+              "link": "http://www.hltv.org/player/8374-bodyy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "8",
+          "team": "Astralis",
+          "points": "416",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6665/",
+          "players": [
+            {
+              "player": "Xyp9x",
+              "link": "http://www.hltv.org/player/4954-xyp9x",
+              "nationality": "dk"
+            },
+            {
+              "player": "dupreeh",
+              "link": "http://www.hltv.org/player/7398-dupreeh",
+              "nationality": "dk"
+            },
+            {
+              "player": "gla1ve",
+              "link": "http://www.hltv.org/player/7412-gla1ve",
+              "nationality": "dk"
+            },
+            {
+              "player": "device",
+              "link": "http://www.hltv.org/player/7592-device",
+              "nationality": "dk"
+            },
+            {
+              "player": "Kjaerbye",
+              "link": "http://www.hltv.org/player/8394-kjaerbye",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "9",
+          "team": "FaZe",
+          "points": "416",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6667/",
+          "players": [
+            {
+              "player": "karrigan",
+              "link": "http://www.hltv.org/player/429-karrigan",
+              "nationality": "dk"
+            },
+            {
+              "player": "allu",
+              "link": "http://www.hltv.org/player/695-allu",
+              "nationality": "fi"
+            },
+            {
+              "player": "kioShiMa",
+              "link": "http://www.hltv.org/player/4959-kioshima",
+              "nationality": "fr"
+            },
+            {
+              "player": "aizy",
+              "link": "http://www.hltv.org/player/8095-aizy",
+              "nationality": "dk"
+            },
+            {
+              "player": "rain",
+              "link": "http://www.hltv.org/player/8183-rain",
+              "nationality": "no"
+            }
+          ]
+        },
+        {
+          "position": "10",
+          "team": "EnVyUs",
+          "points": "307",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5991/",
+          "players": [
+            {
+              "player": "SIXER",
+              "link": "http://www.hltv.org/player/147-sixer",
+              "nationality": "fr"
+            },
+            {
+              "player": "kennyS",
+              "link": "http://www.hltv.org/player/7167-kennys",
+              "nationality": "fr"
+            },
+            {
+              "player": "NBK-",
+              "link": "http://www.hltv.org/player/7168-nbk",
+              "nationality": "fr"
+            },
+            {
+              "player": "apEX",
+              "link": "http://www.hltv.org/player/7322-apex",
+              "nationality": "fr"
+            },
+            {
+              "player": "Happy",
+              "link": "http://www.hltv.org/player/7429-happy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "11",
+          "team": "Immortals",
+          "points": "278",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/7010/",
+          "players": [
+            {
+              "player": "steel",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7382",
+              "nationality": "br"
+            },
+            {
+              "player": "hen1",
+              "link": "http://www.hltv.org/player/8565-hen1",
+              "nationality": "br"
+            },
+            {
+              "player": "lucas",
+              "link": "http://www.hltv.org/player/8566-lucas",
+              "nationality": "br"
+            },
+            {
+              "player": "boltz",
+              "link": "http://www.hltv.org/player/8568-boltz",
+              "nationality": "br"
+            },
+            {
+              "player": "felps",
+              "link": "http://www.hltv.org/player/9219-felps",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "12",
+          "team": "Liquid",
+          "points": "275",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5973/",
+          "players": [
+            {
+              "player": "Hiko",
+              "link": "http://www.hltv.org/player/2644-hiko",
+              "nationality": "us"
+            },
+            {
+              "player": "Pimp",
+              "link": "http://www.hltv.org/player/7154-pimp",
+              "nationality": "dk"
+            },
+            {
+              "player": "nitr0",
+              "link": "http://www.hltv.org/player/7687-nitr0",
+              "nationality": "us"
+            },
+            {
+              "player": "jdm64",
+              "link": "http://www.hltv.org/player/8346-jdm64",
+              "nationality": "us"
+            },
+            {
+              "player": "EliGE",
+              "link": "http://www.hltv.org/player/8738-elige",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "13",
+          "team": "OpTic",
+          "points": "254",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6615/",
+          "players": [
+            {
+              "player": "RUSH",
+              "link": "http://www.hltv.org/player/7805-rush",
+              "nationality": "us"
+            },
+            {
+              "player": "mixwell",
+              "link": "http://www.hltv.org/player/8370-mixwell",
+              "nationality": "es"
+            },
+            {
+              "player": "stanislaw",
+              "link": "http://www.hltv.org/player/8507-stanislaw",
+              "nationality": "ca"
+            },
+            {
+              "player": "NAF",
+              "link": "http://www.hltv.org/player/8520-naf",
+              "nationality": "ca"
+            },
+            {
+              "player": "tarik",
+              "link": "http://www.hltv.org/player/8523-tarik",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "14",
+          "team": "mousesports",
+          "points": "243",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4494/",
+          "players": [
+            {
+              "player": "chrisJ",
+              "link": "http://www.hltv.org/player/2730-chrisj",
+              "nationality": "nl"
+            },
+            {
+              "player": "NiKo",
+              "link": "http://www.hltv.org/player/3741-niko",
+              "nationality": "ba"
+            },
+            {
+              "player": "loWel",
+              "link": "http://www.hltv.org/player/3997-lowel",
+              "nationality": "es"
+            },
+            {
+              "player": "Spiidi",
+              "link": "http://www.hltv.org/player/7499-spiidi",
+              "nationality": "de"
+            },
+            {
+              "player": "denis",
+              "link": "http://www.hltv.org/player/7511-denis",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "15",
+          "team": "Gambit",
+          "points": "232",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6651/",
+          "players": [
+            {
+              "player": "AdreN",
+              "link": "http://www.hltv.org/player/334-adren",
+              "nationality": "kz"
+            },
+            {
+              "player": "Zeus",
+              "link": "http://www.hltv.org/player/484-zeus",
+              "nationality": "ua"
+            },
+            {
+              "player": "Dosia",
+              "link": "http://www.hltv.org/player/735-dosia",
+              "nationality": "ru"
+            },
+            {
+              "player": "mou",
+              "link": "http://www.hltv.org/player/964-mou",
+              "nationality": "kz"
+            },
+            {
+              "player": "HObbit",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8528",
+              "nationality": "kz"
+            }
+          ]
+        },
+        {
+          "position": "16",
+          "team": "fnatic",
+          "points": "210",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4991/",
+          "players": [
+            {
+              "player": "olofmeister",
+              "link": "http://www.hltv.org/player/885-olofmeister",
+              "nationality": "se"
+            },
+            {
+              "player": "dennis",
+              "link": "http://www.hltv.org/player/1146-dennis",
+              "nationality": "se"
+            },
+            {
+              "player": "twist",
+              "link": "http://www.hltv.org/player/7443-twist",
+              "nationality": "se"
+            },
+            {
+              "player": "KRIMZ",
+              "link": "http://www.hltv.org/player/7528-krimz",
+              "nationality": "se"
+            },
+            {
+              "player": "disco doplan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "17",
+          "team": "GODSENT",
+          "points": "189",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6902/",
+          "players": [
+            {
+              "player": "pronax",
+              "link": "http://www.hltv.org/player/41-pronax",
+              "nationality": "se"
+            },
+            {
+              "player": "flusha",
+              "link": "http://www.hltv.org/player/3055-flusha",
+              "nationality": "se"
+            },
+            {
+              "player": "znajder",
+              "link": "http://www.hltv.org/player/3847-znajder",
+              "nationality": "se"
+            },
+            {
+              "player": "JW",
+              "link": "http://www.hltv.org/player/3849-jw",
+              "nationality": "se"
+            },
+            {
+              "player": "Lekr0",
+              "link": "http://www.hltv.org/player/9261-lekr0",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "18",
+          "team": "Heroic",
+          "points": "173",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/7175/",
+          "players": [
+            {
+              "player": "Friis",
+              "link": "http://www.hltv.org/player/7-friis",
+              "nationality": "dk"
+            },
+            {
+              "player": "MODDII",
+              "link": "http://www.hltv.org/player/545-moddii",
+              "nationality": "se"
+            },
+            {
+              "player": "Snappi",
+              "link": "http://www.hltv.org/player/922-snappi",
+              "nationality": "dk"
+            },
+            {
+              "player": "valde",
+              "link": "http://www.hltv.org/player/9031-valde",
+              "nationality": "dk"
+            },
+            {
+              "player": "niko",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10264",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "19",
+          "team": "Renegades",
+          "points": "157",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6211/",
+          "players": [
+            {
+              "player": "yam",
+              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
+              "nationality": "au"
+            },
+            {
+              "player": "jks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
+              "nationality": "au"
+            },
+            {
+              "player": "AZR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
+              "nationality": "au"
+            },
+            {
+              "player": "Rickeh",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
+              "nationality": "au"
+            },
+            {
+              "player": "USTILO",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
+              "nationality": "au"
+            }
+          ]
+        },
+        {
+          "position": "20",
+          "team": "Kinguin",
+          "points": "131",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6134/",
+          "players": [
+            {
+              "player": "SZPERO",
+              "link": "http://www.hltv.org/player/973-szpero",
+              "nationality": "pl"
+            },
+            {
+              "player": "rallen",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5388",
+              "nationality": "pl"
+            },
+            {
+              "player": "MICHU",
+              "link": "http://www.hltv.org/player/7356-michu",
+              "nationality": "pl"
+            },
+            {
+              "player": "mouz",
+              "link": "http://www.hltv.org/player/8323-mouz",
+              "nationality": "pl"
+            },
+            {
+              "player": "Furlan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8327",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "21",
+          "team": "TyLoo",
+          "points": "125",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4863/",
+          "players": [
+            {
+              "player": "Mo",
+              "link": "http://www.hltv.org/player/5187-mo",
+              "nationality": "cn"
+            },
+            {
+              "player": "DD",
+              "link": "http://www.hltv.org/player/7026-dd",
+              "nationality": "cn"
+            },
+            {
+              "player": "fancy1",
+              "link": "http://www.hltv.org/player/7028-fancy1",
+              "nationality": "cn"
+            },
+            {
+              "player": "AttackeR",
+              "link": "http://www.hltv.org/player/8552-attacker",
+              "nationality": "cn"
+            },
+            {
+              "player": "somebody",
+              "link": "http://www.hltv.org/player/8605-somebody",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "22",
+          "team": "FlipSid3",
+          "points": "120",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5988/",
+          "players": [
+            {
+              "player": "markeloff",
+              "link": "http://www.hltv.org/player/338-markeloff",
+              "nationality": "ua"
+            },
+            {
+              "player": "B1ad3",
+              "link": "http://www.hltv.org/player/472-b1ad3",
+              "nationality": "ua"
+            },
+            {
+              "player": "WorldEdit",
+              "link": "http://www.hltv.org/player/7403-worldedit",
+              "nationality": "ru"
+            },
+            {
+              "player": "wayLander",
+              "link": "http://www.hltv.org/player/7796-waylander",
+              "nationality": "fi"
+            },
+            {
+              "player": "electronic",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
+              "nationality": "ru"
+            }
+          ]
+        },
+        {
+          "position": "23",
+          "team": "HellRaisers",
+          "points": "111",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5310/",
+          "players": [
+            {
+              "player": "ANGE1",
+              "link": "http://www.hltv.org/player/339-ange1",
+              "nationality": "ua"
+            },
+            {
+              "player": "bondik",
+              "link": "http://www.hltv.org/player/2131-bondik",
+              "nationality": "ua"
+            },
+            {
+              "player": "STYKO",
+              "link": "http://www.hltv.org/player/6904-styko",
+              "nationality": "sk"
+            },
+            {
+              "player": "Zero",
+              "link": "http://www.hltv.org/player/8413-zero",
+              "nationality": "sk"
+            },
+            {
+              "player": "DeadFox",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
+              "nationality": "hu"
+            }
+          ]
+        },
+        {
+          "position": "24",
+          "team": "Epsilon",
+          "points": "99",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4688/",
+          "players": [
+            {
+              "player": "BARBARR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=44",
+              "nationality": "se"
+            },
+            {
+              "player": "kalle",
+              "link": "http://www.hltv.org/?pageid=173&playerid=646",
+              "nationality": "no"
+            },
+            {
+              "player": "draken",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
+              "nationality": "se"
+            },
+            {
+              "player": "freddieb",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
+              "nationality": "se"
+            },
+            {
+              "player": "REZ",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "25",
+          "team": "VG.CyberZen",
+          "points": "83",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/6773/",
+          "players": [
+            {
+              "player": "Savage",
+              "link": "http://www.hltv.org/player/180-savage",
+              "nationality": "cn"
+            },
+            {
+              "player": "tb",
+              "link": "http://www.hltv.org/player/839-tb",
+              "nationality": "cn"
+            },
+            {
+              "player": "advent",
+              "link": "http://www.hltv.org/player/8600-advent",
+              "nationality": "cn"
+            },
+            {
+              "player": "zhokiNg",
+              "link": "http://www.hltv.org/player/8601-zhoking",
+              "nationality": "cn"
+            },
+            {
+              "player": "LOVEYY",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "26",
+          "team": "LDLC",
+          "points": "62",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4674/",
+          "players": [
+            {
+              "player": "Ex6TenZ",
+              "link": "http://www.hltv.org/player/7166-ex6tenz",
+              "nationality": "be"
+            },
+            {
+              "player": "to1nou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7982",
+              "nationality": "be"
+            },
+            {
+              "player": "ALEX",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8184",
+              "nationality": "gb"
+            },
+            {
+              "player": "mistou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8302",
+              "nationality": "fr"
+            },
+            {
+              "player": "xms",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9545",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "27",
+          "team": "ALTERNATE aTTaX",
+          "points": "55",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/4501/",
+          "players": [
+            {
+              "player": "crisby",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
+              "nationality": "de"
+            },
+            {
+              "player": "kzy",
+              "link": "http://www.hltv.org/?pageid=173&playerid=3517",
+              "nationality": "de"
+            },
+            {
+              "player": "tiziaN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
+              "nationality": "de"
+            },
+            {
+              "player": "syrsoN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "28",
+          "team": "CLG",
+          "points": "49",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5974/",
+          "players": [
+            {
+              "player": "reltuC",
+              "link": "http://www.hltv.org/player/8137-reltuc",
+              "nationality": "us"
+            },
+            {
+              "player": "hazed",
+              "link": "http://www.hltv.org/player/8347-hazed",
+              "nationality": "us"
+            },
+            {
+              "player": "koosta",
+              "link": "http://www.hltv.org/player/9056-koosta",
+              "nationality": "us"
+            },
+            {
+              "player": "NahtE",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10671",
+              "nationality": "us"
+            },
+            {
+              "player": "Subroza",
+              "link": "http://www.hltv.org/?pageid=173&playerid=11231",
+              "nationality": "ca"
+            }
+          ]
+        },
+        {
+          "position": "29",
+          "team": "iGame.com",
+          "points": "49",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/7331/",
+          "players": [
+            {
+              "player": "Twista",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1964",
+              "nationality": "fi"
+            },
+            {
+              "player": "xseveN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7248",
+              "nationality": "fi"
+            },
+            {
+              "player": "SAGGERTON",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7529",
+              "nationality": "fi"
+            },
+            {
+              "player": "sAw",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7821",
+              "nationality": "fi"
+            },
+            {
+              "player": "ZOREE",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8576",
+              "nationality": "fi"
+            }
+          ]
+        },
+        {
+          "position": "30",
+          "team": "Space Soldiers",
+          "points": "48",
+          "link": "http://www.hltv.org/ranking/teams/2016/november/28/details/5929/",
+          "players": [
+            {
+              "player": "MAJ3R",
+              "link": "http://www.hltv.org/?pageid=173&playerid=150",
+              "nationality": "tr"
+            },
+            {
+              "player": "XANTARES",
+              "link": "http://www.hltv.org/player/7938-xantares",
+              "nationality": "tr"
+            },
+            {
+              "player": "DESPE",
+              "link": "http://www.hltv.org/player/7980-despe",
+              "nationality": "tr"
+            },
+            {
+              "player": "paz",
+              "link": "http://www.hltv.org/player/9353-paz",
+              "nationality": "tr"
+            },
+            {
+              "player": "ngiN",
+              "link": "http://www.hltv.org/player/9857-ngin",
+              "nationality": "tr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "http://www.hltv.org/ranking/teams/2016/december/5/",
+      "date": "december 5, 2016",
+      "ranks": [
+        {
+          "position": "1",
+          "team": "NiP",
+          "points": "881",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4411/",
+          "players": [
+            {
+              "player": "f0rest",
+              "link": "http://www.hltv.org/player/29-f0rest",
+              "nationality": "se"
+            },
+            {
+              "player": "GeT_RiGhT",
+              "link": "http://www.hltv.org/player/39-get-right",
+              "nationality": "se"
+            },
+            {
+              "player": "Xizt",
+              "link": "http://www.hltv.org/player/884-xizt",
+              "nationality": "se"
+            },
+            {
+              "player": "friberg",
+              "link": "http://www.hltv.org/player/7148-friberg",
+              "nationality": "se"
+            },
+            {
+              "player": "pyth",
+              "link": "http://www.hltv.org/player/7527-pyth",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "2",
+          "team": "SK",
+          "points": "828",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6137/",
+          "players": [
+            {
+              "player": "FalleN",
+              "link": "http://www.hltv.org/player/2023-fallen",
+              "nationality": "br"
+            },
+            {
+              "player": "fer",
+              "link": "http://www.hltv.org/player/8564-fer",
+              "nationality": "br"
+            },
+            {
+              "player": "coldzera",
+              "link": "http://www.hltv.org/player/9216-coldzera",
+              "nationality": "br"
+            },
+            {
+              "player": "TACO",
+              "link": "http://www.hltv.org/player/9217-taco",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "3",
+          "team": "Virtus.pro",
+          "points": "741",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5378/",
+          "players": [
+            {
+              "player": "TaZ",
+              "link": "http://www.hltv.org/player/161-taz",
+              "nationality": "pl"
+            },
+            {
+              "player": "NEO",
+              "link": "http://www.hltv.org/player/165-neo",
+              "nationality": "pl"
+            },
+            {
+              "player": "pashaBiceps",
+              "link": "http://www.hltv.org/player/317-pashabiceps",
+              "nationality": "pl"
+            },
+            {
+              "player": "Snax",
+              "link": "http://www.hltv.org/player/2553-snax",
+              "nationality": "pl"
+            },
+            {
+              "player": "byali",
+              "link": "http://www.hltv.org/player/5386-byali",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "4",
+          "team": "Astralis",
+          "points": "710",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6665/",
+          "players": [
+            {
+              "player": "Xyp9x",
+              "link": "http://www.hltv.org/player/4954-xyp9x",
+              "nationality": "dk"
+            },
+            {
+              "player": "dupreeh",
+              "link": "http://www.hltv.org/player/7398-dupreeh",
+              "nationality": "dk"
+            },
+            {
+              "player": "gla1ve",
+              "link": "http://www.hltv.org/player/7412-gla1ve",
+              "nationality": "dk"
+            },
+            {
+              "player": "device",
+              "link": "http://www.hltv.org/player/7592-device",
+              "nationality": "dk"
+            },
+            {
+              "player": "Kjaerbye",
+              "link": "http://www.hltv.org/player/8394-kjaerbye",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "5",
+          "team": "dignitas",
+          "points": "645",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5422/",
+          "players": [
+            {
+              "player": "RUBINO",
+              "link": "http://www.hltv.org/player/1485-rubino",
+              "nationality": "no"
+            },
+            {
+              "player": "cajunb",
+              "link": "http://www.hltv.org/player/2469-cajunb",
+              "nationality": "dk"
+            },
+            {
+              "player": "MSL",
+              "link": "http://www.hltv.org/player/7156-msl",
+              "nationality": "dk"
+            },
+            {
+              "player": "Magiskb0Y",
+              "link": "http://www.hltv.org/player/9032-magiskb0y",
+              "nationality": "dk"
+            },
+            {
+              "player": "k0nfig",
+              "link": "http://www.hltv.org/player/9078-k0nfig",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "6",
+          "team": "OpTic",
+          "points": "625",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6615/",
+          "players": [
+            {
+              "player": "RUSH",
+              "link": "http://www.hltv.org/player/7805-rush",
+              "nationality": "us"
+            },
+            {
+              "player": "mixwell",
+              "link": "http://www.hltv.org/player/8370-mixwell",
+              "nationality": "es"
+            },
+            {
+              "player": "stanislaw",
+              "link": "http://www.hltv.org/player/8507-stanislaw",
+              "nationality": "ca"
+            },
+            {
+              "player": "NAF",
+              "link": "http://www.hltv.org/player/8520-naf",
+              "nationality": "ca"
+            },
+            {
+              "player": "tarik",
+              "link": "http://www.hltv.org/player/8523-tarik",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "7",
+          "team": "Cloud9",
+          "points": "568",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5752/",
+          "players": [
+            {
+              "player": "n0thing",
+              "link": "http://www.hltv.org/player/203-n0thing",
+              "nationality": "us"
+            },
+            {
+              "player": "Skadoodle",
+              "link": "http://www.hltv.org/player/7440-skadoodle",
+              "nationality": "us"
+            },
+            {
+              "player": "shroud",
+              "link": "http://www.hltv.org/player/8349-shroud",
+              "nationality": "ca"
+            },
+            {
+              "player": "autimatic",
+              "link": "http://www.hltv.org/player/8735-autimatic",
+              "nationality": "us"
+            },
+            {
+              "player": "Stewie2K",
+              "link": "http://www.hltv.org/player/8797-stewie2k",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "8",
+          "team": "FaZe",
+          "points": "563",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6667/",
+          "players": [
+            {
+              "player": "karrigan",
+              "link": "http://www.hltv.org/player/429-karrigan",
+              "nationality": "dk"
+            },
+            {
+              "player": "allu",
+              "link": "http://www.hltv.org/player/695-allu",
+              "nationality": "fi"
+            },
+            {
+              "player": "kioShiMa",
+              "link": "http://www.hltv.org/player/4959-kioshima",
+              "nationality": "fr"
+            },
+            {
+              "player": "aizy",
+              "link": "http://www.hltv.org/player/8095-aizy",
+              "nationality": "dk"
+            },
+            {
+              "player": "rain",
+              "link": "http://www.hltv.org/player/8183-rain",
+              "nationality": "no"
+            }
+          ]
+        },
+        {
+          "position": "9",
+          "team": "Natus Vincere",
+          "points": "534",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4608/",
+          "players": [
+            {
+              "player": "Edward",
+              "link": "http://www.hltv.org/player/483-edward",
+              "nationality": "ua"
+            },
+            {
+              "player": "GuardiaN",
+              "link": "http://www.hltv.org/player/2757-guardian",
+              "nationality": "sk"
+            },
+            {
+              "player": "seized",
+              "link": "http://www.hltv.org/player/3347-seized",
+              "nationality": "ru"
+            },
+            {
+              "player": "flamie",
+              "link": "http://www.hltv.org/player/7594-flamie",
+              "nationality": "ru"
+            },
+            {
+              "player": "s1mple",
+              "link": "http://www.hltv.org/player/7998-s1mple",
+              "nationality": "ua"
+            }
+          ]
+        },
+        {
+          "position": "10",
+          "team": "G2",
+          "points": "481",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5995/",
+          "players": [
+            {
+              "player": "shox",
+              "link": "http://www.hltv.org/player/1225-shox",
+              "nationality": "fr"
+            },
+            {
+              "player": "RpK",
+              "link": "http://www.hltv.org/player/7169-rpk",
+              "nationality": "fr"
+            },
+            {
+              "player": "SmithZz",
+              "link": "http://www.hltv.org/player/7170-smithzz",
+              "nationality": "fr"
+            },
+            {
+              "player": "ScreaM",
+              "link": "http://www.hltv.org/player/7390-scream",
+              "nationality": "be"
+            },
+            {
+              "player": "bodyy",
+              "link": "http://www.hltv.org/player/8374-bodyy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "11",
+          "team": "mousesports",
+          "points": "322",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4494/",
+          "players": [
+            {
+              "player": "chrisJ",
+              "link": "http://www.hltv.org/player/2730-chrisj",
+              "nationality": "nl"
+            },
+            {
+              "player": "NiKo",
+              "link": "http://www.hltv.org/player/3741-niko",
+              "nationality": "ba"
+            },
+            {
+              "player": "loWel",
+              "link": "http://www.hltv.org/player/3997-lowel",
+              "nationality": "es"
+            },
+            {
+              "player": "Spiidi",
+              "link": "http://www.hltv.org/player/7499-spiidi",
+              "nationality": "de"
+            },
+            {
+              "player": "denis",
+              "link": "http://www.hltv.org/player/7511-denis",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "12",
+          "team": "Immortals",
+          "points": "300",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/7010/",
+          "players": [
+            {
+              "player": "steel",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7382",
+              "nationality": "br"
+            },
+            {
+              "player": "hen1",
+              "link": "http://www.hltv.org/player/8565-hen1",
+              "nationality": "br"
+            },
+            {
+              "player": "lucas",
+              "link": "http://www.hltv.org/player/8566-lucas",
+              "nationality": "br"
+            },
+            {
+              "player": "boltz",
+              "link": "http://www.hltv.org/player/8568-boltz",
+              "nationality": "br"
+            },
+            {
+              "player": "felps",
+              "link": "http://www.hltv.org/player/9219-felps",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "13",
+          "team": "EnVyUs",
+          "points": "294",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5991/",
+          "players": [
+            {
+              "player": "SIXER",
+              "link": "http://www.hltv.org/player/147-sixer",
+              "nationality": "fr"
+            },
+            {
+              "player": "kennyS",
+              "link": "http://www.hltv.org/player/7167-kennys",
+              "nationality": "fr"
+            },
+            {
+              "player": "NBK-",
+              "link": "http://www.hltv.org/player/7168-nbk",
+              "nationality": "fr"
+            },
+            {
+              "player": "apEX",
+              "link": "http://www.hltv.org/player/7322-apex",
+              "nationality": "fr"
+            },
+            {
+              "player": "Happy",
+              "link": "http://www.hltv.org/player/7429-happy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "14",
+          "team": "Liquid",
+          "points": "272",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5973/",
+          "players": [
+            {
+              "player": "Hiko",
+              "link": "http://www.hltv.org/player/2644-hiko",
+              "nationality": "us"
+            },
+            {
+              "player": "Pimp",
+              "link": "http://www.hltv.org/player/7154-pimp",
+              "nationality": "dk"
+            },
+            {
+              "player": "nitr0",
+              "link": "http://www.hltv.org/player/7687-nitr0",
+              "nationality": "us"
+            },
+            {
+              "player": "jdm64",
+              "link": "http://www.hltv.org/player/8346-jdm64",
+              "nationality": "us"
+            },
+            {
+              "player": "EliGE",
+              "link": "http://www.hltv.org/player/8738-elige",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "15",
+          "team": "Gambit",
+          "points": "238",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6651/",
+          "players": [
+            {
+              "player": "AdreN",
+              "link": "http://www.hltv.org/player/334-adren",
+              "nationality": "kz"
+            },
+            {
+              "player": "Zeus",
+              "link": "http://www.hltv.org/player/484-zeus",
+              "nationality": "ua"
+            },
+            {
+              "player": "Dosia",
+              "link": "http://www.hltv.org/player/735-dosia",
+              "nationality": "ru"
+            },
+            {
+              "player": "mou",
+              "link": "http://www.hltv.org/player/964-mou",
+              "nationality": "kz"
+            },
+            {
+              "player": "HObbit",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8528",
+              "nationality": "kz"
+            }
+          ]
+        },
+        {
+          "position": "16",
+          "team": "fnatic",
+          "points": "216",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4991/",
+          "players": [
+            {
+              "player": "olofmeister",
+              "link": "http://www.hltv.org/player/885-olofmeister",
+              "nationality": "se"
+            },
+            {
+              "player": "dennis",
+              "link": "http://www.hltv.org/player/1146-dennis",
+              "nationality": "se"
+            },
+            {
+              "player": "twist",
+              "link": "http://www.hltv.org/player/7443-twist",
+              "nationality": "se"
+            },
+            {
+              "player": "KRIMZ",
+              "link": "http://www.hltv.org/player/7528-krimz",
+              "nationality": "se"
+            },
+            {
+              "player": "disco doplan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "17",
+          "team": "GODSENT",
+          "points": "184",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6902/",
+          "players": [
+            {
+              "player": "pronax",
+              "link": "http://www.hltv.org/player/41-pronax",
+              "nationality": "se"
+            },
+            {
+              "player": "flusha",
+              "link": "http://www.hltv.org/player/3055-flusha",
+              "nationality": "se"
+            },
+            {
+              "player": "znajder",
+              "link": "http://www.hltv.org/player/3847-znajder",
+              "nationality": "se"
+            },
+            {
+              "player": "JW",
+              "link": "http://www.hltv.org/player/3849-jw",
+              "nationality": "se"
+            },
+            {
+              "player": "Lekr0",
+              "link": "http://www.hltv.org/player/9261-lekr0",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "18",
+          "team": "Heroic",
+          "points": "169",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/7175/",
+          "players": [
+            {
+              "player": "Friis",
+              "link": "http://www.hltv.org/player/7-friis",
+              "nationality": "dk"
+            },
+            {
+              "player": "MODDII",
+              "link": "http://www.hltv.org/player/545-moddii",
+              "nationality": "se"
+            },
+            {
+              "player": "Snappi",
+              "link": "http://www.hltv.org/player/922-snappi",
+              "nationality": "dk"
+            },
+            {
+              "player": "valde",
+              "link": "http://www.hltv.org/player/9031-valde",
+              "nationality": "dk"
+            },
+            {
+              "player": "niko",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10264",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "19",
+          "team": "Renegades",
+          "points": "162",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6211/",
+          "players": [
+            {
+              "player": "yam",
+              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
+              "nationality": "au"
+            },
+            {
+              "player": "jks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
+              "nationality": "au"
+            },
+            {
+              "player": "AZR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
+              "nationality": "au"
+            },
+            {
+              "player": "Rickeh",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
+              "nationality": "au"
+            },
+            {
+              "player": "USTILO",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
+              "nationality": "au"
+            }
+          ]
+        },
+        {
+          "position": "20",
+          "team": "TyLoo",
+          "points": "121",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4863/",
+          "players": [
+            {
+              "player": "Mo",
+              "link": "http://www.hltv.org/player/5187-mo",
+              "nationality": "cn"
+            },
+            {
+              "player": "DD",
+              "link": "http://www.hltv.org/player/7026-dd",
+              "nationality": "cn"
+            },
+            {
+              "player": "fancy1",
+              "link": "http://www.hltv.org/player/7028-fancy1",
+              "nationality": "cn"
+            },
+            {
+              "player": "AttackeR",
+              "link": "http://www.hltv.org/player/8552-attacker",
+              "nationality": "cn"
+            },
+            {
+              "player": "somebody",
+              "link": "http://www.hltv.org/player/8605-somebody",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "21",
+          "team": "FlipSid3",
+          "points": "121",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5988/",
+          "players": [
+            {
+              "player": "markeloff",
+              "link": "http://www.hltv.org/player/338-markeloff",
+              "nationality": "ua"
+            },
+            {
+              "player": "B1ad3",
+              "link": "http://www.hltv.org/player/472-b1ad3",
+              "nationality": "ua"
+            },
+            {
+              "player": "WorldEdit",
+              "link": "http://www.hltv.org/player/7403-worldedit",
+              "nationality": "ru"
+            },
+            {
+              "player": "wayLander",
+              "link": "http://www.hltv.org/player/7796-waylander",
+              "nationality": "fi"
+            },
+            {
+              "player": "electronic",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
+              "nationality": "ru"
+            }
+          ]
+        },
+        {
+          "position": "22",
+          "team": "Kinguin",
+          "points": "116",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6134/",
+          "players": [
+            {
+              "player": "SZPERO",
+              "link": "http://www.hltv.org/player/973-szpero",
+              "nationality": "pl"
+            },
+            {
+              "player": "rallen",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5388",
+              "nationality": "pl"
+            },
+            {
+              "player": "MICHU",
+              "link": "http://www.hltv.org/player/7356-michu",
+              "nationality": "pl"
+            },
+            {
+              "player": "mouz",
+              "link": "http://www.hltv.org/player/8323-mouz",
+              "nationality": "pl"
+            },
+            {
+              "player": "Furlan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8327",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "23",
+          "team": "HellRaisers",
+          "points": "113",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5310/",
+          "players": [
+            {
+              "player": "ANGE1",
+              "link": "http://www.hltv.org/player/339-ange1",
+              "nationality": "ua"
+            },
+            {
+              "player": "bondik",
+              "link": "http://www.hltv.org/player/2131-bondik",
+              "nationality": "ua"
+            },
+            {
+              "player": "STYKO",
+              "link": "http://www.hltv.org/player/6904-styko",
+              "nationality": "sk"
+            },
+            {
+              "player": "Zero",
+              "link": "http://www.hltv.org/player/8413-zero",
+              "nationality": "sk"
+            },
+            {
+              "player": "DeadFox",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
+              "nationality": "hu"
+            }
+          ]
+        },
+        {
+          "position": "24",
+          "team": "Epsilon",
+          "points": "94",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4688/",
+          "players": [
+            {
+              "player": "BARBARR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=44",
+              "nationality": "se"
+            },
+            {
+              "player": "kalle",
+              "link": "http://www.hltv.org/?pageid=173&playerid=646",
+              "nationality": "no"
+            },
+            {
+              "player": "draken",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
+              "nationality": "se"
+            },
+            {
+              "player": "freddieb",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
+              "nationality": "se"
+            },
+            {
+              "player": "REZ",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "25",
+          "team": "VG.CyberZen",
+          "points": "83",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6773/",
+          "players": [
+            {
+              "player": "Savage",
+              "link": "http://www.hltv.org/player/180-savage",
+              "nationality": "cn"
+            },
+            {
+              "player": "tb",
+              "link": "http://www.hltv.org/player/839-tb",
+              "nationality": "cn"
+            },
+            {
+              "player": "advent",
+              "link": "http://www.hltv.org/player/8600-advent",
+              "nationality": "cn"
+            },
+            {
+              "player": "zhokiNg",
+              "link": "http://www.hltv.org/player/8601-zhoking",
+              "nationality": "cn"
+            },
+            {
+              "player": "LOVEYY",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "26",
+          "team": "LDLC",
+          "points": "66",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4674/",
+          "players": [
+            {
+              "player": "Ex6TenZ",
+              "link": "http://www.hltv.org/player/7166-ex6tenz",
+              "nationality": "be"
+            },
+            {
+              "player": "to1nou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7982",
+              "nationality": "be"
+            },
+            {
+              "player": "ALEX",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8184",
+              "nationality": "gb"
+            },
+            {
+              "player": "mistou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8302",
+              "nationality": "fr"
+            },
+            {
+              "player": "xms",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9545",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "27",
+          "team": "Vexed",
+          "points": "52",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/6375/",
+          "players": [
+            {
+              "player": "jarod",
+              "link": "http://www.hltv.org/?pageid=173&playerid=269",
+              "nationality": "fr"
+            },
+            {
+              "player": "Roombang",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7813",
+              "nationality": "be"
+            },
+            {
+              "player": "AmaNEk",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9616",
+              "nationality": "fr"
+            },
+            {
+              "player": "hAdji",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9656",
+              "nationality": "fr"
+            },
+            {
+              "player": "devoduvek",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10569",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "28",
+          "team": "Space Soldiers",
+          "points": "49",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5929/",
+          "players": [
+            {
+              "player": "MAJ3R",
+              "link": "http://www.hltv.org/?pageid=173&playerid=150",
+              "nationality": "tr"
+            },
+            {
+              "player": "XANTARES",
+              "link": "http://www.hltv.org/player/7938-xantares",
+              "nationality": "tr"
+            },
+            {
+              "player": "DESPE",
+              "link": "http://www.hltv.org/player/7980-despe",
+              "nationality": "tr"
+            },
+            {
+              "player": "paz",
+              "link": "http://www.hltv.org/player/9353-paz",
+              "nationality": "tr"
+            },
+            {
+              "player": "ngiN",
+              "link": "http://www.hltv.org/player/9857-ngin",
+              "nationality": "tr"
+            }
+          ]
+        },
+        {
+          "position": "29",
+          "team": "ALTERNATE aTTaX",
+          "points": "48",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/4501/",
+          "players": [
+            {
+              "player": "crisby",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
+              "nationality": "de"
+            },
+            {
+              "player": "tiziaN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
+              "nationality": "de"
+            },
+            {
+              "player": "syrsoN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "30",
+          "team": "TSM",
+          "points": "47",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/5/details/5996/",
+          "players": [
+            {
+              "player": "SEMPHIS",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1915",
+              "nationality": "ca"
+            },
+            {
+              "player": "FNS",
+              "link": "http://www.hltv.org/?pageid=173&playerid=6451",
+              "nationality": "ca"
+            },
+            {
+              "player": "Relyks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8517",
+              "nationality": "us"
+            },
+            {
+              "player": "SicK",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9258",
+              "nationality": "us"
+            },
+            {
+              "player": "Twistzz",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10394",
+              "nationality": "ca"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "link": "http://www.hltv.org/ranking/teams/2016/december/12/",
+      "date": "december 12, 2016",
+      "ranks": [
+        {
+          "position": "1",
+          "team": "Astralis",
+          "points": "944",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6665/",
+          "players": [
+            {
+              "player": "Xyp9x",
+              "link": "http://www.hltv.org/player/4954-xyp9x",
+              "nationality": "dk"
+            },
+            {
+              "player": "dupreeh",
+              "link": "http://www.hltv.org/player/7398-dupreeh",
+              "nationality": "dk"
+            },
+            {
+              "player": "gla1ve",
+              "link": "http://www.hltv.org/player/7412-gla1ve",
+              "nationality": "dk"
+            },
+            {
+              "player": "device",
+              "link": "http://www.hltv.org/player/7592-device",
+              "nationality": "dk"
+            },
+            {
+              "player": "Kjaerbye",
+              "link": "http://www.hltv.org/player/8394-kjaerbye",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "2",
+          "team": "SK",
+          "points": "908",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6137/",
+          "players": [
+            {
+              "player": "fox",
+              "link": "http://www.hltv.org/player/629-fox",
+              "nationality": "pt"
+            },
+            {
+              "player": "FalleN",
+              "link": "http://www.hltv.org/player/2023-fallen",
+              "nationality": "br"
+            },
+            {
+              "player": "fer",
+              "link": "http://www.hltv.org/player/8564-fer",
+              "nationality": "br"
+            },
+            {
+              "player": "coldzera",
+              "link": "http://www.hltv.org/player/9216-coldzera",
+              "nationality": "br"
+            },
+            {
+              "player": "TACO",
+              "link": "http://www.hltv.org/player/9217-taco",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "3",
+          "team": "NiP",
+          "points": "769",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4411/",
+          "players": [
+            {
+              "player": "f0rest",
+              "link": "http://www.hltv.org/player/29-f0rest",
+              "nationality": "se"
+            },
+            {
+              "player": "GeT_RiGhT",
+              "link": "http://www.hltv.org/player/39-get-right",
+              "nationality": "se"
+            },
+            {
+              "player": "Xizt",
+              "link": "http://www.hltv.org/player/884-xizt",
+              "nationality": "se"
+            },
+            {
+              "player": "friberg",
+              "link": "http://www.hltv.org/player/7148-friberg",
+              "nationality": "se"
+            },
+            {
+              "player": "pyth",
+              "link": "http://www.hltv.org/player/7527-pyth",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "4",
+          "team": "OpTic",
+          "points": "765",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6615/",
+          "players": [
+            {
+              "player": "RUSH",
+              "link": "http://www.hltv.org/player/7805-rush",
+              "nationality": "us"
+            },
+            {
+              "player": "mixwell",
+              "link": "http://www.hltv.org/player/8370-mixwell",
+              "nationality": "es"
+            },
+            {
+              "player": "stanislaw",
+              "link": "http://www.hltv.org/player/8507-stanislaw",
+              "nationality": "ca"
+            },
+            {
+              "player": "NAF",
+              "link": "http://www.hltv.org/player/8520-naf",
+              "nationality": "ca"
+            },
+            {
+              "player": "tarik",
+              "link": "http://www.hltv.org/player/8523-tarik",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "5",
+          "team": "Virtus.pro",
+          "points": "686",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5378/",
+          "players": [
+            {
+              "player": "TaZ",
+              "link": "http://www.hltv.org/player/161-taz",
+              "nationality": "pl"
+            },
+            {
+              "player": "NEO",
+              "link": "http://www.hltv.org/player/165-neo",
+              "nationality": "pl"
+            },
+            {
+              "player": "pashaBiceps",
+              "link": "http://www.hltv.org/player/317-pashabiceps",
+              "nationality": "pl"
+            },
+            {
+              "player": "Snax",
+              "link": "http://www.hltv.org/player/2553-snax",
+              "nationality": "pl"
+            },
+            {
+              "player": "byali",
+              "link": "http://www.hltv.org/player/5386-byali",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "6",
+          "team": "dignitas",
+          "points": "603",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5422/",
+          "players": [
+            {
+              "player": "RUBINO",
+              "link": "http://www.hltv.org/player/1485-rubino",
+              "nationality": "no"
+            },
+            {
+              "player": "cajunb",
+              "link": "http://www.hltv.org/player/2469-cajunb",
+              "nationality": "dk"
+            },
+            {
+              "player": "MSL",
+              "link": "http://www.hltv.org/player/7156-msl",
+              "nationality": "dk"
+            },
+            {
+              "player": "Magiskb0Y",
+              "link": "http://www.hltv.org/player/9032-magiskb0y",
+              "nationality": "dk"
+            },
+            {
+              "player": "k0nfig",
+              "link": "http://www.hltv.org/player/9078-k0nfig",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "7",
+          "team": "Natus Vincere",
+          "points": "509",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4608/",
+          "players": [
+            {
+              "player": "Edward",
+              "link": "http://www.hltv.org/player/483-edward",
+              "nationality": "ua"
+            },
+            {
+              "player": "GuardiaN",
+              "link": "http://www.hltv.org/player/2757-guardian",
+              "nationality": "sk"
+            },
+            {
+              "player": "seized",
+              "link": "http://www.hltv.org/player/3347-seized",
+              "nationality": "ru"
+            },
+            {
+              "player": "flamie",
+              "link": "http://www.hltv.org/player/7594-flamie",
+              "nationality": "ru"
+            },
+            {
+              "player": "s1mple",
+              "link": "http://www.hltv.org/player/7998-s1mple",
+              "nationality": "ua"
+            }
+          ]
+        },
+        {
+          "position": "8",
+          "team": "FaZe",
+          "points": "500",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6667/",
+          "players": [
+            {
+              "player": "karrigan",
+              "link": "http://www.hltv.org/player/429-karrigan",
+              "nationality": "dk"
+            },
+            {
+              "player": "allu",
+              "link": "http://www.hltv.org/player/695-allu",
+              "nationality": "fi"
+            },
+            {
+              "player": "kioShiMa",
+              "link": "http://www.hltv.org/player/4959-kioshima",
+              "nationality": "fr"
+            },
+            {
+              "player": "aizy",
+              "link": "http://www.hltv.org/player/8095-aizy",
+              "nationality": "dk"
+            },
+            {
+              "player": "rain",
+              "link": "http://www.hltv.org/player/8183-rain",
+              "nationality": "no"
+            }
+          ]
+        },
+        {
+          "position": "9",
+          "team": "Cloud9",
+          "points": "485",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5752/",
+          "players": [
+            {
+              "player": "n0thing",
+              "link": "http://www.hltv.org/player/203-n0thing",
+              "nationality": "us"
+            },
+            {
+              "player": "Skadoodle",
+              "link": "http://www.hltv.org/player/7440-skadoodle",
+              "nationality": "us"
+            },
+            {
+              "player": "shroud",
+              "link": "http://www.hltv.org/player/8349-shroud",
+              "nationality": "ca"
+            },
+            {
+              "player": "autimatic",
+              "link": "http://www.hltv.org/player/8735-autimatic",
+              "nationality": "us"
+            },
+            {
+              "player": "Stewie2K",
+              "link": "http://www.hltv.org/player/8797-stewie2k",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "10",
+          "team": "G2",
+          "points": "376",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5995/",
+          "players": [
+            {
+              "player": "shox",
+              "link": "http://www.hltv.org/player/1225-shox",
+              "nationality": "fr"
+            },
+            {
+              "player": "RpK",
+              "link": "http://www.hltv.org/player/7169-rpk",
+              "nationality": "fr"
+            },
+            {
+              "player": "SmithZz",
+              "link": "http://www.hltv.org/player/7170-smithzz",
+              "nationality": "fr"
+            },
+            {
+              "player": "ScreaM",
+              "link": "http://www.hltv.org/player/7390-scream",
+              "nationality": "be"
+            },
+            {
+              "player": "bodyy",
+              "link": "http://www.hltv.org/player/8374-bodyy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "11",
+          "team": "EnVyUs",
+          "points": "350",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5991/",
+          "players": [
+            {
+              "player": "SIXER",
+              "link": "http://www.hltv.org/player/147-sixer",
+              "nationality": "fr"
+            },
+            {
+              "player": "kennyS",
+              "link": "http://www.hltv.org/player/7167-kennys",
+              "nationality": "fr"
+            },
+            {
+              "player": "NBK-",
+              "link": "http://www.hltv.org/player/7168-nbk",
+              "nationality": "fr"
+            },
+            {
+              "player": "apEX",
+              "link": "http://www.hltv.org/player/7322-apex",
+              "nationality": "fr"
+            },
+            {
+              "player": "Happy",
+              "link": "http://www.hltv.org/player/7429-happy",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "12",
+          "team": "mousesports",
+          "points": "279",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4494/",
+          "players": [
+            {
+              "player": "chrisJ",
+              "link": "http://www.hltv.org/player/2730-chrisj",
+              "nationality": "nl"
+            },
+            {
+              "player": "NiKo",
+              "link": "http://www.hltv.org/player/3741-niko",
+              "nationality": "ba"
+            },
+            {
+              "player": "loWel",
+              "link": "http://www.hltv.org/player/3997-lowel",
+              "nationality": "es"
+            },
+            {
+              "player": "Spiidi",
+              "link": "http://www.hltv.org/player/7499-spiidi",
+              "nationality": "de"
+            },
+            {
+              "player": "denis",
+              "link": "http://www.hltv.org/player/7511-denis",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "13",
+          "team": "Immortals",
+          "points": "252",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/7010/",
+          "players": [
+            {
+              "player": "steel",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7382",
+              "nationality": "br"
+            },
+            {
+              "player": "hen1",
+              "link": "http://www.hltv.org/player/8565-hen1",
+              "nationality": "br"
+            },
+            {
+              "player": "lucas",
+              "link": "http://www.hltv.org/player/8566-lucas",
+              "nationality": "br"
+            },
+            {
+              "player": "boltz",
+              "link": "http://www.hltv.org/player/8568-boltz",
+              "nationality": "br"
+            },
+            {
+              "player": "felps",
+              "link": "http://www.hltv.org/player/9219-felps",
+              "nationality": "br"
+            }
+          ]
+        },
+        {
+          "position": "14",
+          "team": "Liquid",
+          "points": "240",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5973/",
+          "players": [
+            {
+              "player": "Hiko",
+              "link": "http://www.hltv.org/player/2644-hiko",
+              "nationality": "us"
+            },
+            {
+              "player": "Pimp",
+              "link": "http://www.hltv.org/player/7154-pimp",
+              "nationality": "dk"
+            },
+            {
+              "player": "nitr0",
+              "link": "http://www.hltv.org/player/7687-nitr0",
+              "nationality": "us"
+            },
+            {
+              "player": "jdm64",
+              "link": "http://www.hltv.org/player/8346-jdm64",
+              "nationality": "us"
+            },
+            {
+              "player": "EliGE",
+              "link": "http://www.hltv.org/player/8738-elige",
+              "nationality": "us"
+            }
+          ]
+        },
+        {
+          "position": "15",
+          "team": "Gambit",
+          "points": "207",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6651/",
+          "players": [
+            {
+              "player": "AdreN",
+              "link": "http://www.hltv.org/player/334-adren",
+              "nationality": "kz"
+            },
+            {
+              "player": "Zeus",
+              "link": "http://www.hltv.org/player/484-zeus",
+              "nationality": "ua"
+            },
+            {
+              "player": "Dosia",
+              "link": "http://www.hltv.org/player/735-dosia",
+              "nationality": "ru"
+            },
+            {
+              "player": "mou",
+              "link": "http://www.hltv.org/player/964-mou",
+              "nationality": "kz"
+            },
+            {
+              "player": "HObbit",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8528",
+              "nationality": "kz"
+            }
+          ]
+        },
+        {
+          "position": "16",
+          "team": "fnatic",
+          "points": "174",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4991/",
+          "players": [
+            {
+              "player": "olofmeister",
+              "link": "http://www.hltv.org/player/885-olofmeister",
+              "nationality": "se"
+            },
+            {
+              "player": "dennis",
+              "link": "http://www.hltv.org/player/1146-dennis",
+              "nationality": "se"
+            },
+            {
+              "player": "twist",
+              "link": "http://www.hltv.org/player/7443-twist",
+              "nationality": "se"
+            },
+            {
+              "player": "KRIMZ",
+              "link": "http://www.hltv.org/player/7528-krimz",
+              "nationality": "se"
+            },
+            {
+              "player": "disco doplan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9256",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "17",
+          "team": "GODSENT",
+          "points": "152",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6902/",
+          "players": [
+            {
+              "player": "pronax",
+              "link": "http://www.hltv.org/player/41-pronax",
+              "nationality": "se"
+            },
+            {
+              "player": "flusha",
+              "link": "http://www.hltv.org/player/3055-flusha",
+              "nationality": "se"
+            },
+            {
+              "player": "znajder",
+              "link": "http://www.hltv.org/player/3847-znajder",
+              "nationality": "se"
+            },
+            {
+              "player": "JW",
+              "link": "http://www.hltv.org/player/3849-jw",
+              "nationality": "se"
+            },
+            {
+              "player": "Lekr0",
+              "link": "http://www.hltv.org/player/9261-lekr0",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "18",
+          "team": "Heroic",
+          "points": "141",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/7175/",
+          "players": [
+            {
+              "player": "Friis",
+              "link": "http://www.hltv.org/player/7-friis",
+              "nationality": "dk"
+            },
+            {
+              "player": "MODDII",
+              "link": "http://www.hltv.org/player/545-moddii",
+              "nationality": "se"
+            },
+            {
+              "player": "Snappi",
+              "link": "http://www.hltv.org/player/922-snappi",
+              "nationality": "dk"
+            },
+            {
+              "player": "valde",
+              "link": "http://www.hltv.org/player/9031-valde",
+              "nationality": "dk"
+            },
+            {
+              "player": "niko",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10264",
+              "nationality": "dk"
+            }
+          ]
+        },
+        {
+          "position": "19",
+          "team": "Renegades",
+          "points": "138",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6211/",
+          "players": [
+            {
+              "player": "yam",
+              "link": "http://www.hltv.org/?pageid=173&playerid=2555",
+              "nationality": "au"
+            },
+            {
+              "player": "jks",
+              "link": "http://www.hltv.org/?pageid=173&playerid=4679",
+              "nationality": "au"
+            },
+            {
+              "player": "AZR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8082",
+              "nationality": "au"
+            },
+            {
+              "player": "Rickeh",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8745",
+              "nationality": "au"
+            },
+            {
+              "player": "USTILO",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8771",
+              "nationality": "au"
+            }
+          ]
+        },
+        {
+          "position": "20",
+          "team": "HellRaisers",
+          "points": "117",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5310/",
+          "players": [
+            {
+              "player": "ANGE1",
+              "link": "http://www.hltv.org/player/339-ange1",
+              "nationality": "ua"
+            },
+            {
+              "player": "bondik",
+              "link": "http://www.hltv.org/player/2131-bondik",
+              "nationality": "ua"
+            },
+            {
+              "player": "STYKO",
+              "link": "http://www.hltv.org/player/6904-styko",
+              "nationality": "sk"
+            },
+            {
+              "player": "Zero",
+              "link": "http://www.hltv.org/player/8413-zero",
+              "nationality": "sk"
+            },
+            {
+              "player": "DeadFox",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8716",
+              "nationality": "hu"
+            }
+          ]
+        },
+        {
+          "position": "21",
+          "team": "TyLoo",
+          "points": "105",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4863/",
+          "players": [
+            {
+              "player": "Mo",
+              "link": "http://www.hltv.org/player/5187-mo",
+              "nationality": "cn"
+            },
+            {
+              "player": "DD",
+              "link": "http://www.hltv.org/player/7026-dd",
+              "nationality": "cn"
+            },
+            {
+              "player": "fancy1",
+              "link": "http://www.hltv.org/player/7028-fancy1",
+              "nationality": "cn"
+            },
+            {
+              "player": "AttackeR",
+              "link": "http://www.hltv.org/player/8552-attacker",
+              "nationality": "cn"
+            },
+            {
+              "player": "somebody",
+              "link": "http://www.hltv.org/player/8605-somebody",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "22",
+          "team": "Kinguin",
+          "points": "101",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6134/",
+          "players": [
+            {
+              "player": "SZPERO",
+              "link": "http://www.hltv.org/player/973-szpero",
+              "nationality": "pl"
+            },
+            {
+              "player": "rallen",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5388",
+              "nationality": "pl"
+            },
+            {
+              "player": "MICHU",
+              "link": "http://www.hltv.org/player/7356-michu",
+              "nationality": "pl"
+            },
+            {
+              "player": "mouz",
+              "link": "http://www.hltv.org/player/8323-mouz",
+              "nationality": "pl"
+            },
+            {
+              "player": "Furlan",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8327",
+              "nationality": "pl"
+            }
+          ]
+        },
+        {
+          "position": "23",
+          "team": "Epsilon",
+          "points": "96",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4688/",
+          "players": [
+            {
+              "player": "BARBARR",
+              "link": "http://www.hltv.org/?pageid=173&playerid=44",
+              "nationality": "se"
+            },
+            {
+              "player": "kalle",
+              "link": "http://www.hltv.org/?pageid=173&playerid=646",
+              "nationality": "no"
+            },
+            {
+              "player": "draken",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9255",
+              "nationality": "se"
+            },
+            {
+              "player": "freddieb",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9257",
+              "nationality": "se"
+            },
+            {
+              "player": "REZ",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9278",
+              "nationality": "se"
+            }
+          ]
+        },
+        {
+          "position": "24",
+          "team": "FlipSid3",
+          "points": "88",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5988/",
+          "players": [
+            {
+              "player": "markeloff",
+              "link": "http://www.hltv.org/player/338-markeloff",
+              "nationality": "ua"
+            },
+            {
+              "player": "B1ad3",
+              "link": "http://www.hltv.org/player/472-b1ad3",
+              "nationality": "ua"
+            },
+            {
+              "player": "WorldEdit",
+              "link": "http://www.hltv.org/player/7403-worldedit",
+              "nationality": "ru"
+            },
+            {
+              "player": "wayLander",
+              "link": "http://www.hltv.org/player/7796-waylander",
+              "nationality": "fi"
+            },
+            {
+              "player": "electronic",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8918",
+              "nationality": "ru"
+            }
+          ]
+        },
+        {
+          "position": "25",
+          "team": "VG.CyberZen",
+          "points": "73",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6773/",
+          "players": [
+            {
+              "player": "Savage",
+              "link": "http://www.hltv.org/player/180-savage",
+              "nationality": "cn"
+            },
+            {
+              "player": "tb",
+              "link": "http://www.hltv.org/player/839-tb",
+              "nationality": "cn"
+            },
+            {
+              "player": "advent",
+              "link": "http://www.hltv.org/player/8600-advent",
+              "nationality": "cn"
+            },
+            {
+              "player": "zhokiNg",
+              "link": "http://www.hltv.org/player/8601-zhoking",
+              "nationality": "cn"
+            },
+            {
+              "player": "LOVEYY",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8957",
+              "nationality": "cn"
+            }
+          ]
+        },
+        {
+          "position": "26",
+          "team": "LDLC",
+          "points": "57",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4674/",
+          "players": [
+            {
+              "player": "Ex6TenZ",
+              "link": "http://www.hltv.org/player/7166-ex6tenz",
+              "nationality": "be"
+            },
+            {
+              "player": "to1nou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7982",
+              "nationality": "be"
+            },
+            {
+              "player": "ALEX",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8184",
+              "nationality": "gb"
+            },
+            {
+              "player": "mistou",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8302",
+              "nationality": "fr"
+            },
+            {
+              "player": "xms",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9545",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "27",
+          "team": "ALTERNATE aTTaX",
+          "points": "42",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/4501/",
+          "players": [
+            {
+              "player": "crisby",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1064",
+              "nationality": "de"
+            },
+            {
+              "player": "tiziaN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=5796",
+              "nationality": "de"
+            },
+            {
+              "player": "syrsoN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7266",
+              "nationality": "de"
+            }
+          ]
+        },
+        {
+          "position": "28",
+          "team": "Space Soldiers",
+          "points": "42",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/5929/",
+          "players": [
+            {
+              "player": "MAJ3R",
+              "link": "http://www.hltv.org/?pageid=173&playerid=150",
+              "nationality": "tr"
+            },
+            {
+              "player": "XANTARES",
+              "link": "http://www.hltv.org/player/7938-xantares",
+              "nationality": "tr"
+            },
+            {
+              "player": "DESPE",
+              "link": "http://www.hltv.org/player/7980-despe",
+              "nationality": "tr"
+            },
+            {
+              "player": "paz",
+              "link": "http://www.hltv.org/player/9353-paz",
+              "nationality": "tr"
+            },
+            {
+              "player": "ngiN",
+              "link": "http://www.hltv.org/player/9857-ngin",
+              "nationality": "tr"
+            }
+          ]
+        },
+        {
+          "position": "29",
+          "team": "Vexed",
+          "points": "41",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/6375/",
+          "players": [
+            {
+              "player": "jarod",
+              "link": "http://www.hltv.org/?pageid=173&playerid=269",
+              "nationality": "fr"
+            },
+            {
+              "player": "Roombang",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7813",
+              "nationality": "be"
+            },
+            {
+              "player": "AmaNEk",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9616",
+              "nationality": "fr"
+            },
+            {
+              "player": "hAdji",
+              "link": "http://www.hltv.org/?pageid=173&playerid=9656",
+              "nationality": "fr"
+            },
+            {
+              "player": "devoduvek",
+              "link": "http://www.hltv.org/?pageid=173&playerid=10569",
+              "nationality": "fr"
+            }
+          ]
+        },
+        {
+          "position": "30",
+          "team": "iGame.com",
+          "points": "40",
+          "link": "http://www.hltv.org/ranking/teams/2016/december/12/details/7331/",
+          "players": [
+            {
+              "player": "zehN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=1378",
+              "nationality": "fi"
+            },
+            {
+              "player": "xseveN",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7248",
+              "nationality": "fi"
+            },
+            {
+              "player": "SAGGERTON",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7529",
+              "nationality": "fi"
+            },
+            {
+              "player": "sAw",
+              "link": "http://www.hltv.org/?pageid=173&playerid=7821",
+              "nationality": "fi"
+            },
+            {
+              "player": "ZOREE",
+              "link": "http://www.hltv.org/?pageid=173&playerid=8576",
+              "nationality": "fi"
+            }
+          ]
+        }
+      ]
     }
   ],
   "teams": [
@@ -9938,24 +10904,9 @@ var data = {
       "safeTeamName": "Virtus_pro"
     },
     {
-      "name": "G2",
-      "color": "#A8A8A8",
-      "safeTeamName": "G2"
-    },
-    {
-      "name": "GODSENT",
-      "color": "#F5C92E",
-      "safeTeamName": "GODSENT"
-    },
-    {
       "name": "Natus Vincere",
       "color": "#FEE821",
       "safeTeamName": "Natus_Vincere"
-    },
-    {
-      "name": "Astralis",
-      "color": "#EF3742",
-      "safeTeamName": "Astralis"
     },
     {
       "name": "NiP",
@@ -9973,6 +10924,36 @@ var data = {
       "safeTeamName": "Liquid"
     },
     {
+      "name": "dignitas",
+      "color": "#F8C700",
+      "safeTeamName": "dignitas"
+    },
+    {
+      "name": "G2",
+      "color": "#A8A8A8",
+      "safeTeamName": "G2"
+    },
+    {
+      "name": "EnVyUs",
+      "color": "#576DA5",
+      "safeTeamName": "EnVyUs"
+    },
+    {
+      "name": "Astralis",
+      "color": "#EF3742",
+      "safeTeamName": "Astralis"
+    },
+    {
+      "name": "GODSENT",
+      "color": "#F5C92E",
+      "safeTeamName": "GODSENT"
+    },
+    {
+      "name": "OpTic",
+      "color": "#98D106",
+      "safeTeamName": "OpTic"
+    },
+    {
       "name": "Immortals",
       "color": "#01B2AA",
       "safeTeamName": "Immortals"
@@ -9983,9 +10964,9 @@ var data = {
       "safeTeamName": "Heroic"
     },
     {
-      "name": "EnVyUs",
-      "color": "#576DA5",
-      "safeTeamName": "EnVyUs"
+      "name": "FaZe",
+      "color": "#E91E25",
+      "safeTeamName": "FaZe"
     },
     {
       "name": "mousesports",
@@ -9993,19 +10974,9 @@ var data = {
       "safeTeamName": "mousesports"
     },
     {
-      "name": "FaZe",
-      "color": "#E91E25",
-      "safeTeamName": "FaZe"
-    },
-    {
-      "name": "Gambit",
-      "color": "#F00815",
-      "safeTeamName": "Gambit"
-    },
-    {
-      "name": "dignitas",
-      "color": "#F8C700",
-      "safeTeamName": "dignitas"
+      "name": "fnatic",
+      "color": "#F19E33",
+      "safeTeamName": "fnatic"
     },
     {
       "name": "FlipSid3",
@@ -10018,54 +10989,9 @@ var data = {
       "safeTeamName": "Echo_Fox"
     },
     {
-      "name": "MK",
-      "color": "#027C03",
-      "safeTeamName": "MK"
-    },
-    {
-      "name": "OpTic",
-      "color": "#98D106",
-      "safeTeamName": "OpTic"
-    },
-    {
-      "name": "Renegades",
-      "color": "#87202A",
-      "safeTeamName": "Renegades"
-    },
-    {
-      "name": "TSM",
-      "color": "#EFEFEF",
-      "safeTeamName": "TSM"
-    },
-    {
-      "name": "HellRaisers",
-      "color": "#EC1C23",
-      "safeTeamName": "HellRaisers"
-    },
-    {
-      "name": "Space Soldiers",
-      "color": "#F7E300",
-      "safeTeamName": "Space_Soldiers"
-    },
-    {
-      "name": "Epsilon",
-      "color": "#0A5499",
-      "safeTeamName": "Epsilon"
-    },
-    {
       "name": "TyLoo",
       "color": "#D53A31",
       "safeTeamName": "TyLoo"
-    },
-    {
-      "name": "Crowns",
-      "color": "#E3DB9A",
-      "safeTeamName": "Crowns"
-    },
-    {
-      "name": "Spirit",
-      "color": "#067D47",
-      "safeTeamName": "Spirit"
     },
     {
       "name": "VG.CyberZen",
@@ -10073,9 +10999,19 @@ var data = {
       "safeTeamName": "VG_CyberZen"
     },
     {
-      "name": "ALTERNATE aTTaX",
-      "color": "#E30714",
-      "safeTeamName": "ALTERNATE_aTTaX"
+      "name": "Gambit",
+      "color": "#F00815",
+      "safeTeamName": "Gambit"
+    },
+    {
+      "name": "HellRaisers",
+      "color": "#EC1C23",
+      "safeTeamName": "HellRaisers"
+    },
+    {
+      "name": "Renegades",
+      "color": "#87202A",
+      "safeTeamName": "Renegades"
     },
     {
       "name": "NRG",
@@ -10083,14 +11019,19 @@ var data = {
       "safeTeamName": "NRG"
     },
     {
-      "name": "fnatic",
-      "color": "#F19E33",
-      "safeTeamName": "fnatic"
+      "name": "TSM",
+      "color": "#EFEFEF",
+      "safeTeamName": "TSM"
     },
     {
-      "name": "PENTA",
-      "color": "#EFEFEF",
-      "safeTeamName": "PENTA"
+      "name": "Crowns",
+      "color": "#E3DB9A",
+      "safeTeamName": "Crowns"
+    },
+    {
+      "name": "ALTERNATE aTTaX",
+      "color": "#E30714",
+      "safeTeamName": "ALTERNATE_aTTaX"
     },
     {
       "name": "compLexity",
@@ -10098,9 +11039,19 @@ var data = {
       "safeTeamName": "compLexity"
     },
     {
+      "name": "PENTA",
+      "color": "#EFEFEF",
+      "safeTeamName": "PENTA"
+    },
+    {
       "name": "Kinguin",
       "color": "#FE9901",
       "safeTeamName": "Kinguin"
+    },
+    {
+      "name": "Epsilon",
+      "color": "#0A5499",
+      "safeTeamName": "Epsilon"
     },
     {
       "name": "iGame.com",
@@ -10121,6 +11072,16 @@ var data = {
       "name": "Platinium",
       "color": "#AD0C1D",
       "safeTeamName": "Platinium"
+    },
+    {
+      "name": "Space Soldiers",
+      "color": "#F7E300",
+      "safeTeamName": "Space_Soldiers"
+    },
+    {
+      "name": "Vexed",
+      "color": "#CD2029",
+      "safeTeamName": "Vexed"
     }
   ],
   "players": {}

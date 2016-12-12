@@ -115,22 +115,12 @@
 				<h2>Adjust Data</h1>
 				<div class="control">
 					<label for="dateFrom" class="left">First Date</label>
-					<select id="dateFrom" class="right">
-						<option value="FromDate1" selected="selected">30/09/1992</option>
-						<option value="FromDate2">30/09/1993</option>
-						<option value="FromDate3">30/09/1994</option>
-						<option value="FromDate4">30/09/1995</option>
-						<option value="FromDate5">30/09/1996</option>
+					<select id="dateFrom" class="right" onchange="refreshDateRanges()">
 					</select>
 				</div>
 				<div class="control">
 					<label for="dateTo" class="left">Last Date</label>
-					<select id="dateTo" class="right">
-						<option value="ToDate1">30/09/1992</option>
-						<option value="ToDate2">30/09/1993</option>
-						<option value="ToDate3">30/09/1994</option>
-						<option value="ToDate4">30/09/1995</option>
-						<option value="ToDate5" selected="selected">30/09/1996</option>
+					<select id="dateTo" class="right" onchange="refreshDateRanges()">
 					</select>
 				</div>
 				<div class="control">

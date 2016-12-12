@@ -22,6 +22,12 @@ var months: string[] = [
 // Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 var ratingDates: RatingDate[] = [
+  { year: 2016, month: 12, day: 12 },
+  { year: 2016, month: 12, day: 5 },
+
+  { year: 2016, month: 11, day: 28 },
+  { year: 2016, month: 11, day: 21 },
+  { year: 2016, month: 11, day: 14 },
   { year: 2016, month: 11, day: 7 },
   { year: 2016, month: 11, day: 1 },
 
@@ -29,12 +35,12 @@ var ratingDates: RatingDate[] = [
   { year: 2016, month: 10, day: 17 },
   { year: 2016, month: 10, day: 10 },
   { year: 2016, month: 10, day: 3 },
-
+/*
   { year: 2016, month: 9, day: 26 },
   { year: 2016, month: 9, day: 19 },
   { year: 2016, month: 9, day: 12 },
   { year: 2016, month: 9, day: 5 },
-/*
+
   { year: 2016, month: 8, day: 29 },
   { year: 2016, month: 8, day: 22 },
   { year: 2016, month: 8, day: 15 },
@@ -257,7 +263,7 @@ function loadPageLoop(files)
 
       data.rankings.push(ranking);
 
-      var $ = window.$;
+      var $ = window.$ as JQueryStatic;
       $(".ranking-box .ranking-logo").each(function ()
       {
         var thisElement =  $(this);

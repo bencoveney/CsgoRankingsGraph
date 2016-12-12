@@ -2,6 +2,64 @@
 var graph = document.getElementById("graph");
 var svgNs = "http://www.w3.org/2000/svg";
 
+// Parse dates
+data.rankings.forEach(function(ranking)
+{
+  ranking.date = new Date(ranking.date);
+});
+
+// Ensure the rankings are sorted.
+data.rankings = data.rankings.sort(function(a, b)
+{
+  return (a.date as Date).getTime() - (b.date as Date).getTime();
+});
+
+var dateFromElement = document.querySelector("#dateFrom") as HTMLSelectElement;
+var dateToElement = document.querySelector("#dateTo") as HTMLSelectElement;
+
+function getDropDownDate(date: Date): string {
+  return date.toDateString().substring(4);
+}
+
+function setDropDownDates(first, last) {
+  function addDateToSelector(date: Date, selector: HTMLSelectElement, isSelected: boolean, isEnabled: boolean) {
+    var option = document.createElement("option");
+    var dateString = getDropDownDate(date);
+    option.text = dateString;
+    option.value = dateString;
+    option.selected = isSelected;
+    option.disabled = !isEnabled;
+    selector.add(option);
+  }
+
+  function emptyElement(element: Element) {
+    while(element.firstChild)
+    {
+      element.removeChild(element.firstChild);
+    }
+  }
+
+  emptyElement(dateFromElement);
+  emptyElement(dateToElement);
+
+  data.rankings.forEach((ranking) => {
+    addDateToSelector(ranking.date as Date, dateFromElement, ranking === first, ranking.date < last.date);
+    addDateToSelector(ranking.date as Date, dateToElement, ranking === last, ranking.date > first.date);
+  })
+}
+
+setDropDownDates(data.rankings[data.rankings.length - 11], data.rankings[data.rankings.length - 1]);
+
+function refreshDateRanges() {
+  function findRanking(dateString: string) {
+    return data.rankings.find(function(ranking) {
+      return getDropDownDate(ranking.date as Date) === dateString;
+    });
+  }
+
+  setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
+}
+
 // Creates a line on the graph.
 function drawLine(x1, y1, x2, y2, color, width, dashes)
 {
@@ -57,18 +115,6 @@ var paddingRight = 50;
 var paddingBottom = 50;
 var remainingHeight = height - paddingTop - paddingBottom;
 var remainingWidth = width - paddingLeft - paddingRight;
-
-// Parse dates
-data.rankings.forEach(function(ranking)
-{
-  ranking.date = new Date(ranking.date);
-});
-
-// Ensure the rankings are sorted.
-data.rankings = data.rankings.sort(function(a, b)
-{
-  return (a.date as Date).getTime() - (b.date as Date).getTime();
-});
 
 // Populate a collection containing all the players.
 // Not currently used.

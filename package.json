@@ -12,7 +12,8 @@
     "typings": "^1.5.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "load": "npm run build && node loader"
   },
   "repository": {
     "type": "git",
