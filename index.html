@@ -102,6 +102,12 @@
 				padding: 10px 10px;
 				height: auto;
 				border-radius: 5px;
+				outline-color: #1dec5c;
+			}
+
+			.flyout .body .control button:hover {
+				background-color: #1dec5c;
+				color: #0a0a0a;
 			}
 		</style>
 	</head>
@@ -112,7 +118,12 @@
 			<a class="toggle">+</a>
 			<div class="body hidden">
 				<h1>CSGO Rankings</h1>
+				<span>
+					<em>CSGO Rankings Graph</em> source available on <a href="TODO">GitHub</a>.
+					Data scraped from <a href="TODO">www.HLTV.org</a>
+				</span>
 				<h2>Adjust Data</h1>
+				<p><strong>Warning:</strong> Rendering large date/rank ranges may slow down your browser.</p>
 				<div class="control">
 					<label for="dateFrom" class="left">First Date</label>
 					<select id="dateFrom" class="right" onchange="refreshDateRanges()">
@@ -129,24 +140,14 @@
 					</select>
 				</div>
 				<div class="control">
-					<button class="left">Show Default Data</button>
-					<button class="right">Show All Data</button>
+					<button class="left" onclick="showDefaultData()">Show Default Data</button>
+					<button class="right" onclick="showAllData()">Show <strong>All</strong> Data!</button>
 				</div>
 				<div class="clearfix"></div>
-				<h2>About</h2>
-				<span>
-					<em>CSGO Rankings Graph</em> source available on <a href="TODO">GitHub</a>.
-					Data scraped from <a href="TODO">www.HLTV.org</a>
-				</span>
 			</div>
 		</div>
 
 		<script src="output.js"></script>
 		<script src="graph.js"></script>
-		<script>
-			document.querySelector(".flyout .toggle").addEventListener("click", function() {
-				document.querySelector(".flyout .body").classList.toggle("hidden")
-			});
-		</script>
 	</body>
 </html>

@@ -496,4 +496,16 @@ function handleMouseOut(teamName)
   });
 }
 
-setDropDownDates(data.rankings[data.rankings.length - 11], data.rankings[data.rankings.length - 1]);
+function showDefaultData() {
+  setDropDownDates(data.rankings[data.rankings.length - 11], data.rankings[data.rankings.length - 1]);
+}
+
+function showAllData() {
+  setDropDownDates(data.rankings[0], data.rankings[data.rankings.length - 1]);
+}
+
+showDefaultData();
+
+document.querySelector(".flyout .toggle").addEventListener("click", function() {
+  document.querySelector(".flyout .body").classList.toggle("hidden")
+});
