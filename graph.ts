@@ -2,9 +2,11 @@
 var graph = document.getElementById("graph");
 var svgNs = "http://www.w3.org/2000/svg";
 
-// Parse dates
+// Parse dates and find the highest number of ranks.
+var highestNumberOfRanks = 0;
 data.rankings.forEach(function(ranking)
 {
+  highestNumberOfRanks = Math.max(highestNumberOfRanks, ranking.ranks.length);
   ranking.date = new Date(ranking.date);
 });
 
@@ -59,6 +61,24 @@ function refreshDateRanges() {
 
   setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
 }
+
+function dropDownRanks(selected) {
+  var ranksElement = document.querySelector("#topNRanks") as HTMLSelectElement
+  function addRank(rankNumber) {
+    var option = document.createElement("option");
+    var rankString = rankNumber.toString();
+    option.text = rankString;
+    option.value = rankString;
+    option.selected = selected === rankNumber;
+    ranksElement.add(option);
+  }
+  for(var i = 1; i <= highestNumberOfRanks; i++)
+  {
+    addRank(i);
+  }
+}
+
+dropDownRanks(10);
 
 // Creates a line on the graph.
 function drawLine(x1, y1, x2, y2, color, width, dashes)
