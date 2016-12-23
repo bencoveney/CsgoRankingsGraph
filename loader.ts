@@ -22,6 +22,7 @@ var months: string[] = [
 // Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 var ratingDates: RatingDate[] = [
+  { year: 2016, month: 12, day: 19 },
   { year: 2016, month: 12, day: 12 },
   { year: 2016, month: 12, day: 5 },
 
@@ -196,7 +197,9 @@ var teamColors: { [teamName: string]: string } = {
   "Echo Fox": "#E07026",
   "Crowns": "#E3DB9A",
   "iGame.com": "#39A2DB",
-  "Platinium": "#AD0C1D"
+  "Platinium": "#AD0C1D",
+  "Vega Squadron": "#0083E8",
+  "fnatic Academy": "#F19E33"
 }
 
 // The end format of the downloaded data.

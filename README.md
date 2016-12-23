@@ -5,6 +5,14 @@ Preview at https://bencoveney.github.io/CsgoRankingsGraph/
 
 Visualisation of HLTV team rankings over time.
 
+Instructions
+------------
+To install all dependencies run `npm install`.
+
+To scrape the data run `npm run load`. This will download all rankings listed in `loader.ts`.
+
+To build the website code run `npm run build`.
+
 To-do List
 ----------
 
@@ -19,3 +27,5 @@ To-do List
 - Split TypeScript compilation up properly.
 - Generalise the codebase to be applicable to other sets of rankings.
 - CI and publish somewhere.
+- Condense subsequent straight lines into a single element.
+- Add buttons to highlight all/no teams.

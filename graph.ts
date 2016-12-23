@@ -115,9 +115,9 @@ function drawText(string, x, y, color, fontSize, className, opacity)
 }
 
 // Declare some opactiy constants.
-var normalOpacity = 0.5;
+var normalOpacity = 0.2;
 var highlightOpacity = 1;
-var lowlightOpacity = 0.2;
+var lowlightOpacity = 0.1;
 
 var paddingTop = 100;
 var paddingLeft = 50;
@@ -325,12 +325,24 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     line.setAttribute("class", "team-" + team.safeTeamName);
     line.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
     line.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+    line.setAttribute("onclick", "handleClick(\"" + team.safeTeamName + "\");");
     graph.appendChild(line);
   }
 
   // Add a definitions section to the graph for gradient declarations.
   var definitions = document.createElementNS(svgNs, "defs");
   graph.appendChild(definitions);
+
+  var styles = document.createElementNS(svgNs, "style");
+  styles.setAttribute("type", "text/css");
+  styles.innerHTML = `
+<![CDATA[
+  .clicked {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+]]>`
+  definitions.appendChild(styles);
 
   function createLinearGradient(id, x1, y1, x2, y2, startColor, startOpacity, stopColor, stopOpacity)
   {
@@ -383,6 +395,7 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     rect.setAttribute("fill", "url(#" + gradientName + ")");
     rect.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
     rect.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+    rect.setAttribute("onclick", "handleClick(\"" + team.safeTeamName + "\");");
 
     graph.appendChild(rect);
   }
@@ -409,10 +422,12 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     rect.setAttribute("y", yPosition.toString());
     rect.setAttribute("width", width.toString());
     rect.setAttribute("height", height.toString());
+    rect.setAttribute("fill-opacity", normalOpacity.toString());
     rect.setAttribute("class", "team-" + team.safeTeamName);
     rect.setAttribute("fill", "url(#" + gradientName + ")");
     rect.setAttribute("onmouseover", "handleMouseOver(\"" + team.safeTeamName + "\");");
     rect.setAttribute("onmouseout", "handleMouseOut(\"" + team.safeTeamName + "\");");
+    rect.setAttribute("onclick", "handleClick(\"" + team.safeTeamName + "\");");
 
     graph.appendChild(rect);
   }
@@ -475,7 +490,6 @@ function changeTeamOpacity(teamName, opacity)
   });
 }
 
-
 // Highlights the specified team's path.
 function handleMouseOver(teamName)
 {
@@ -493,6 +507,15 @@ function handleMouseOut(teamName)
   data.teams.forEach(function(team)
   {
     changeTeamOpacity(team.safeTeamName, normalOpacity);
+  });
+}
+
+function handleClick(teamName)
+{
+  console.log(teamName);
+  var teamSeries = document.querySelectorAll(".team-" + teamName);
+  [].forEach.call(teamSeries, function(path: Element) {
+    path.classList.toggle("clicked");
   });
 }
 
