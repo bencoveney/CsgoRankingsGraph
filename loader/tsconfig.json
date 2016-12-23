@@ -6,8 +6,8 @@
     "target": "es6"
   },
   "files": [
-    "typings/index.d.ts",
-    "graph.ts",
-    "loader.ts"
+    "../typings/index.d.ts",
+    "../dataFormat.d.ts",
+    "./loader.ts"
   ]
 }

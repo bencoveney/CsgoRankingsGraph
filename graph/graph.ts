@@ -1,3 +1,5 @@
+declare var data: DataFormat;
+
 // Get the graph renderer.
 var graph = document.getElementById("graph");
 var svgNs = "http://www.w3.org/2000/svg";
