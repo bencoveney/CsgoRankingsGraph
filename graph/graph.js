@@ -1,15 +1,15 @@
-var graph = document.getElementById("graph");
-var svgNs = "http://www.w3.org/2000/svg";
-var highestNumberOfRanks = 0;
-data.rankings.forEach(function (ranking) {
+const graph = document.getElementById("graph");
+const svgNs = "http://www.w3.org/2000/svg";
+let highestNumberOfRanks = 0;
+data.rankings.forEach((ranking) => {
     highestNumberOfRanks = Math.max(highestNumberOfRanks, ranking.ranks.length);
     ranking.date = new Date(ranking.date);
 });
-data.rankings = data.rankings.sort(function (a, b) {
+data.rankings = data.rankings.sort((a, b) => {
     return a.date.getTime() - b.date.getTime();
 });
-var dateFromElement = document.querySelector("#dateFrom");
-var dateToElement = document.querySelector("#dateTo");
+const dateFromElement = document.querySelector("#dateFrom");
+const dateToElement = document.querySelector("#dateTo");
 function getDropDownDate(date) {
     return date.toDateString().substring(4);
 }
@@ -20,8 +20,8 @@ function emptyElement(element) {
 }
 function setDropDownDates(first, last) {
     function addDateToSelector(date, selector, isSelected, isEnabled) {
-        var option = document.createElement("option");
-        var dateString = getDropDownDate(date);
+        const option = document.createElement("option");
+        const dateString = getDropDownDate(date);
         option.text = dateString;
         option.value = dateString;
         option.selected = isSelected;
@@ -38,29 +38,29 @@ function setDropDownDates(first, last) {
 }
 function refreshDateRanges() {
     function findRanking(dateString) {
-        return data.rankings.find(function (ranking) {
+        return data.rankings.find((ranking) => {
             return getDropDownDate(ranking.date) === dateString;
         });
     }
     setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
 }
 function dropDownRanks(selected) {
-    var ranksElement = document.querySelector("#topNRanks");
+    const ranksElement = document.querySelector("#topNRanks");
     function addRank(rankNumber) {
-        var option = document.createElement("option");
-        var rankString = rankNumber.toString();
+        const option = document.createElement("option");
+        const rankString = rankNumber.toString();
         option.text = rankString;
         option.value = rankString;
         option.selected = selected === rankNumber;
         ranksElement.add(option);
     }
-    for (var i = 1; i <= highestNumberOfRanks; i++) {
+    for (let i = 1; i <= highestNumberOfRanks; i++) {
         addRank(i);
     }
 }
 dropDownRanks(10);
 function drawLine(x1, y1, x2, y2, color, width, dashes) {
-    var line = document.createElementNS(svgNs, "line");
+    const line = document.createElementNS(svgNs, "line");
     line.setAttribute("x1", x1);
     line.setAttribute("y1", y1);
     line.setAttribute("x2", x2);
@@ -70,9 +70,9 @@ function drawLine(x1, y1, x2, y2, color, width, dashes) {
     line.setAttribute("stroke-dasharray", dashes);
     graph.appendChild(line);
 }
-function drawText(string, x, y, color, fontSize, className, opacity) {
-    var text = document.createElementNS(svgNs, "text");
-    text.innerHTML = string;
+function drawText(value, x, y, color, fontSize, className, opacity) {
+    const text = document.createElementNS(svgNs, "text");
+    text.innerHTML = value;
     text.setAttribute("x", x);
     text.setAttribute("y", y);
     text.setAttribute("font-family", "Arial");
@@ -83,49 +83,49 @@ function drawText(string, x, y, color, fontSize, className, opacity) {
     text.setAttribute("fill-opacity", opacity);
     graph.appendChild(text);
 }
-var normalOpacity = 0.2;
-var highlightOpacity = 1;
-var lowlightOpacity = 0.1;
-var paddingTop = 100;
-var paddingLeft = 50;
-var paddingRight = 50;
-var paddingBottom = 50;
-var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+const normalOpacity = 0.2;
+const highlightOpacity = 1;
+const lowlightOpacity = 0.1;
+const paddingTop = 100;
+const paddingLeft = 50;
+const paddingRight = 50;
+const paddingBottom = 50;
+const months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 function displayGraph(firstRanking, lastRanking, topNRanks) {
     emptyElement(graph);
-    var selecting = false;
-    var activeRankings = data.rankings.filter(function (ranking) {
+    let selecting = false;
+    const activeRankings = data.rankings.filter((ranking) => {
         if (ranking === firstRanking) {
             selecting = true;
         }
-        var result = selecting;
+        const result = selecting;
         if (ranking === lastRanking) {
             selecting = false;
         }
         return result;
     });
-    var numberOfRankings = activeRankings.length;
-    var spacingPerRanking = 160;
-    var numberOfRanks = activeRankings[numberOfRankings - 1].ranks.length;
-    var spacingPerRank = 60;
-    var width = spacingPerRanking * numberOfRankings;
-    var height = spacingPerRank * numberOfRanks;
-    graph.setAttribute('width', width.toString());
-    graph.setAttribute('height', height.toString());
-    var remainingHeight = height - paddingTop - paddingBottom;
-    var remainingWidth = width - paddingLeft - paddingRight;
-    activeRankings.forEach(function (ranking) {
-        ranking.ranks.forEach(function (rank, rankIndex) {
-            rank.players.forEach(function (player) {
-                var newPlayer;
+    const numberOfRankings = activeRankings.length;
+    const spacingPerRanking = 160;
+    const numberOfRanks = activeRankings[numberOfRankings - 1].ranks.length;
+    const spacingPerRank = 60;
+    const graphWidth = spacingPerRanking * numberOfRankings;
+    const graphHeight = spacingPerRank * numberOfRanks;
+    graph.setAttribute("width", graphWidth.toString());
+    graph.setAttribute("height", graphHeight.toString());
+    const remainingHeight = graphHeight - paddingTop - paddingBottom;
+    const remainingWidth = graphWidth - paddingLeft - paddingRight;
+    activeRankings.forEach((ranking) => {
+        ranking.ranks.forEach((rank, rankIndex) => {
+            rank.players.forEach((player) => {
+                let newPlayer;
                 if (data.players[player.player]) {
                     newPlayer = data.players[player.player];
                 }
                 else {
                     newPlayer = {
-                        teams: []
+                        teams: [],
                     };
-                    activeRankings.forEach(function () {
+                    activeRankings.forEach(() => {
                         newPlayer.teams.push(null);
                     });
                     data.players[player.player] = newPlayer;
@@ -134,31 +134,31 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
             });
         });
     });
-    data.teams.forEach(function (team) {
+    data.teams.forEach((team) => {
         team.ranks = [];
-        activeRankings.forEach(function (ranking) {
-            var foundRank = ranking.ranks.find(function (rank) {
-                return rank.team == team.name;
+        activeRankings.forEach((ranking) => {
+            const foundRank = ranking.ranks.find((rank) => {
+                return rank.team === team.name;
             });
             team.ranks.push(foundRank ? foundRank.position : null);
         });
     });
-    activeRankings.forEach(function (ranking, rankingIndex) {
-        var xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
-        drawLine(xPosition, 0, xPosition, height, "#333333", 1, "5, 5");
-        var rankingDate = ranking.date;
-        var dayAndMonth = rankingDate.getDate() + " " + months[rankingDate.getMonth()];
-        var year = rankingDate.getFullYear().toString();
+    activeRankings.forEach((ranking, rankingIndex) => {
+        const xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
+        drawLine(xPosition, 0, xPosition, graphHeight, "#333333", 1, "5, 5");
+        const rankingDate = ranking.date;
+        const dayAndMonth = rankingDate.getDate() + " " + months[rankingDate.getMonth()];
+        const year = rankingDate.getFullYear().toString();
         drawText(dayAndMonth, xPosition, 20, "white", 12, "", 1);
         drawText(year, xPosition, 40, "white", 12, "", 1);
     });
-    activeRankings[0].ranks.forEach(function (ranking, rankingIndex) {
-        var yPosition = (rankingIndex * spacingPerRank) + paddingTop;
-        drawLine(0, yPosition, width, yPosition, "#333333", 1, "5, 5");
+    activeRankings[0].ranks.forEach((ranking, rankingIndex) => {
+        const yPosition = (rankingIndex * spacingPerRank) + paddingTop;
+        drawLine(0, yPosition, graphWidth, yPosition, "#333333", 1, "5, 5");
     });
-    var curveSoftness = spacingPerRanking * 0.75;
-    var curveWidth = 10;
-    var curveFade = spacingPerRanking * 0.25;
+    const curveSoftness = spacingPerRanking * 0.75;
+    const curveWidth = 10;
+    const curveFade = spacingPerRanking * 0.25;
     function getRank(team, rankingIndex) {
         rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
         return team.ranks[rankingIndex];
@@ -172,27 +172,27 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     }
     function createLabel(team, rankingIndex, rank) {
         if (rankingIndex < numberOfRankings && rank <= numberOfRanks) {
-            var yPosition = getYPosition(rank);
-            var xPosition = getXPosition(rankingIndex);
-            var labelClass = "team-" + team.safeTeamName;
-            var labelText = team.name + " (" + rank + ")";
-            var labelColor = team.textColor || team.color;
+            const yPosition = getYPosition(rank);
+            const xPosition = getXPosition(rankingIndex);
+            const labelClass = "team-" + team.safeTeamName;
+            const labelText = team.name + " (" + rank + ")";
+            const labelColor = team.textColor || team.color;
             drawText(labelText, xPosition, yPosition - 20, labelColor, "12", labelClass, normalOpacity);
         }
     }
     function createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team) {
-        var yPositionBefore = getYPosition(rankBefore);
-        var yPositionAfter = getYPosition(rankAfter);
-        var xPositionBefore = getXPosition(rankingIndexBefore);
-        var xPositionAfter = getXPosition(rankingIndexAfter);
+        const yPositionBefore = getYPosition(rankBefore);
+        const yPositionAfter = getYPosition(rankAfter);
+        const xPositionBefore = getXPosition(rankingIndexBefore);
+        const xPositionAfter = getXPosition(rankingIndexAfter);
         createLabel(team, rankingIndexAfter, rankAfter);
         if (rankingIndexAfter < numberOfRankings && rankAfter <= numberOfRanks) {
-            var labelClass = "team-" + team.safeTeamName;
-            var labelText = team.name + " (" + rankAfter + ")";
-            var labelColor = team.textColor || team.color;
+            const labelClass = "team-" + team.safeTeamName;
+            const labelText = team.name + " (" + rankAfter + ")";
+            const labelColor = team.textColor || team.color;
             drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
         }
-        var pathDefinition = "M" + xPositionBefore + " ";
+        let pathDefinition = "M" + xPositionBefore + " ";
         pathDefinition += yPositionBefore + " ";
         pathDefinition += " C ";
         pathDefinition += (xPositionBefore + curveSoftness) + " ";
@@ -201,7 +201,7 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
         pathDefinition += yPositionAfter + ", ";
         pathDefinition += xPositionAfter + " ";
         pathDefinition += yPositionAfter;
-        var line = document.createElementNS(svgNs, "path");
+        const line = document.createElementNS(svgNs, "path");
         line.setAttribute("d", pathDefinition);
         line.setAttribute("stroke", team.color);
         line.setAttribute("fill", "transparent");
@@ -213,9 +213,9 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
         line.setAttribute("onclick", "handleClick(\"" + team.safeTeamName + "\");");
         graph.appendChild(line);
     }
-    var definitions = document.createElementNS(svgNs, "defs");
+    const definitions = document.createElementNS(svgNs, "defs");
     graph.appendChild(definitions);
-    var styles = document.createElementNS(svgNs, "style");
+    const styles = document.createElementNS(svgNs, "style");
     styles.setAttribute("type", "text/css");
     styles.innerHTML = `
 <![CDATA[
@@ -226,32 +226,32 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
 ]]>`;
     definitions.appendChild(styles);
     function createLinearGradient(id, x1, y1, x2, y2, startColor, startOpacity, stopColor, stopOpacity) {
-        var gradient = document.createElementNS(svgNs, "linearGradient");
+        const gradient = document.createElementNS(svgNs, "linearGradient");
         gradient.setAttribute("id", id);
         gradient.setAttribute("x1", x1);
         gradient.setAttribute("y1", y1);
         gradient.setAttribute("x2", x2);
         gradient.setAttribute("y2", y2);
         definitions.appendChild(gradient);
-        var topStop = document.createElementNS(svgNs, "stop");
+        const topStop = document.createElementNS(svgNs, "stop");
         topStop.setAttribute("offset", "0%");
         topStop.setAttribute("stop-color", startColor);
         topStop.setAttribute("stop-opacity", startOpacity);
         gradient.appendChild(topStop);
-        var bottomStop = document.createElementNS(svgNs, "stop");
+        const bottomStop = document.createElementNS(svgNs, "stop");
         bottomStop.setAttribute("offset", "100%");
         bottomStop.setAttribute("stop-color", stopColor);
         bottomStop.setAttribute("stop-opacity", stopOpacity);
         gradient.appendChild(bottomStop);
     }
     function createFadeOut(rankingIndexBefore, rankBefore, team) {
-        var yPosition = getYPosition(rankBefore) - (curveWidth / 2);
-        var height = curveWidth;
-        var xPosition = getXPosition(rankingIndexBefore);
-        var width = curveFade;
-        var gradientName = team.safeTeamName + "_before_" + rankingIndexBefore;
+        const yPosition = getYPosition(rankBefore) - (curveWidth / 2);
+        const height = curveWidth;
+        const xPosition = getXPosition(rankingIndexBefore);
+        const width = curveFade;
+        const gradientName = team.safeTeamName + "_before_" + rankingIndexBefore;
         createLinearGradient(gradientName, 0, 0, 1, 0, team.color, 1, team.color, 0);
-        var rect = document.createElementNS(svgNs, "rect");
+        const rect = document.createElementNS(svgNs, "rect");
         rect.setAttribute("x", xPosition.toString());
         rect.setAttribute("y", yPosition.toString());
         rect.setAttribute("width", width.toString());
@@ -266,13 +266,13 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     }
     function createFadeIn(rankingIndexAfter, rankAfter, team) {
         createLabel(team, rankingIndexAfter, rankAfter);
-        var yPosition = getYPosition(rankAfter) - (curveWidth / 2);
-        var height = curveWidth;
-        var xPosition = getXPosition(rankingIndexAfter) - curveFade;
-        var width = curveFade;
-        var gradientName = team.safeTeamName + "_after_" + rankingIndexAfter;
+        const yPosition = getYPosition(rankAfter) - (curveWidth / 2);
+        const height = curveWidth;
+        const xPosition = getXPosition(rankingIndexAfter) - curveFade;
+        const width = curveFade;
+        const gradientName = team.safeTeamName + "_after_" + rankingIndexAfter;
         createLinearGradient(gradientName, 1, 0, 0, 0, team.color, 1, team.color, 0);
-        var rect = document.createElementNS(svgNs, "rect");
+        const rect = document.createElementNS(svgNs, "rect");
         rect.setAttribute("x", xPosition.toString());
         rect.setAttribute("y", yPosition.toString());
         rect.setAttribute("width", width.toString());
@@ -285,12 +285,12 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
         rect.setAttribute("onclick", "handleClick(\"" + team.safeTeamName + "\");");
         graph.appendChild(rect);
     }
-    data.teams.forEach(function (team) {
-        for (var j = 0; j < (numberOfRankings + 1); j++) {
-            var rankingIndexBefore = j - 1;
-            var rankingIndexAfter = j;
-            var rankBefore = getRank(team, rankingIndexBefore);
-            var rankAfter = getRank(team, rankingIndexAfter);
+    data.teams.forEach((team) => {
+        for (let j = 0; j < (numberOfRankings + 1); j++) {
+            const rankingIndexBefore = j - 1;
+            const rankingIndexAfter = j;
+            const rankBefore = getRank(team, rankingIndexBefore);
+            const rankAfter = getRank(team, rankingIndexAfter);
             if (rankBefore !== null) {
                 if (rankAfter !== null) {
                     createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team);
@@ -304,40 +304,40 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
             }
         }
     });
-    var gradientHeight = paddingBottom;
-    var gradientTop = height - gradientHeight;
-    var gradientBottom = height;
+    const gradientHeight = paddingBottom;
+    const gradientTop = graphHeight - gradientHeight;
+    const gradientBottom = graphHeight;
     createLinearGradient("bottom", 0, 0, 0, 1, "black", 0, "black", 1);
-    var gradientArea = document.createElementNS(svgNs, "rect");
+    const gradientArea = document.createElementNS(svgNs, "rect");
     gradientArea.setAttribute("x", (0).toString());
     gradientArea.setAttribute("y", gradientTop.toString());
-    gradientArea.setAttribute("width", width.toString());
+    gradientArea.setAttribute("width", graphWidth.toString());
     gradientArea.setAttribute("height", gradientHeight.toString());
     gradientArea.setAttribute("fill", "url(#bottom)");
     graph.appendChild(gradientArea);
 }
 function changeTeamOpacity(teamName, opacity) {
-    var teamSeries = document.querySelectorAll(".team-" + teamName);
-    [].forEach.call(teamSeries, function (path) {
+    const teamSeries = document.querySelectorAll(".team-" + teamName);
+    [].forEach.call(teamSeries, (path) => {
         path.setAttribute("stroke-opacity", opacity);
         path.setAttribute("fill-opacity", opacity);
     });
 }
 function handleMouseOver(teamName) {
-    data.teams.forEach(function (team) {
-        var opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
+    data.teams.forEach((team) => {
+        const opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
         changeTeamOpacity(team.safeTeamName, opacity);
     });
 }
 function handleMouseOut(teamName) {
-    data.teams.forEach(function (team) {
+    data.teams.forEach((team) => {
         changeTeamOpacity(team.safeTeamName, normalOpacity);
     });
 }
 function handleClick(teamName) {
     console.log(teamName);
-    var teamSeries = document.querySelectorAll(".team-" + teamName);
-    [].forEach.call(teamSeries, function (path) {
+    const teamSeries = document.querySelectorAll(".team-" + teamName);
+    [].forEach.call(teamSeries, (path) => {
         path.classList.toggle("clicked");
     });
 }
@@ -348,6 +348,6 @@ function showAllData() {
     setDropDownDates(data.rankings[0], data.rankings[data.rankings.length - 1]);
 }
 showDefaultData();
-document.querySelector(".flyout .toggle").addEventListener("click", function () {
+document.querySelector(".flyout .toggle").addEventListener("click", () => {
     document.querySelector(".flyout .body").classList.toggle("hidden");
 });

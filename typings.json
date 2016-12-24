@@ -1,0 +1,6 @@
+{
+  "name": "csgo-ranking-graph",
+  "dependencies": {
+    "jsdom": "registry:dt/jsdom#2.0.0+20160915014424"
+  }
+}

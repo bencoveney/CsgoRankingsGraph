@@ -15,17 +15,19 @@ To build the website code run `npm run build`.
 
 To-do List
 ----------
-
 - Make number-of-ranks dropdown actually work.
 - Fix visual bugs around the first element in a curve.
+  - Opacity is okay, Appears to be adding an extra label for all elements except the first.
 - Refactor the code to be less messy and split it up into files.
-- Configure and fun TsLint as part of the build.
 - Improve rendering performance for large selections.
-- Allow toggling on/off team highlights.
 - Map player curves from team to team.
+  - Width should be amount of players moved e.g. 5 Luminosity -> SK
 - Port CSS to SCSS.
-- Split TypeScript compilation up properly.
 - Generalise the codebase to be applicable to other sets of rankings.
 - CI and publish somewhere.
 - Condense subsequent straight lines into a single element.
-- Add buttons to highlight all/no teams.
+- Dropdown for highlighting teams.
+  - All
+  - None
+  - Countries
+- Move ranking dates & team colours to config file.

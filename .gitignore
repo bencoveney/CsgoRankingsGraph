@@ -1,3 +1,4 @@
 node_modules
 typings
 loader/loader.js
+npm-debug.log

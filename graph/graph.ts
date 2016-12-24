@@ -1,41 +1,38 @@
 declare var data: DataFormat;
 
 // Get the graph renderer.
-var graph = document.getElementById("graph");
-var svgNs = "http://www.w3.org/2000/svg";
+const graph = document.getElementById("graph");
+const svgNs = "http://www.w3.org/2000/svg";
 
 // Parse dates and find the highest number of ranks.
-var highestNumberOfRanks = 0;
-data.rankings.forEach(function(ranking)
-{
+let highestNumberOfRanks = 0;
+data.rankings.forEach((ranking) => {
   highestNumberOfRanks = Math.max(highestNumberOfRanks, ranking.ranks.length);
   ranking.date = new Date(ranking.date);
 });
 
 // Ensure the rankings are sorted.
-data.rankings = data.rankings.sort(function(a, b)
-{
+data.rankings = data.rankings.sort((a, b) => {
   return (a.date as Date).getTime() - (b.date as Date).getTime();
 });
 
-var dateFromElement = document.querySelector("#dateFrom") as HTMLSelectElement;
-var dateToElement = document.querySelector("#dateTo") as HTMLSelectElement;
+const dateFromElement = document.querySelector("#dateFrom") as HTMLSelectElement;
+const dateToElement = document.querySelector("#dateTo") as HTMLSelectElement;
 
 function getDropDownDate(date: Date): string {
   return date.toDateString().substring(4);
 }
 
 function emptyElement(element: Element) {
-  while(element.firstChild)
-  {
+  while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
 }
 
 function setDropDownDates(first, last) {
   function addDateToSelector(date: Date, selector: HTMLSelectElement, isSelected: boolean, isEnabled: boolean) {
-    var option = document.createElement("option");
-    var dateString = getDropDownDate(date);
+    const option = document.createElement("option");
+    const dateString = getDropDownDate(date);
     option.text = dateString;
     option.value = dateString;
     option.selected = isSelected;
@@ -49,14 +46,14 @@ function setDropDownDates(first, last) {
   data.rankings.forEach((ranking) => {
     addDateToSelector(ranking.date as Date, dateFromElement, ranking === first, ranking.date < last.date);
     addDateToSelector(ranking.date as Date, dateToElement, ranking === last, ranking.date > first.date);
-  })
+  });
 
   displayGraph(first, last, 30);
 }
 
 function refreshDateRanges() {
   function findRanking(dateString: string) {
-    return data.rankings.find(function(ranking) {
+    return data.rankings.find((ranking) => {
       return getDropDownDate(ranking.date as Date) === dateString;
     });
   }
@@ -65,17 +62,16 @@ function refreshDateRanges() {
 }
 
 function dropDownRanks(selected) {
-  var ranksElement = document.querySelector("#topNRanks") as HTMLSelectElement
+  const ranksElement = document.querySelector("#topNRanks") as HTMLSelectElement;
   function addRank(rankNumber) {
-    var option = document.createElement("option");
-    var rankString = rankNumber.toString();
+    const option = document.createElement("option");
+    const rankString = rankNumber.toString();
     option.text = rankString;
     option.value = rankString;
     option.selected = selected === rankNumber;
     ranksElement.add(option);
   }
-  for(var i = 1; i <= highestNumberOfRanks; i++)
-  {
+  for (let i = 1; i <= highestNumberOfRanks; i++) {
     addRank(i);
   }
 }
@@ -83,9 +79,8 @@ function dropDownRanks(selected) {
 dropDownRanks(10);
 
 // Creates a line on the graph.
-function drawLine(x1, y1, x2, y2, color, width, dashes)
-{
-  var line = document.createElementNS(svgNs, "line");
+function drawLine(x1, y1, x2, y2, color, width, dashes) {
+  const line = document.createElementNS(svgNs, "line");
 
   line.setAttribute("x1", x1);
   line.setAttribute("y1", y1);
@@ -98,11 +93,10 @@ function drawLine(x1, y1, x2, y2, color, width, dashes)
   graph.appendChild(line);
 }
 
-function drawText(string, x, y, color, fontSize, className, opacity)
-{
-  var text = document.createElementNS(svgNs, "text");
+function drawText(value, x, y, color, fontSize, className, opacity) {
+  const text = document.createElementNS(svgNs, "text");
 
-  text.innerHTML = string;
+  text.innerHTML = value;
 
   text.setAttribute("x", x);
   text.setAttribute("y", y);
@@ -117,79 +111,70 @@ function drawText(string, x, y, color, fontSize, className, opacity)
 }
 
 // Declare some opactiy constants.
-var normalOpacity = 0.2;
-var highlightOpacity = 1;
-var lowlightOpacity = 0.1;
+const normalOpacity = 0.2;
+const highlightOpacity = 1;
+const lowlightOpacity = 0.1;
 
-var paddingTop = 100;
-var paddingLeft = 50;
-var paddingRight = 50;
-var paddingBottom = 50;
+const paddingTop = 100;
+const paddingLeft = 50;
+const paddingRight = 50;
+const paddingBottom = 50;
 
-var months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
+const months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
 function displayGraph(firstRanking, lastRanking, topNRanks) {
   emptyElement(graph);
 
-  var selecting = false;
-  var activeRankings = data.rankings.filter(function(ranking) {
-    if(ranking === firstRanking)
-    {
+  let selecting = false;
+  const activeRankings = data.rankings.filter((ranking) => {
+    if (ranking === firstRanking) {
       selecting = true;
     }
-    var result = selecting;
-    if (ranking === lastRanking)
-    {
-      selecting = false
+    const result = selecting;
+    if (ranking === lastRanking) {
+      selecting = false;
     }
     return result;
   });
 
   // Distribute the vertical space between the number of rankings.
-  var numberOfRankings = activeRankings.length;
-  var spacingPerRanking = 160;
+  const numberOfRankings = activeRankings.length;
+  const spacingPerRanking = 160;
 
   // Distribute the horizontal space between the number of ranks.
-  var numberOfRanks = activeRankings[numberOfRankings - 1].ranks.length;
-  var spacingPerRank = 60;
+  const numberOfRanks = activeRankings[numberOfRankings - 1].ranks.length;
+  const spacingPerRank = 60;
 
   // Set the dimensions
-  var width = spacingPerRanking * numberOfRankings;
-  var height = spacingPerRank * numberOfRanks;
-  graph.setAttribute('width', width.toString());
-  graph.setAttribute('height', height.toString());
+  const graphWidth = spacingPerRanking * numberOfRankings;
+  const graphHeight = spacingPerRank * numberOfRanks;
+  graph.setAttribute("width", graphWidth.toString());
+  graph.setAttribute("height", graphHeight.toString());
 
   // Apply some padding to the graph area so that the points are not pressed up against the side.
-  var remainingHeight = height - paddingTop - paddingBottom;
-  var remainingWidth = width - paddingLeft - paddingRight;
+  const remainingHeight = graphHeight - paddingTop - paddingBottom;
+  const remainingWidth = graphWidth - paddingLeft - paddingRight;
 
   // Populate a collection containing all the players.
   // Not currently used.
-  activeRankings.forEach(function(ranking)
-  {
-    ranking.ranks.forEach(function(rank, rankIndex)
-    {
-      rank.players.forEach(function(player)
-      {
+  activeRankings.forEach((ranking) => {
+    ranking.ranks.forEach((rank, rankIndex) => {
+      rank.players.forEach((player) => {
         // Attempt to find the existing player.
-        var newPlayer;
-        if (data.players[player.player])
-        {
+        let newPlayer;
+        if (data.players[player.player]) {
           newPlayer = data.players[player.player];
-        }
-        else
-        {
+        } else {
           // Populate a fresh player with empty rankings.
           newPlayer = {
-            teams: []
+            teams: [],
           };
 
-          activeRankings.forEach(function()
-          {
+          activeRankings.forEach(() => {
             newPlayer.teams.push(null);
           });
 
-          data.players[player.player] = newPlayer
+          data.players[player.player] = newPlayer;
         }
 
         // Put the team into the player's history.
@@ -199,16 +184,13 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   });
 
   // Denormalize the rank of each team for every ranking.
-  data.teams.forEach(function(team)
-  {
+  data.teams.forEach((team) => {
     // Get their rankings.
     team.ranks = [];
-    activeRankings.forEach(function(ranking)
-    {
+    activeRankings.forEach((ranking) => {
       // Add the team's rank, otherwise null.
-      var foundRank = ranking.ranks.find(function(rank)
-      {
-        return rank.team == team.name;
+      const foundRank = ranking.ranks.find((rank) => {
+        return rank.team === team.name;
       });
 
       team.ranks.push(foundRank ? foundRank.position : null);
@@ -216,36 +198,33 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   });
 
   // Draw horizontal gridlines.
-  activeRankings.forEach(function(ranking, rankingIndex)
-  { 
-    var xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
+  activeRankings.forEach((ranking, rankingIndex) => {
+    const xPosition = (rankingIndex * spacingPerRanking) + paddingLeft;
 
-    drawLine(xPosition, 0, xPosition, height, "#333333", 1, "5, 5");
+    drawLine(xPosition, 0, xPosition, graphHeight, "#333333", 1, "5, 5");
 
-    var rankingDate = ranking.date as Date;
-    var dayAndMonth = rankingDate.getDate() + " " + months[rankingDate.getMonth()];
-    var year = rankingDate.getFullYear().toString();
+    const rankingDate = ranking.date as Date;
+    const dayAndMonth = rankingDate.getDate() + " " + months[rankingDate.getMonth()];
+    const year = rankingDate.getFullYear().toString();
 
     drawText(dayAndMonth, xPosition, 20, "white", 12, "", 1);
     drawText(year, xPosition, 40, "white", 12, "", 1);
   });
 
   // Draw vertical gridlines.
-  activeRankings[0].ranks.forEach(function(ranking, rankingIndex)
-  { 
-    var yPosition = (rankingIndex * spacingPerRank) + paddingTop;
+  activeRankings[0].ranks.forEach((ranking, rankingIndex) => {
+    const yPosition = (rankingIndex * spacingPerRank) + paddingTop;
 
-    drawLine(0, yPosition, width, yPosition, "#333333", 1, "5, 5");
+    drawLine(0, yPosition, graphWidth, yPosition, "#333333", 1, "5, 5");
   });
 
   // Calculate how to place the curve anchor points.
-  var curveSoftness = spacingPerRanking * 0.75;
-  var curveWidth = 10
-  var curveFade = spacingPerRanking * 0.25;
+  const curveSoftness = spacingPerRanking * 0.75;
+  const curveWidth = 10;
+  const curveFade = spacingPerRanking * 0.25;
 
   // Gets the rank for a team in the given set of rankings.
-  function getRank(team, rankingIndex)
-  {
+  function getRank(team, rankingIndex) {
     // We might be pointing to a ranking which doesn't exist.
     // Duplicate the ranking to keep a flat line at the graph's edges.
     rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
@@ -255,59 +234,53 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   }
 
   // Calculate the line's x position at the given ranking.
-  function getXPosition(rankIndex)
-  {
+  function getXPosition(rankIndex) {
     return (rankIndex * spacingPerRanking) + paddingLeft;
   }
 
   // Calculate the line's y position at the given ranking.
-  function getYPosition(rank)
-  {
+  function getYPosition(rank) {
     // Decrement the rankings so that it is 0-based rather than 1-based.
     rank = rank - 1;
 
     return (rank * spacingPerRank) + paddingTop;
   }
 
-  function createLabel(team, rankingIndex, rank)
-  {
-    if(rankingIndex < numberOfRankings && rank <= numberOfRanks)
-    {
-      var yPosition = getYPosition(rank);
-      var xPosition = getXPosition(rankingIndex);
+  function createLabel(team, rankingIndex, rank) {
+    if (rankingIndex < numberOfRankings && rank <= numberOfRanks) {
+      const yPosition = getYPosition(rank);
+      const xPosition = getXPosition(rankingIndex);
 
-      var labelClass = "team-" + team.safeTeamName;
-      var labelText = team.name + " (" + rank + ")";
-      var labelColor = team.textColor || team.color;
+      const labelClass = "team-" + team.safeTeamName;
+      const labelText = team.name + " (" + rank + ")";
+      const labelColor = team.textColor || team.color;
 
       drawText(labelText, xPosition, yPosition - 20, labelColor, "12", labelClass, normalOpacity);
     }
   }
 
-  function createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team)
-  {
+  function createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team) {
     // Calculate the y position before and after the transition.
-    var yPositionBefore = getYPosition(rankBefore);
-    var yPositionAfter = getYPosition(rankAfter);
+    const yPositionBefore = getYPosition(rankBefore);
+    const yPositionAfter = getYPosition(rankAfter);
 
     // Calculate the y position before and after the transition.
-    var xPositionBefore = getXPosition(rankingIndexBefore);
-    var xPositionAfter = getXPosition(rankingIndexAfter);
+    const xPositionBefore = getXPosition(rankingIndexBefore);
+    const xPositionAfter = getXPosition(rankingIndexAfter);
 
     createLabel(team, rankingIndexAfter, rankAfter);
 
-    if(rankingIndexAfter < numberOfRankings && rankAfter <= numberOfRanks)
-    {
-      var labelClass = "team-" + team.safeTeamName;
-      var labelText = team.name + " (" + rankAfter + ")";
-      var labelColor = team.textColor || team.color;
+    if (rankingIndexAfter < numberOfRankings && rankAfter <= numberOfRanks) {
+      const labelClass = "team-" + team.safeTeamName;
+      const labelText = team.name + " (" + rankAfter + ")";
+      const labelColor = team.textColor || team.color;
 
       drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
     }
 
     // Add the curve.
     // TODO: Create long lines for big flat gaps.
-    var pathDefinition = "M" + xPositionBefore + " "
+    let pathDefinition = "M" + xPositionBefore + " ";
     pathDefinition += yPositionBefore + " ";
     pathDefinition += " C ";
     pathDefinition += (xPositionBefore + curveSoftness) + " ";
@@ -318,7 +291,7 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     pathDefinition += yPositionAfter;
 
     // Create the curve element.
-    var line = document.createElementNS(svgNs, "path");
+    const line = document.createElementNS(svgNs, "path");
     line.setAttribute("d", pathDefinition);
     line.setAttribute("stroke", team.color);
     line.setAttribute("fill", "transparent");
@@ -332,10 +305,10 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   }
 
   // Add a definitions section to the graph for gradient declarations.
-  var definitions = document.createElementNS(svgNs, "defs");
+  const definitions = document.createElementNS(svgNs, "defs");
   graph.appendChild(definitions);
 
-  var styles = document.createElementNS(svgNs, "style");
+  const styles = document.createElementNS(svgNs, "style");
   styles.setAttribute("type", "text/css");
   styles.innerHTML = `
 <![CDATA[
@@ -343,13 +316,12 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     stroke-opacity: 1;
     fill-opacity: 1;
   }
-]]>`
+]]>`;
   definitions.appendChild(styles);
 
-  function createLinearGradient(id, x1, y1, x2, y2, startColor, startOpacity, stopColor, stopOpacity)
-  {
+  function createLinearGradient(id, x1, y1, x2, y2, startColor, startOpacity, stopColor, stopOpacity) {
     // Add a new gradient to the definitions.
-    var gradient = document.createElementNS(svgNs, "linearGradient");
+    const gradient = document.createElementNS(svgNs, "linearGradient");
     gradient.setAttribute("id", id);
     gradient.setAttribute("x1", x1);
     gradient.setAttribute("y1", y1);
@@ -358,35 +330,34 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     definitions.appendChild(gradient);
 
     // Create the transparent gradient stop.
-    var topStop = document.createElementNS(svgNs, "stop");
+    const topStop = document.createElementNS(svgNs, "stop");
     topStop.setAttribute("offset", "0%");
     topStop.setAttribute("stop-color", startColor);
     topStop.setAttribute("stop-opacity", startOpacity);
     gradient.appendChild(topStop);
 
     // Create the solid gradient stop.
-    var bottomStop = document.createElementNS(svgNs, "stop");
+    const bottomStop = document.createElementNS(svgNs, "stop");
     bottomStop.setAttribute("offset", "100%");
     bottomStop.setAttribute("stop-color", stopColor);
     bottomStop.setAttribute("stop-opacity", stopOpacity);
     gradient.appendChild(bottomStop);
   }
 
-  function createFadeOut(rankingIndexBefore, rankBefore, team)
-  {
-    var yPosition = getYPosition(rankBefore) - (curveWidth / 2);
-    var height = curveWidth;
+  function createFadeOut(rankingIndexBefore, rankBefore, team) {
+    const yPosition = getYPosition(rankBefore) - (curveWidth / 2);
+    const height = curveWidth;
 
     // Calculate the y position before and after the transition.
-    var xPosition = getXPosition(rankingIndexBefore);
-    var width = curveFade;
+    const xPosition = getXPosition(rankingIndexBefore);
+    const width = curveFade;
 
-    var gradientName = team.safeTeamName + "_before_" + rankingIndexBefore;
+    const gradientName = team.safeTeamName + "_before_" + rankingIndexBefore;
     createLinearGradient(gradientName, 0, 0, 1, 0, team.color, 1, team.color, 0);
 
     // Create the rectangle with the gradient applied.
     // TODO: Create rect function.
-    var rect = document.createElementNS(svgNs, "rect");
+    const rect = document.createElementNS(svgNs, "rect");
 
     rect.setAttribute("x", xPosition.toString());
     rect.setAttribute("y", yPosition.toString());
@@ -402,23 +373,22 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
     graph.appendChild(rect);
   }
 
-  function createFadeIn(rankingIndexAfter, rankAfter, team)
-  {
+  function createFadeIn(rankingIndexAfter, rankAfter, team) {
     createLabel(team, rankingIndexAfter, rankAfter);
 
-    var yPosition = getYPosition(rankAfter) - (curveWidth / 2);
-    var height = curveWidth;
+    const yPosition = getYPosition(rankAfter) - (curveWidth / 2);
+    const height = curveWidth;
 
     // Calculate the y position before and after the transition.
-    var xPosition = getXPosition(rankingIndexAfter) - curveFade;
-    var width = curveFade;
+    const xPosition = getXPosition(rankingIndexAfter) - curveFade;
+    const width = curveFade;
 
-    var gradientName = team.safeTeamName + "_after_" + rankingIndexAfter;
+    const gradientName = team.safeTeamName + "_after_" + rankingIndexAfter;
     createLinearGradient(gradientName, 1, 0, 0, 0, team.color, 1, team.color, 0);
 
     // Create the rectangle with the gradient applied.
     // TODO: Create rect function.
-    var rect = document.createElementNS(svgNs, "rect");
+    const rect = document.createElementNS(svgNs, "rect");
 
     rect.setAttribute("x", xPosition.toString());
     rect.setAttribute("y", yPosition.toString());
@@ -435,88 +405,74 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   }
 
   // Draw team series.
-  data.teams.forEach(function(team)
-  {
+  data.teams.forEach((team) => {
     // Iterate through the gaps on either side of the rankings.
-    for (var j = 0; j < (numberOfRankings + 1); j++)
-    {
+    for (let j = 0; j < (numberOfRankings + 1); j++) {
       // Find the index before and after the gap.
-      var rankingIndexBefore = j - 1;
-      var rankingIndexAfter = j;
+      const rankingIndexBefore = j - 1;
+      const rankingIndexAfter = j;
 
-      var rankBefore = getRank(team, rankingIndexBefore);
-      var rankAfter = getRank(team, rankingIndexAfter);
+      const rankBefore = getRank(team, rankingIndexBefore);
+      const rankAfter = getRank(team, rankingIndexAfter);
 
-      if (rankBefore !== null)
-      {
-        if (rankAfter !== null)
-        {
+      if (rankBefore !== null) {
+        if (rankAfter !== null) {
           createCurve(rankingIndexBefore, rankingIndexAfter, rankBefore, rankAfter, team);
-        }
-        else
-        {
+        } else {
           createFadeOut(rankingIndexBefore, rankBefore, team);
         }
-      }
-      else if (rankAfter !== null)
-      {
+      } else if (rankAfter !== null) {
         createFadeIn(rankingIndexAfter, rankAfter, team);
       }
     }
   });
 
   // Prepare a gradient for the bottom of the graph to fade to black.
-  var gradientHeight = paddingBottom;
-  var gradientTop = height - gradientHeight;
-  var gradientBottom = height;
+  const gradientHeight = paddingBottom;
+  const gradientTop = graphHeight - gradientHeight;
+  const gradientBottom = graphHeight;
 
   createLinearGradient("bottom", 0, 0, 0, 1, "black", 0, "black", 1);
 
   // Create the rectangle with the gradient applied.
-  var gradientArea = document.createElementNS(svgNs, "rect");
+  const gradientArea = document.createElementNS(svgNs, "rect");
   gradientArea.setAttribute("x", (0).toString());
   gradientArea.setAttribute("y", gradientTop.toString());
-  gradientArea.setAttribute("width", width.toString());
+  gradientArea.setAttribute("width", graphWidth.toString());
   gradientArea.setAttribute("height", gradientHeight.toString());
   gradientArea.setAttribute("fill", "url(#bottom)");
   graph.appendChild(gradientArea);
 }
 
 // Changes the opacity for all paths matching the team name.
-function changeTeamOpacity(teamName, opacity)
-{
-  var teamSeries = document.querySelectorAll(".team-" + teamName);
-  [].forEach.call(teamSeries, function(path) {
+function changeTeamOpacity(teamName, opacity) {
+  const teamSeries = document.querySelectorAll(".team-" + teamName);
+  [].forEach.call(teamSeries, (path) => {
     path.setAttribute("stroke-opacity", opacity);
     path.setAttribute("fill-opacity", opacity);
   });
 }
 
 // Highlights the specified team's path.
-function handleMouseOver(teamName)
-{
-  data.teams.forEach(function(team)
-  {
-    var opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
-    
+function handleMouseOver(teamName) {
+  data.teams.forEach((team) => {
+    const opacity = teamName === team.safeTeamName ? highlightOpacity : lowlightOpacity;
+
     changeTeamOpacity(team.safeTeamName, opacity);
   });
 }
 
 // Lowlights the specified team's path.
-function handleMouseOut(teamName)
-{
-  data.teams.forEach(function(team)
-  {
+function handleMouseOut(teamName) {
+  data.teams.forEach((team) => {
     changeTeamOpacity(team.safeTeamName, normalOpacity);
   });
 }
 
-function handleClick(teamName)
-{
+function handleClick(teamName) {
   console.log(teamName);
-  var teamSeries = document.querySelectorAll(".team-" + teamName);
-  [].forEach.call(teamSeries, function(path: Element) {
+  const teamSeries = document.querySelectorAll(".team-" + teamName);
+  [].forEach.call(teamSeries, (path: Element) => {
     path.classList.toggle("clicked");
   });
 }
@@ -531,6 +487,6 @@ function showAllData() {
 
 showDefaultData();
 
-document.querySelector(".flyout .toggle").addEventListener("click", function() {
-  document.querySelector(".flyout .body").classList.toggle("hidden")
+document.querySelector(".flyout .toggle").addEventListener("click", () => {
+  document.querySelector(".flyout .body").classList.toggle("hidden");
 });
