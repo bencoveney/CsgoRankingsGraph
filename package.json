@@ -18,7 +18,8 @@
     "build": "npm run tslint_graph && npm run tsc_graph",
     "tslint_loader": "tslint -c tslint.json --project loader/tsconfig.json -t stylish",
     "tsc_loader": "tsc -p loader/tsconfig.json",
-    "load": "npm run tslint_loader && npm run tsc_loader && node loader/loader"
+    "load": "npm run tslint_loader && npm run tsc_loader && node loader/loader",
+    "test": "npm run load && npm run build",
   },
   "repository": {
     "type": "git",
