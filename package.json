@@ -15,10 +15,14 @@
   "scripts": {
     "tslint_graph": "tslint -c tslint.json --project graph/tsconfig.json -t stylish",
     "tsc_graph": "tsc -p graph/tsconfig.json",
-    "build": "npm run tslint_graph && npm run tsc_graph",
+    "build_graph": "npm run tslint_graph && npm run tsc_graph",
+
     "tslint_loader": "tslint -c tslint.json --project loader/tsconfig.json -t stylish",
     "tsc_loader": "tsc -p loader/tsconfig.json",
-    "load": "npm run tslint_loader && npm run tsc_loader && node loader/loader"
+    "build_loader": "npm run tslint_loader && npm run tsc_loader",
+    "load": "npm run build_loader && node loader/loader",
+
+    "test": "npm run build_graph && npm run build_loader"
   },
   "repository": {
     "type": "git",

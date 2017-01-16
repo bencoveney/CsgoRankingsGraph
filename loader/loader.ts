@@ -23,6 +23,11 @@ const months: string[] = [
 // Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 const ratingDates: RatingDate[] = [
+  { year: 2017, month: 12, day: 16 },
+  { year: 2017, month: 12, day: 9 },
+  { year: 2017, month: 12, day: 2 },
+
+  { year: 2016, month: 12, day: 26 },
   { year: 2016, month: 12, day: 19 },
   { year: 2016, month: 12, day: 12 },
   { year: 2016, month: 12, day: 5 },
