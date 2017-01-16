@@ -2,5 +2,9 @@
   "name": "csgo-ranking-graph",
   "dependencies": {
     "jsdom": "registry:dt/jsdom#2.0.0+20160915014424"
+  },
+  "globalDependencies": {
+    "jquery": "registry:dt/jquery#1.10.0+20170104155652",
+    "node": "registry:env/node#6.0.0+20170115054122"
   }
 }
