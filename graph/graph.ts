@@ -270,14 +270,6 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
 
     createLabel(team, rankingIndexAfter, rankAfter);
 
-    if (rankingIndexAfter < numberOfRankings && rankAfter <= numberOfRanks) {
-      const labelClass = "team-" + team.safeTeamName;
-      const labelText = team.name + " (" + rankAfter + ")";
-      const labelColor = team.textColor || team.color;
-
-      drawText(labelText, xPositionAfter, yPositionAfter - 20, labelColor, "12", labelClass, normalOpacity);
-    }
-
     // Add the curve.
     // TODO: Create long lines for big flat gaps.
     let pathDefinition = "M" + xPositionBefore + " ";

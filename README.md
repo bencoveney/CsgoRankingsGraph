@@ -16,8 +16,6 @@ To build the website code run `npm run build`.
 To-do List
 ----------
 - Make number-of-ranks dropdown actually work.
-- Fix visual bugs around the first element in a curve.
-  - Opacity is okay, Appears to be adding an extra label for all elements except the first.
 - Refactor the code to be less messy and split it up into files.
 - Improve rendering performance for large selections.
 - Map player curves from team to team.

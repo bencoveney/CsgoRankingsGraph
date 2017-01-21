@@ -20,6 +20,7 @@
     "tslint_loader": "tslint -c tslint.json --project loader/tsconfig.json -t stylish",
     "tsc_loader": "tsc -p loader/tsconfig.json",
     "build_loader": "npm run tslint_loader && npm run tsc_loader",
+
     "load": "npm run build_loader && node loader/loader",
 
     "test": "npm run build_graph && npm run build_loader"
@@ -28,7 +29,7 @@
     "type": "git",
     "url": "git+https://github.com/bencoveney/CsgoRankingsGraph.git"
   },
-  "author": "",
+  "author": "Ben Coveney",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/bencoveney/CsgoRankingsGraph/issues"

@@ -23,9 +23,9 @@ const months: string[] = [
 // Dates for which rankings will be downloaded.
 type RatingDate = { year: number, month: number, day: number };
 const ratingDates: RatingDate[] = [
-  { year: 2017, month: 12, day: 16 },
-  { year: 2017, month: 12, day: 9 },
-  { year: 2017, month: 12, day: 2 },
+  { year: 2017, month: 1, day: 16 },
+  { year: 2017, month: 1, day: 9 },
+  { year: 2017, month: 1, day: 2 },
 
   { year: 2016, month: 12, day: 26 },
   { year: 2016, month: 12, day: 19 },
@@ -315,7 +315,7 @@ function loadPageLoop(files) {
 }
 
 function writeData() {
-  const outputFile = "output.js";
+  const outputFile = "loader/output.js";
 
   fs.writeFile(
     outputFile,

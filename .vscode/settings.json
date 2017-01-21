@@ -8,8 +8,8 @@
   "typescript.tsdk": "./node_modules/typescript/lib",
   "files.exclude": {
     "node_modules":true,
-    "graph/graph.js":true,
-    "loader/output.js":true,
-    "loader/loader.js":true
+    "typings":true,
+    "graph/*.js":true,
+    "loader/*.js":true
   }
 }
