@@ -14,6 +14,7 @@
     "typings": "^1.5.0"
   },
   "scripts": {
+    "install": "typings install",
     "tslint_graph": "tslint -c tslint.json --project graph/tsconfig.json -t stylish",
     "tsc_graph": "tsc -p graph/tsconfig.json",
     "build_graph": "npm run tslint_graph && npm run tsc_graph",
