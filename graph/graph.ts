@@ -16,19 +16,26 @@ data.rankings = data.rankings.sort((a, b) => {
   return (a.date as Date).getTime() - (b.date as Date).getTime();
 });
 
+// Grab the drop-downs from the DOM.
 const dateFromElement = document.querySelector("#dateFrom") as HTMLSelectElement;
 const dateToElement = document.querySelector("#dateTo") as HTMLSelectElement;
+const topNRanksElement = document.querySelector("#topNRanks") as HTMLSelectElement;
 
+// Function to format dates in the format for drop-downs.
 function getDropDownDate(date: Date): string {
   return date.toDateString().substring(4);
 }
 
+// Function to clear an element.
 function emptyElement(element: Element) {
   while (element.firstChild) {
     element.removeChild(element.firstChild);
   }
 }
 
+let topNRanks = 30;
+
+// Function to update the dates dropdown list and re-display the graph.
 function setDropDownDates(first, last) {
   function addDateToSelector(date: Date, selector: HTMLSelectElement, isSelected: boolean, isEnabled: boolean) {
     const option = document.createElement("option");
@@ -48,29 +55,37 @@ function setDropDownDates(first, last) {
     addDateToSelector(ranking.date as Date, dateToElement, ranking === last, ranking.date > first.date);
   });
 
-  displayGraph(first, last, 30);
+  displayGraph(first, last);
 }
 
-function refreshDateRanges() {
+// Function to assess dropdowns and reload the graph.
+function refreshGraph() {
   function findRanking(dateString: string) {
     return data.rankings.find((ranking) => {
       return getDropDownDate(ranking.date as Date) === dateString;
     });
   }
 
+  dropDownRanks(parseInt(topNRanksElement.value, 10));
+
   setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
 }
 
+// Function to update the top n ranks dropdown.
 function dropDownRanks(selected) {
-  const ranksElement = document.querySelector("#topNRanks") as HTMLSelectElement;
+  topNRanks = selected;
+
   function addRank(rankNumber) {
     const option = document.createElement("option");
     const rankString = rankNumber.toString();
     option.text = rankString;
     option.value = rankString;
     option.selected = selected === rankNumber;
-    ranksElement.add(option);
+    topNRanksElement.add(option);
   }
+
+  emptyElement(topNRanksElement);
+
   for (let i = 1; i <= highestNumberOfRanks; i++) {
     addRank(i);
   }
@@ -122,7 +137,7 @@ const paddingBottom = 50;
 
 const months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
-function displayGraph(firstRanking, lastRanking, topNRanks) {
+function displayGraph(firstRanking, lastRanking) {
   emptyElement(graph);
 
   let selecting = false;
@@ -142,7 +157,7 @@ function displayGraph(firstRanking, lastRanking, topNRanks) {
   const spacingPerRanking = 160;
 
   // Distribute the horizontal space between the number of ranks.
-  const numberOfRanks = activeRankings[numberOfRankings - 1].ranks.length;
+  const numberOfRanks = topNRanks;
   const spacingPerRank = 60;
 
   // Set the dimensions

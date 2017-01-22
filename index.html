@@ -126,17 +126,17 @@
 				<p><strong>Warning:</strong> Rendering large date/rank ranges may slow down your browser.</p>
 				<div class="control">
 					<label for="dateFrom" class="left">First Date</label>
-					<select id="dateFrom" class="right" onchange="refreshDateRanges()">
+					<select id="dateFrom" class="right" onchange="refreshGraph()">
 					</select>
 				</div>
 				<div class="control">
 					<label for="dateTo" class="left">Last Date</label>
-					<select id="dateTo" class="right" onchange="refreshDateRanges()">
+					<select id="dateTo" class="right" onchange="refreshGraph()">
 					</select>
 				</div>
 				<div class="control">
 					<label for="topNRanks" class="left">Top <em>N</em> Ranks</label>
-					<select id="topNRanks" class="right">
+					<select id="topNRanks" class="right" onchange="refreshGraph()">
 					</select>
 				</div>
 				<div class="control">

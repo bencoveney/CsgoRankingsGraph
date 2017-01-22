@@ -6,11 +6,15 @@
   "isShellCommand": true,
   "showOutput": "always",
   "suppressTaskName": true,
+  "echoCommand": true,
   "tasks": [
     {
       "taskName": "run",
-      "args": ["build"],
-      "isBuildCommand": true
+      "args": ["test"],
+      "isBuildCommand": true,
+      "problemMatcher": [
+        "$tsc"
+      ]
     }
   ]
 }
