@@ -8,6 +8,7 @@
     "better-console": "^0.2.4",
     "jquery": "^3.1.1",
     "jsdom": "^9.8.3",
+    "node-sass": "^4.3.0",
     "tslint": "^4.2.0",
     "typescript": "^2.0.7",
     "typings": "^1.5.0"
@@ -16,14 +17,15 @@
     "tslint_graph": "tslint -c tslint.json --project graph/tsconfig.json -t stylish",
     "tsc_graph": "tsc -p graph/tsconfig.json",
     "build_graph": "npm run tslint_graph && npm run tsc_graph",
-
     "tslint_loader": "tslint -c tslint.json --project loader/tsconfig.json -t stylish",
     "tsc_loader": "tsc -p loader/tsconfig.json",
     "build_loader": "npm run tslint_loader && npm run tsc_loader",
-
+    "tslint_css": "tslint -c tslint.json --project css/tsconfig.json -t stylish",
+    "tsc_css": "tsc -p css/tsconfig.json",
+    "build_css": "npm run tslint_css && npm run tsc_css",
+    "css": "npm run build_css && node css/buildScss",
     "load": "npm run build_loader && node loader/loader",
-
-    "test": "npm run build_graph && npm run build_loader"
+    "test": "npm run build_graph && npm run build_loader && npm run css"
   },
   "repository": {
     "type": "git",

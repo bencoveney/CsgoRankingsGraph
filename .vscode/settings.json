@@ -10,6 +10,8 @@
     "node_modules":true,
     "typings":true,
     "graph/*.js":true,
-    "loader/*.js":true
+    "loader/*.js":true,
+    "css/*.js":true,
+    "css/*.css":true
   }
 }

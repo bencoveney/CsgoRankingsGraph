@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "module": "commonjs",
+    "removeComments": true,
+    "sourceMap": false,
+    "target": "es6"
+  },
+  "files": [
+    "../typings/index.d.ts",
+    "./buildScss.ts"
+  ]
+}
