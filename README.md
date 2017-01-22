@@ -19,7 +19,9 @@ To-do List
 ----------
 - Improve bottom-of-graph appearance (e.g. when topN ranks is 1)
 - Refactor the code to be less messy and split it up into files.
-- Improve rendering performance for large selections.
+- Improve performance
+  - Long lines for large selections.
+  - Precompute more data.
 - Map player curves from team to team.
   - Width should be amount of players moved e.g. 5 Luminosity -> SK
 - Generalise the codebase to be applicable to other sets of rankings.

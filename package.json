@@ -10,15 +10,17 @@
     "jsdom": "^9.8.3",
     "node-sass": "^4.3.0",
     "sass-lint": "^1.10.2",
+    "source-map-loader": "^0.1.6",
+    "ts-loader": "^2.0.0",
     "tslint": "^4.2.0",
     "typescript": "^2.0.7",
-    "typings": "^1.5.0"
+    "typings": "^1.5.0",
+    "webpack": "^2.2.0"
   },
   "scripts": {
     "install": "typings install",
-
     "graph_lint": "tslint -c tslint.json --project graph/tsconfig.json -t stylish",
-    "graph_compile": "tsc -p graph/tsconfig.json",
+    "graph_compile": "webpack",
     "graph_build": "npm run graph_lint && npm run graph_compile",
     "loader_lint": "tslint -c tslint.json --project loader/tsconfig.json -t stylish",
     "loader_compile": "tsc -p loader/tsconfig.json",
