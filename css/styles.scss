@@ -5,15 +5,15 @@ $color-borders: #777;
 $color-highlight: #1dec5c;
 
 @mixin clickable($hover) {
-  border-style: solid;
+  background-color: $color-section-background;
   border-color: $color-borders;
-  background-color: #111111;
+  border-style: solid;
   color: $color-highlight;
 
   @if $hover {
     &:hover {
       background-color: $color-highlight;
-      color: #111111;
+      color: $color-section-background;
     }
   }
 }
@@ -22,102 +22,104 @@ body {
   background-color: $color-page-background;
   color: $color-text;
   font-family: arial;
+}
 
-  .flyout {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    max-width: 350px;
+.flyout {
+  bottom: 0;
+  left: 0;
+  max-width: 350px;
+  position: fixed;
 
-    .toggle {
-      @include clickable(true);
+  .toggle {
+    @include clickable(true);
 
-      display: block;
-      border-width: 1px 1px 0 0;
-      border-top-right-radius: 15px;
-      padding: 5px 15px;
-      opacity: 0.6;
-      font-size: 2em;
-      font-weight: bold;
-      text-align: right;
+    border-top-right-radius: 15px;
+    border-width: 1px 1px 0 0;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    opacity: .6;
+    padding: 5px 15px;
+    text-align: right;
 
-      &:hover {
-        opacity: 1;
+    &:hover {
+      opacity: 1;
+    }
+  }
+
+  .body {
+    background-color: $color-section-background;
+    border-color: $color-borders;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+    height: 500px;
+    line-height: 1.8;
+    overflow: hidden;
+    padding: 5px 15px 15px;
+    position: relative;
+    transition: padding 1s, height 1s, width 1s;
+    width: 350px;
+
+    &.hidden {
+      height: 0;
+      padding: 0 15px;
+      width: 50px;
+    }
+
+    h1,
+    h2 {
+      border-bottom: 1px dashed $color-borders;
+      color: $color-highlight;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      width: 100%;
+    }
+
+    a {
+      &:link,
+      &:active,
+      &:visited {
+        color: $color-text;
       }
     }
 
-    .body {
-      background-color: $color-section-background;
-      border-width: 1px 1px 0 0;
-      border-style: solid;
-      border-color: $color-borders;
-      padding: 5px 15px 15px 15px;
-      box-sizing: border-box;
-      line-height: 1.8;
-      height: 500px;
-      width: 350px;
-      transition: padding 1s, height 1s, width 1s;
-      overflow: hidden;
-      position: relative;
+    .control {
+      clear: both;
 
-      &.hidden {
-        padding: 0 15px;
-        height: 0;
-        width: 50px;
-      }
-
-      h1,
-      h2 {
-        margin-top: 15px;
+      .left,
+      .right {
+        box-sizing: border-box;
         margin-bottom: 10px;
-        width: 100%;
-        border-bottom: 1px dashed $color-borders;
-        color: $color-highlight;
+        min-height: 30px;
+        padding-top: 6px 0;
+        width: 48%;
       }
 
-      a:link,
-      a:active,
-      a:visited {
-        color: $color-text;
+      .left {
+        clear: left;
+        float: left;
       }
 
-      .control {
-        clear: both;
+      .right {
+        clear: right;
+        float: right;
+      }
 
-        .left,
-        .right {
-          width: 48%;
-          min-height: 30px;
-          margin-bottom: 10px;
-          padding-top: 6px 0;
-          box-sizing: border-box;
-        }
+      select,
+      button {
+        border-radius: 5px;
+        border-width: 1px;
+        height: auto;
+        padding: 10px;
+      }
 
-        .left {
-          float: left;
-          clear: left;
-        }
+      select {
+        @include clickable(false);
+      }
 
-        .right {
-          float: right;
-          clear: right;
-        }
-
-        select.right,
-        button {
-          border-width: 1px;
-          padding: 10px 10px;
-          height: auto;
-          border-radius: 5px;
-        }
-
-        select.right {
-          @include clickable(false);
-        }
-
-        button {
-          @include clickable(true);
-        }
+      button {
+        @include clickable(true);
       }
     }
   }

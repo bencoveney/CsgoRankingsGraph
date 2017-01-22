@@ -2,88 +2,87 @@ body {
   background-color: #000;
   color: #fff;
   font-family: arial; }
-  body .flyout {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    max-width: 350px; }
-    body .flyout .toggle {
-      border-style: solid;
-      border-color: #777;
-      background-color: #111111;
+
+.flyout {
+  bottom: 0;
+  left: 0;
+  max-width: 350px;
+  position: fixed; }
+  .flyout .toggle {
+    background-color: #111;
+    border-color: #777;
+    border-style: solid;
+    color: #1dec5c;
+    border-top-right-radius: 15px;
+    border-width: 1px 1px 0 0;
+    display: block;
+    font-size: 2em;
+    font-weight: bold;
+    opacity: .6;
+    padding: 5px 15px;
+    text-align: right; }
+    .flyout .toggle:hover {
+      background-color: #1dec5c;
+      color: #111; }
+    .flyout .toggle:hover {
+      opacity: 1; }
+  .flyout .body {
+    background-color: #111;
+    border-color: #777;
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    box-sizing: border-box;
+    height: 500px;
+    line-height: 1.8;
+    overflow: hidden;
+    padding: 5px 15px 15px;
+    position: relative;
+    transition: padding 1s, height 1s, width 1s;
+    width: 350px; }
+    .flyout .body.hidden {
+      height: 0;
+      padding: 0 15px;
+      width: 50px; }
+    .flyout .body h1,
+    .flyout .body h2 {
+      border-bottom: 1px dashed #777;
       color: #1dec5c;
-      display: block;
-      border-width: 1px 1px 0 0;
-      border-top-right-radius: 15px;
-      padding: 5px 15px;
-      opacity: 0.6;
-      font-size: 2em;
-      font-weight: bold;
-      text-align: right; }
-      body .flyout .toggle:hover {
-        background-color: #1dec5c;
-        color: #111111; }
-      body .flyout .toggle:hover {
-        opacity: 1; }
-    body .flyout .body {
-      background-color: #111;
-      border-width: 1px 1px 0 0;
-      border-style: solid;
-      border-color: #777;
-      padding: 5px 15px 15px 15px;
-      box-sizing: border-box;
-      line-height: 1.8;
-      height: 500px;
-      width: 350px;
-      transition: padding 1s, height 1s, width 1s;
-      overflow: hidden;
-      position: relative; }
-      body .flyout .body.hidden {
-        padding: 0 15px;
-        height: 0;
-        width: 50px; }
-      body .flyout .body h1,
-      body .flyout .body h2 {
-        margin-top: 15px;
+      margin-bottom: 10px;
+      margin-top: 15px;
+      width: 100%; }
+    .flyout .body a:link, .flyout .body a:active, .flyout .body a:visited {
+      color: #fff; }
+    .flyout .body .control {
+      clear: both; }
+      .flyout .body .control .left,
+      .flyout .body .control .right {
+        box-sizing: border-box;
         margin-bottom: 10px;
-        width: 100%;
-        border-bottom: 1px dashed #777;
+        min-height: 30px;
+        padding-top: 6px 0;
+        width: 48%; }
+      .flyout .body .control .left {
+        clear: left;
+        float: left; }
+      .flyout .body .control .right {
+        clear: right;
+        float: right; }
+      .flyout .body .control select,
+      .flyout .body .control button {
+        border-radius: 5px;
+        border-width: 1px;
+        height: auto;
+        padding: 10px; }
+      .flyout .body .control select {
+        background-color: #111;
+        border-color: #777;
+        border-style: solid;
         color: #1dec5c; }
-      body .flyout .body a:link,
-      body .flyout .body a:active,
-      body .flyout .body a:visited {
-        color: #fff; }
-      body .flyout .body .control {
-        clear: both; }
-        body .flyout .body .control .left,
-        body .flyout .body .control .right {
-          width: 48%;
-          min-height: 30px;
-          margin-bottom: 10px;
-          padding-top: 6px 0;
-          box-sizing: border-box; }
-        body .flyout .body .control .left {
-          float: left;
-          clear: left; }
-        body .flyout .body .control .right {
-          float: right;
-          clear: right; }
-        body .flyout .body .control select.right,
-        body .flyout .body .control button {
-          border-width: 1px;
-          padding: 10px 10px;
-          height: auto;
-          border-radius: 5px; }
-        body .flyout .body .control select.right {
-          border-style: solid;
-          border-color: #777;
-          background-color: #111111;
-          color: #1dec5c; }
-        body .flyout .body .control button {
-          border-style: solid;
-          border-color: #777;
-          background-color: #111111;
-          color: #1dec5c; }
-          body .flyout .body .control button:hover {
-            background-color: #1dec5c;
-            color: #111111; }
+      .flyout .body .control button {
+        background-color: #111;
+        border-color: #777;
+        border-style: solid;
+        color: #1dec5c; }
+        .flyout .body .control button:hover {
+          background-color: #1dec5c;
+          color: #111; }
