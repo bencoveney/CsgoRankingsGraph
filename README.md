@@ -15,17 +15,15 @@ To build the website code run `npm run build`.
 
 To-do List
 ----------
-- Make number-of-ranks dropdown actually work.
+- Improve bottom-of-graph appearance (e.g. when topN ranks is 1)
 - Refactor the code to be less messy and split it up into files.
 - Improve rendering performance for large selections.
 - Map player curves from team to team.
   - Width should be amount of players moved e.g. 5 Luminosity -> SK
 - Port CSS to SCSS.
 - Generalise the codebase to be applicable to other sets of rankings.
-- CI and publish somewhere.
 - Condense subsequent straight lines into a single element.
 - Dropdown for highlighting teams.
   - All
   - None
   - Countries
-- Move ranking dates & team colours to config file.

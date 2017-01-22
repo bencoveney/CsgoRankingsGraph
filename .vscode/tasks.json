@@ -9,12 +9,16 @@
   "echoCommand": true,
   "tasks": [
     {
-      "taskName": "run",
+      "taskName": "build",
       "args": ["test"],
       "isBuildCommand": true,
       "problemMatcher": [
         "$tsc"
       ]
+    },
+    {
+      "taskName": "load",
+      "args": ["run", "load"]
     }
   ]
 }
