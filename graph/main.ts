@@ -1,7 +1,10 @@
 import {Canvas} from "./canvas";
 import * as Utilities from "./utilities";
 
-declare var data: DataFormat;
+// Require typings conflict with node ones. Use a dirty one out of laziness.
+declare function require(path: string): DataFormat;
+// tslint:disable-next-line
+let data = require("../loader/output.json");
 
 const graph = new Canvas(document.getElementById("graph"));
 

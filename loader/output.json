@@ -1,4 +1,4 @@
-var data = {
+{
   "players": {},
   "rankings": [
     {
@@ -16065,4 +16065,4 @@ var data = {
       "safeTeamName": "BIG"
     }
   ]
-};
+}

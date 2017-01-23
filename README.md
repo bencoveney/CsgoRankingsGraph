@@ -24,7 +24,6 @@ To-do List
 - Map player curves from team to team.
   - Width should be amount of players moved e.g. 5 Luminosity -> SK
 - Generalise the codebase to be applicable to other sets of rankings.
-- Condense subsequent straight lines into a single element.
 - Dropdown for highlighting teams.
   - All
   - None

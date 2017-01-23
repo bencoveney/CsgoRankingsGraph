@@ -129,11 +129,11 @@ function loadPageLoop(files) {
 }
 
 function writeData() {
-  const outputFile = "loader/output.js";
+  const outputFile = "loader/output.json";
 
   fs.writeFile(
     outputFile,
-    "var data = " + JSON.stringify(data, null, 2) + ";",
+    JSON.stringify(data, null, 2),
     (error) => {
       if (error) {
         return console.log(error);
