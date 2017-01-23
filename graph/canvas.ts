@@ -21,24 +21,12 @@ export class Canvas {
   private definitions: Element;
 
   constructor(private element: Element) {
-    // Add a definitions section to the graph for gradient declarations.
-    this.definitions = Canvas.createNsElement("defs");
-    this.element.appendChild(this.definitions);
-
-    const styles = Canvas.createNsElement("style");
-    styles.setAttribute("type", "text/css");
-    styles.innerHTML = `
-<![CDATA[
-  .clicked {
-    stroke-opacity: 1;
-    fill-opacity: 1;
-  }
-]]>`;
-    this.definitions.appendChild(styles);
+    this.resetDefinitions();
   }
 
   public clear(): void {
     Utilities.emptyElement(this.element);
+    this.resetDefinitions();
   }
 
   public setDimensions(width: number, height: number): void {
@@ -223,5 +211,22 @@ export class Canvas {
     );
 
     this.element.appendChild(rect);
+  }
+
+  private resetDefinitions(): void {
+    // Add a definitions section to the graph for gradient declarations.
+    this.definitions = Canvas.createNsElement("defs");
+    this.element.appendChild(this.definitions);
+
+    const styles = Canvas.createNsElement("style");
+    styles.setAttribute("type", "text/css");
+    styles.innerHTML = `
+<![CDATA[
+  .clicked {
+    stroke-opacity: 1;
+    fill-opacity: 1;
+  }
+]]>`;
+    this.definitions.appendChild(styles);
   }
 }

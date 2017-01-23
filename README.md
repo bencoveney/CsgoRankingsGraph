@@ -17,7 +17,6 @@ To build the website code run `npm run test`.
 
 To-do List
 ----------
-- Improve bottom-of-graph appearance (e.g. when topN ranks is 1)
 - Refactor the code to be less messy and split it up into files.
 - Improve performance
   - Long lines for large selections.

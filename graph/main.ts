@@ -64,6 +64,7 @@ function refreshGraph() {
 
   setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
 }
+(window as any).refreshGraph = refreshGraph;
 
 // Function to update the top n ranks dropdown.
 function dropDownRanks(selected) {
@@ -90,7 +91,7 @@ dropDownRanks(10);
 const paddingTop = 100;
 const paddingLeft = 50;
 const paddingRight = 50;
-const paddingBottom = 50;
+const paddingBottom = 0;
 
 const months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
@@ -119,12 +120,8 @@ function displayGraph(firstRanking, lastRanking) {
 
   // Set the dimensions
   const graphWidth = spacingPerRanking * numberOfRankings;
-  const graphHeight = spacingPerRank * numberOfRanks;
+  const graphHeight = (spacingPerRank * numberOfRanks) + paddingTop + paddingBottom;
   graph.setDimensions(graphWidth, graphHeight);
-
-  // Apply some padding to the graph area so that the points are not pressed up against the side.
-  const remainingHeight = graphHeight - paddingTop - paddingBottom;
-  const remainingWidth = graphWidth - paddingLeft - paddingRight;
 
   // Populate a collection containing all the players.
   // Not currently used.
@@ -201,7 +198,9 @@ function displayGraph(firstRanking, lastRanking) {
     rankingIndex = Math.min(Math.max(rankingIndex, 0), numberOfRankings - 1);
 
     // Find the rank at the given rankings.
-    return team.ranks[rankingIndex];
+    const rank = team.ranks[rankingIndex];
+
+    return rank && rank > topNRanks ? null : rank;
   }
 
   // Calculate the line's x position at the given ranking.
@@ -317,7 +316,7 @@ function displayGraph(firstRanking, lastRanking) {
   });
 
   // Prepare a gradient for the bottom of the graph to fade to black.
-  const gradientHeight = paddingBottom;
+  const gradientHeight = 50;
   const gradientTop = graphHeight - gradientHeight;
   const gradientBottom = graphHeight;
 
@@ -364,11 +363,15 @@ function handleClick(teamName) {
 (window as any).handleClick = handleClick;
 
 function showDefaultData() {
+  dropDownRanks(10);
+
   setDropDownDates(data.rankings[data.rankings.length - 11], data.rankings[data.rankings.length - 1]);
 }
 (window as any).showDefaultData = showDefaultData;
 
 function showAllData() {
+  dropDownRanks(highestNumberOfRanks);
+
   setDropDownDates(data.rankings[0], data.rankings[data.rankings.length - 1]);
 }
 (window as any).showAllData = showAllData;
