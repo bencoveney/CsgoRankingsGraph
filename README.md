@@ -11,7 +11,7 @@ Instructions
 ------------
 To install all dependencies run `npm install`.
 
-To scrape the data run `npm run load`. This will download all rankings listed in `loader.ts`.
+To scrape the data run `npm run loader_all`. This will download all rankings listed in `loader.ts`.
 
 To build the website code run `npm run test`.
 

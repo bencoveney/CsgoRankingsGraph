@@ -25,11 +25,9 @@ const months: string[] = [
 const teamColors = config.get("teamColors") as { [teamName: string]: string };
 
 // The end format of the downloaded data.
-const data: DataFormat = {
-  players: {},
-  rankings: [],
-  teams: [],
-};
+const data: DataFormat = JSON.parse(fs.readFileSync("loader/output.json", "utf8"));
+
+const jquery = fs.readFileSync("./node_modules/jquery/dist/jquery.js", "utf-8");
 
 function loadPageLoop(files) {
   const file = files.pop();
@@ -41,14 +39,33 @@ function loadPageLoop(files) {
   path += monthName + "/";
   path += file.day + "/";
 
-  const jquery = fs.readFileSync("./node_modules/jquery/dist/jquery.js", "utf-8");
+  const dateString = monthName + " " + file.day + ", " + file.year;
+
+  const date = new Date(dateString);
+
+  console.log("Rankings for " + date.toISOString());
+
+  const alreadyLoaded = data.rankings.some((ranking) => {
+    return ranking.date === dateString;
+  });
+
+  function loadNext() {
+    if (files.length > 0) {
+      loadPageLoop(files);
+    } else {
+      writeData();
+    }
+  }
+
+  if (alreadyLoaded) {
+    console.info("Already loaded");
+    loadNext();
+    return;
+  }
 
   jsdom.env({
     done: (err, window) => {
-      const dateString = monthName + " " + file.day + ", " + file.year;
-      const date = new Date(dateString);
-
-      console.log("Rankings for " + date.toISOString());
+      console.log("page loaded");
 
       const ranking = {
         date: dateString,
@@ -117,11 +134,7 @@ function loadPageLoop(files) {
         }
       });
 
-      if (files.length > 0) {
-        loadPageLoop(files);
-      } else {
-        writeData();
-      }
+      loadNext();
     },
     src: [jquery],
     url: path,
@@ -148,4 +161,4 @@ function writeData() {
 type RatingDate = { year: number, month: number, day: number };
 const rankingDates = config.get("dates") as RatingDate[];
 
-loadPageLoop(rankingDates.slice(0, 16));
+loadPageLoop(rankingDates);
