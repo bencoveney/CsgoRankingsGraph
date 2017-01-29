@@ -224,7 +224,7 @@ function displayGraph(firstRanking, lastRanking) {
       const yPosition = getYPosition(rank);
       const xPosition = getXPosition(rankingIndex);
 
-      const labelClass = "team-" + team.safeTeamName;
+      const labelClass = "curve curve-" + team.safeTeamName;
       const labelText = team.name + " (" + rank + ")";
       const labelColor = team.textColor || team.color;
 
@@ -328,42 +328,6 @@ function displayGraph(firstRanking, lastRanking) {
   // Create the rectangle with the gradient applied.
   graph.addRect(0, gradientTop, graphWidth, gradientHeight, "url(#bottom)");
 }
-
-// Changes the opacity for all paths matching the team name.
-function changeTeamOpacity(teamName, opacity) {
-  const teamSeries = document.querySelectorAll(".team-" + teamName);
-  [].forEach.call(teamSeries, (path) => {
-    path.setAttribute("stroke-opacity", opacity);
-    path.setAttribute("fill-opacity", opacity);
-  });
-}
-
-// Highlights the specified team's path.
-function handleMouseOver(teamName) {
-  data.teams.forEach((team) => {
-    const opacity = teamName === team.safeTeamName ? Canvas.highlightOpacity : Canvas.lowlightOpacity;
-
-    changeTeamOpacity(team.safeTeamName, opacity);
-  });
-}
-(window as any).handleMouseOver = handleMouseOver;
-
-// Lowlights the specified team's path.
-function handleMouseOut(teamName) {
-  data.teams.forEach((team) => {
-    changeTeamOpacity(team.safeTeamName, Canvas.normalOpacity);
-  });
-}
-(window as any).handleMouseOut = handleMouseOut;
-
-function handleClick(teamName) {
-  console.log(teamName);
-  const teamSeries = document.querySelectorAll(".team-" + teamName);
-  [].forEach.call(teamSeries, (path: Element) => {
-    path.classList.toggle("clicked");
-  });
-}
-(window as any).handleClick = handleClick;
 
 function showDefaultData() {
   dropDownRanks(10);

@@ -151,17 +151,15 @@ export class Canvas {
     Canvas.setAttributes(
       line,
       {
-        "class": `team-${name}`,
+        "class": `curve curve-${name}`,
         "d": pathDefinition,
-        "fill": "transparent",
-        "onclick": `handleClick("${name}");`,
-        "onmouseout": `handleMouseOut("${name}");`,
-        "onmouseover": `handleMouseOver("${name}");`,
+        "fill": "none",
         "stroke": color,
         "stroke-opacity": Canvas.normalOpacity.toString(),
         "stroke-width": width.toString(),
       },
     );
+    this.bindListeners(line, name);
     this.element.appendChild(line);
   }
 
@@ -180,19 +178,16 @@ export class Canvas {
     Canvas.setAttributes(
       rect,
       {
-        "class": "team-" + name,
+        "class": "curve curve-" + name,
         "fill": color,
         "fill-opacity": opacity.toString(),
         "height": height.toString(),
-        "onclick": `handleClick("${name}");`,
-        "onmouseout": `handleMouseOut("${name}");`,
-        "onmouseover": `handleMouseOver("${name}");`,
         "width": width.toString(),
         "x": x.toString(),
         "y": y.toString(),
       },
     );
-
+    this.bindListeners(rect, name);
     this.element.appendChild(rect);
   }
 
@@ -228,5 +223,40 @@ export class Canvas {
   }
 ]]>`;
     this.definitions.appendChild(styles);
+  }
+
+  // Binds an event listener to the specified element.
+  private bindListeners(element: Element, name: string): void {
+    element.addEventListener("click", () => this.toggleFocus(name));
+    element.addEventListener("mouseout", () => this.removeHighlight(name));
+    element.addEventListener("mouseover", () => this.addHighlight(name));
+  }
+
+  // Adds the highlight for the specified curve.
+  private addHighlight(teamName: string) {
+    this.changeOpacity(`.curve.curve-${teamName}`, Canvas.highlightOpacity);
+    this.changeOpacity(`.curve:not(.curve-${teamName})`, Canvas.lowlightOpacity);
+  }
+
+  // Removes the highlight for the specified curve.
+  private removeHighlight(teamName: string) {
+    this.changeOpacity(".curve", Canvas.normalOpacity);
+  }
+
+  // Toggles focus on the specified curve.
+  private toggleFocus(teamName: string) {
+    const allClicked = document.querySelectorAll(".curve-" + teamName);
+    [].forEach.call(allClicked, (path: Element) => {
+      path.classList.toggle("clicked");
+    });
+  }
+
+  // Changes the opacity for all elements matching the selector.
+  private changeOpacity(selector: string, opacity: number) {
+    const targets = document.querySelectorAll(selector);
+    [].forEach.call(targets, (path) => {
+      path.setAttribute("stroke-opacity", opacity);
+      path.setAttribute("fill-opacity", opacity);
+    });
   }
 }
