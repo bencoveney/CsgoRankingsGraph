@@ -1,17 +1,15 @@
 import {Canvas} from "./canvas";
-import * as Utilities from "./utilities";
+import {Form} from "./form";
 
 // Require typings conflict with node ones. Use a dirty one out of laziness.
-declare function require(path: string): DataFormat;
+declare function require(path: string): Rankings;
 // tslint:disable-next-line
 let data = require("../loader/output.json");
 
 const graph = new Canvas(document.getElementById("graph"));
 
-// Parse dates and find the highest number of ranks.
-let highestNumberOfRanks = 0;
+// Parse dates.
 data.rankings.forEach((ranking) => {
-  highestNumberOfRanks = Math.max(highestNumberOfRanks, ranking.ranks.length);
   ranking.date = new Date(ranking.date);
 });
 
@@ -20,77 +18,6 @@ data.rankings = data.rankings.sort((a, b) => {
   return (a.date as Date).getTime() - (b.date as Date).getTime();
 });
 
-// Grab the drop-downs from the DOM.
-const dateFromElement = document.querySelector("#dateFrom") as HTMLSelectElement;
-const dateToElement = document.querySelector("#dateTo") as HTMLSelectElement;
-const topNRanksElement = document.querySelector("#topNRanks") as HTMLSelectElement;
-
-// Function to format dates in the format for drop-downs.
-function getDropDownDate(date: Date): string {
-  return date.toDateString().substring(4);
-}
-
-let topNRanks = 30;
-
-// Function to update the dates dropdown list and re-display the graph.
-function setDropDownDates(first, last) {
-  function addDateToSelector(date: Date, selector: HTMLSelectElement, isSelected: boolean, isEnabled: boolean) {
-    const option = document.createElement("option");
-    const dateString = getDropDownDate(date);
-    option.text = dateString;
-    option.value = dateString;
-    option.selected = isSelected;
-    option.disabled = !isEnabled;
-    selector.add(option);
-  }
-
-  Utilities.emptyElement(dateFromElement);
-  Utilities.emptyElement(dateToElement);
-
-  data.rankings.forEach((ranking) => {
-    addDateToSelector(ranking.date as Date, dateFromElement, ranking === first, ranking.date < last.date);
-    addDateToSelector(ranking.date as Date, dateToElement, ranking === last, ranking.date > first.date);
-  });
-
-  displayGraph(first, last);
-}
-
-// Function to assess dropdowns and reload the graph.
-function refreshGraph() {
-  function findRanking(dateString: string) {
-    return data.rankings.find((ranking) => {
-      return getDropDownDate(ranking.date as Date) === dateString;
-    });
-  }
-
-  dropDownRanks(parseInt(topNRanksElement.value, 10));
-
-  setDropDownDates(findRanking(dateFromElement.value), findRanking(dateToElement.value));
-}
-(window as any).refreshGraph = refreshGraph;
-
-// Function to update the top n ranks dropdown.
-function dropDownRanks(selected) {
-  topNRanks = selected;
-
-  function addRank(rankNumber) {
-    const option = document.createElement("option");
-    const rankString = rankNumber.toString();
-    option.text = rankString;
-    option.value = rankString;
-    option.selected = selected === rankNumber;
-    topNRanksElement.add(option);
-  }
-
-  Utilities.emptyElement(topNRanksElement);
-
-  for (let i = 1; i <= highestNumberOfRanks; i++) {
-    addRank(i);
-  }
-}
-
-dropDownRanks(10);
-
 const paddingTop = 100;
 const paddingLeft = 50;
 const paddingRight = 50;
@@ -98,7 +25,7 @@ const paddingBottom = 0;
 
 const months = new Array("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec");
 
-function displayGraph(firstRanking, lastRanking) {
+function displayGraph(firstRanking: Ranking, lastRanking: Ranking, topNRanks: number) {
   graph.clear();
 
   let selecting = false;
@@ -125,34 +52,6 @@ function displayGraph(firstRanking, lastRanking) {
   const graphWidth = spacingPerRanking * numberOfRankings;
   const graphHeight = (spacingPerRank * numberOfRanks) + paddingTop + paddingBottom;
   graph.setDimensions(graphWidth, graphHeight);
-
-  // Populate a collection containing all the players.
-  // Not currently used.
-  activeRankings.forEach((ranking) => {
-    ranking.ranks.forEach((rank, rankIndex) => {
-      rank.players.forEach((player) => {
-        // Attempt to find the existing player.
-        let newPlayer;
-        if (data.players[player.player]) {
-          newPlayer = data.players[player.player];
-        } else {
-          // Populate a fresh player with empty rankings.
-          newPlayer = {
-            teams: [],
-          };
-
-          activeRankings.forEach(() => {
-            newPlayer.teams.push(null);
-          });
-
-          data.players[player.player] = newPlayer;
-        }
-
-        // Put the team into the player's history.
-        newPlayer.teams[rankIndex] = rank.team;
-      });
-    });
-  });
 
   // Denormalize the rank of each team for every ranking.
   data.teams.forEach((team) => {
@@ -329,22 +228,4 @@ function displayGraph(firstRanking, lastRanking) {
   graph.addRect(0, gradientTop, graphWidth, gradientHeight, "url(#bottom)");
 }
 
-function showDefaultData() {
-  dropDownRanks(10);
-
-  setDropDownDates(data.rankings[data.rankings.length - 11], data.rankings[data.rankings.length - 1]);
-}
-(window as any).showDefaultData = showDefaultData;
-
-function showAllData() {
-  dropDownRanks(highestNumberOfRanks);
-
-  setDropDownDates(data.rankings[0], data.rankings[data.rankings.length - 1]);
-}
-(window as any).showAllData = showAllData;
-
-showDefaultData();
-
-document.querySelector(".flyout .toggle").addEventListener("click", () => {
-  document.querySelector(".flyout .body").classList.toggle("hidden");
-});
+const form = new Form(data, displayGraph);

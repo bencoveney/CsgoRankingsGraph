@@ -25,7 +25,7 @@ const months: string[] = [
 const teamColors = config.get("teamColors") as { [teamName: string]: string };
 
 // The end format of the downloaded data.
-const data: DataFormat = JSON.parse(fs.readFileSync("loader/output.json", "utf8"));
+const data: Rankings = JSON.parse(fs.readFileSync("loader/output.json", "utf8"));
 
 const jquery = fs.readFileSync("./node_modules/jquery/dist/jquery.js", "utf-8");
 

@@ -5,7 +5,9 @@
     "target": "es6"
   },
   "files": [
-    "../dataFormat.d.ts",
-    "./main.ts"
+    "../dataFormat.d.ts"
+  ],
+  "include": [
+    "./**/*.ts"
   ]
 }
