@@ -16,7 +16,7 @@
     },
     {
       "taskName": "load",
-      "args": ["run", "load"]
+      "args": ["run", "loader_all"]
     }
   ]
 }

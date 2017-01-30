@@ -28,3 +28,4 @@ To-do List
   - All
   - None
   - Countries
+- Loader doesn-t regenerate with updated colours.
