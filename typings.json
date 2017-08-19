@@ -6,7 +6,6 @@
     "node-sass": "registry:dt/node-sass#3.10.1+20161123075507"
   },
   "globalDependencies": {
-    "jquery": "registry:dt/jquery#1.10.0+20170104155652",
-    "node": "registry:env/node#6.0.0+20170115054122"
+    "jquery": "registry:dt/jquery#1.10.0+20170104155652"
   }
 }
